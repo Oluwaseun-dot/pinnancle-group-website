@@ -57,10 +57,10 @@ export default function OurStorySection() {
         </div>
 
         {/* Founders Story Visual Showcase */}
-        <div className="relative w-full aspect-[16/9] rounded-3xl overflow-hidden mb-12 border border-brand-border bg-brand-dark shadow-2xl group">
+        <div className="relative w-full aspect-[2/1] rounded-3xl overflow-hidden mb-12 border border-brand-border bg-brand-dark shadow-2xl group">
           <img
             src="/images/our-story-founders.jpg"
-            alt="Pinnancle Group Co-Founders: Ayodeji Moses, Praise Salami, and Oluwaseun Olatunji in Strategic Planning & Evaluation Session"
+            alt="Pinnancle Group Co-Founders in Strategic Workflow Evaluation Session"
             className="w-full h-full object-cover object-center filter contrast-105 group-hover:scale-105 transition-transform duration-700"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-brand-black/90 via-transparent to-brand-black/40" />
