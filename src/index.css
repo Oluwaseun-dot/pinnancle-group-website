@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --brand-black: #050505;
+    --brand-dark: #0a0a0a;
+    --brand-charcoal: #121212;
+    --brand-lime: #ccff00;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  body {
+    background-color: #050505;
+    color: #f5f5f5;
+    overflow-x: hidden;
+  }
+
+  /* Custom scrollbar in monochrome */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #050505;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #242424;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #383838;
+  }
+}
+
+/* Subtle background grid pattern */
+.bg-grid-subtle {
+  background-size: 48px 48px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+}
+
+/* Restrained lime glow and dark glass */
+.glass-panel {
+  background: rgba(18, 18, 18, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.editorial-heading {
+  font-family: 'Syne', 'Plus Jakarta Sans', sans-serif;
+  letter-spacing: -0.035em;
+  line-height: 1.05;
+}
+
+/* Image reveal overlay */
+.image-vignette {
+  mask-image: radial-gradient(circle at center, black 65%, transparent 100%);
+  -webkit-mask-image: radial-gradient(circle at center, black 65%, transparent 100%);
+}
+
+/* Hide default cursor on desktop when custom cursor is active */
+@media (hover: hover) and (pointer: fine) {
+  .custom-cursor-enabled {
+    cursor: default;
+  }
+}

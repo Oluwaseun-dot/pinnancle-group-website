@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+  <defs>
+    <linearGradient id="pg-bg" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#141414" />
+      <stop offset="1" stop-color="#050505" />
+    </linearGradient>
+    <linearGradient id="pg-sun" x1="14" y1="6" x2="27" y2="25" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF" />
+      <stop offset="1" stop-color="#CBD5E1" />
+    </linearGradient>
+    <linearGradient id="pg-shad" x1="27" y1="6" x2="39" y2="25" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#94A3B8" />
+      <stop offset="1" stop-color="#475569" />
+    </linearGradient>
+    <linearGradient id="pg-lime" x1="23" y1="4" x2="31" y2="12" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#CCFF00" />
+      <stop offset="1" stop-color="#84CC16" />
+    </linearGradient>
+  </defs>
+  <rect width="48" height="48" rx="12" fill="url(#pg-bg)" stroke="#262626" stroke-width="1.2" />
+  <rect x="10.5" y="11" width="5.5" height="26" rx="2.75" fill="#FFFFFF" />
+  <path d="M16 11L27 7V25H16V11Z" fill="url(#pg-sun)" />
+  <path d="M27 7L38 15.5C39 16.3 39.5 17.5 39.5 18.8C39.5 22.2 36.8 25 33.4 25H27V7Z" fill="url(#pg-shad)" />
+  <path d="M16 16.5L25 13L32 18C32.5 18.5 32 19.5 31.2 19.5H16V16.5Z" fill="#050505" />
+  <line x1="27" y1="7" x2="27" y2="25" stroke="#050505" stroke-width="1" />
+  <polygon points="27,4.5 30,8.5 27,10 24,8.5" fill="url(#pg-lime)" />
+  <circle cx="13.25" cy="32" r="1" fill="#CCFF00" />
+</svg>
