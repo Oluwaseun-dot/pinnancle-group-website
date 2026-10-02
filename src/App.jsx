@@ -4,6 +4,8 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import CustomCursor from './components/CustomCursor';
 import ScrollToTop from './components/ScrollToTop';
+import ScrollProgressBar from './components/ScrollProgressBar';
+import BackToTopButton from './components/BackToTopButton';
 import ErrorBoundary from './components/ErrorBoundary';
 
 import HomePage from './pages/HomePage';
@@ -22,8 +24,14 @@ export default function App() {
   return (
     <Router>
       <div className="relative min-h-screen bg-brand-black text-brand-offWhite selection:bg-brand-lime selection:text-black flex flex-col justify-between">
+        {/* Sleek top-edge scroll depth indicator */}
+        <ScrollProgressBar />
+
         {/* Desktop-only magnetic custom cursor */}
         <CustomCursor />
+
+        {/* Floating smooth back-to-top controller */}
+        <BackToTopButton />
 
         {/* Route scroll reset */}
         <ScrollToTop />

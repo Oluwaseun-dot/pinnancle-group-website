@@ -82,7 +82,17 @@ export default function WhatIsTakingTooMuchTime() {
   const activeItem = problems.find((p) => p.id === activeProblemId) || problems[0];
 
   return (
-    <section className="py-24 sm:py-32 md:py-40 bg-brand-black text-brand-offWhite relative border-t border-brand-border">
+    <section className="py-24 sm:py-32 md:py-40 bg-brand-black text-brand-offWhite relative border-t border-brand-border overflow-hidden">
+      {/* Subtle Architectural Operations Atmosphere Backdrop */}
+      <div className="absolute inset-0 z-0 pointer-events-none select-none opacity-25">
+        <img
+          src="/images/hero-command-center.jpg"
+          alt=""
+          className="w-full h-full object-cover filter contrast-125 brightness-[0.3]"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-brand-black via-brand-black/92 to-brand-black" />
+      </div>
+
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         {/* Section Header */}
         <div className="max-w-3xl mb-16 sm:mb-20">

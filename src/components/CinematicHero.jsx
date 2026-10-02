@@ -19,7 +19,7 @@ export default function CinematicHero() {
           />
         </div>
 
-        {/* Local Cinematic Video Loop (/hero.mp4) */}
+        {/* Local Cinematic Video Loop (/hero.mp4) - Tuned for high visibility & cinematic clarity */}
         {!videoFailed && (
           <video
             autoPlay
@@ -30,19 +30,27 @@ export default function CinematicHero() {
             poster="/images/hero-command-center.jpg"
             onLoadedData={() => setVideoLoaded(true)}
             onError={() => setVideoFailed(true)}
-            className={`absolute inset-0 w-full h-full object-cover filter contrast-110 brightness-[0.55] transition-opacity duration-1000 ${
-              videoLoaded ? 'opacity-40 sm:opacity-50' : 'opacity-0'
+            className={`absolute inset-0 w-full h-full object-cover filter contrast-[1.08] brightness-[0.80] saturate-[1.05] transition-opacity duration-1000 ${
+              videoLoaded ? 'opacity-75 sm:opacity-85' : 'opacity-0'
             }`}
           >
             <source src="/hero.mp4" type="video/mp4" />
           </video>
         )}
 
-        {/* Architectural Vignette & Editorial Scrim Layers (Ensures 100% typography legibility) */}
-        <div className="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/75 to-brand-black/85" />
-        <div className="absolute inset-0 bg-gradient-to-r from-brand-black/90 via-transparent to-brand-black/90" />
-        <div className="absolute inset-0 bg-radial-glow opacity-15" />
-        <div className="absolute inset-0 bg-grid-subtle opacity-20" />
+        {/* Cinematic Scrim Layers: Balanced to keep video clearly visible while ensuring 100% typography contrast */}
+        {/* Vertical gradient: Grounds navbar and transitions smoothly into next section */}
+        <div className="absolute inset-0 bg-gradient-to-b from-brand-black/75 via-transparent to-brand-black" />
+        
+        {/* Center protective scrim: Soft, elegant contrast behind typography without hiding video action */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-brand-black/75 via-brand-black/45 to-transparent" />
+        
+        {/* Soft edge vignette */}
+        <div className="absolute inset-0 bg-gradient-to-r from-brand-black/60 via-transparent to-brand-black/60" />
+        
+        {/* Subtle high-tech atmosphere */}
+        <div className="absolute inset-0 bg-radial-glow opacity-10" />
+        <div className="absolute inset-0 bg-grid-subtle opacity-10" />
       </div>
 
       {/* 02. Hero Content Container */}
@@ -56,7 +64,7 @@ export default function CinematicHero() {
         </div>
 
         {/* Primary Headline */}
-        <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-display font-bold tracking-tight text-white max-w-5xl leading-[1.08] sm:leading-[1.05]">
+        <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-display font-bold tracking-tight text-white max-w-5xl leading-[1.08] sm:leading-[1.05] drop-shadow-[0_4px_24px_rgba(0,0,0,0.85)]">
           We Build AI Systems <br className="hidden sm:inline" />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-brand-light to-brand-silver">
             That Help Businesses Grow.
@@ -64,7 +72,7 @@ export default function CinematicHero() {
         </h1>
 
         {/* Supporting Message */}
-        <p className="text-base sm:text-lg md:text-xl text-brand-silver max-w-2xl sm:max-w-3xl mt-6 sm:mt-8 leading-relaxed font-normal">
+        <p className="text-base sm:text-lg md:text-xl text-brand-silver max-w-2xl sm:max-w-3xl mt-6 sm:mt-8 leading-relaxed font-normal drop-shadow-[0_2px_12px_rgba(0,0,0,0.7)]">
           We help businesses automate repetitive work, respond faster to customers, manage leads, improve sales, and connect the tools they use every day.
         </p>
 

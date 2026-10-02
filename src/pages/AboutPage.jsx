@@ -28,11 +28,11 @@ export default function AboutPage() {
         {/* Our Beginning & Evolution */}
         <div id="story" className="rounded-3xl bg-brand-charcoal border border-brand-border p-8 sm:p-12 shadow-2xl space-y-8">
           {/* Visual Showcase */}
-          <div className="relative w-full aspect-[21/9] sm:aspect-[16/7] rounded-2xl overflow-hidden border border-brand-border bg-brand-dark shadow-2xl group">
+          <div className="relative w-full aspect-[16/9] rounded-2xl overflow-hidden border border-brand-border bg-brand-dark shadow-2xl group">
             <img
               src="/images/our-story-founders.jpg"
-              alt="Pinnancle Group Co-Founders: Ayodeji Moses, Praise Salami, and Oluwaseun Olatunji in Strategic Planning Session"
-              className="w-full h-full object-cover filter contrast-105 group-hover:scale-105 transition-transform duration-700"
+              alt="Pinnancle Group Co-Founders: Ayodeji Moses, Praise Salami, and Oluwaseun Olatunji in Strategic Planning & Evaluation Session"
+              className="w-full h-full object-cover object-center filter contrast-105 group-hover:scale-105 transition-transform duration-700"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-brand-black/90 via-transparent to-brand-black/40" />
             <div className="absolute top-4 left-4 flex items-center gap-2">

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle2, Sparkles, Database, Workflow, Bot, Monitor, FileText, Video } from 'lucide-react';
 import { servicesData } from '../data/servicesData';
 import MagneticButton from './MagneticButton';
+import LiveWorkflowPipeline from './LiveWorkflowPipeline';
 
 export default function ServicesInteractive() {
   const [aiAuto, bizAuto, crmAuto, webDesign, tenderSupport, creativeMedia] = servicesData;
@@ -135,6 +136,13 @@ export default function ServicesInteractive() {
                 </div>
               ))}
             </div>
+          </div>
+
+          {/* ========================================================
+              AUTONOMOUS PIPELINE SIMULATOR (Live Step Execution Visual)
+             ======================================================== */}
+          <div className="pt-6">
+            <LiveWorkflowPipeline />
           </div>
 
           {/* ========================================================
