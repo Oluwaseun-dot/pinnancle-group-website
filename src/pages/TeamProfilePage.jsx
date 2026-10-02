@@ -54,7 +54,7 @@ export default function TeamProfilePage() {
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="w-full h-full object-cover object-top filter grayscale contrast-110 group-hover:filter-none group-hover:scale-105 transition-all duration-500"
+                    className="w-full h-full object-cover object-top filter contrast-105 group-hover:scale-105 transition-all duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-brand-black/80 via-transparent to-transparent pointer-events-none" />
                   <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between text-[10px] font-mono text-white/90">

@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Award, Building, CheckCircle2, ShieldCheck, Users, Globe } from 'lucide-react';
+import { Building, CheckCircle2, Award, ShieldCheck, Users, Globe } from 'lucide-react';
 
 export default function TrustCredibilityBar() {
   const [isVisible, setIsVisible] = useState(false);
@@ -13,7 +13,7 @@ export default function TrustCredibilityBar() {
           observer.disconnect();
         }
       },
-      { threshold: 0.2 }
+      { threshold: 0.15 }
     );
 
     if (barRef.current) {
@@ -28,59 +28,59 @@ export default function TrustCredibilityBar() {
       value: '50+',
       label: 'Businesses Served',
       sub: 'UK, Nigeria & Global',
-      icon: <Building className="w-4 h-4 text-white" />
+      icon: <Building className="w-3.5 h-3.5 text-brand-lime" />
     },
     {
       value: '100+',
-      label: 'Projects Delivered',
-      sub: 'Live Production Systems',
-      icon: <CheckCircle2 className="w-4 h-4 text-white" />
+      label: 'Systems Delivered',
+      sub: 'Live Production',
+      icon: <CheckCircle2 className="w-3.5 h-3.5 text-brand-lime" />
     },
     {
       value: '4.9/5',
       label: 'Client Rating',
-      sub: 'Verified Customer Reviews',
-      icon: <Award className="w-4 h-4 text-brand-lime" />
+      sub: 'Verified Reviews',
+      icon: <Award className="w-3.5 h-3.5 text-brand-lime" />
     },
     {
       value: '2023',
-      label: 'Founded',
+      label: 'Year Founded',
       sub: 'Continuous Growth',
-      icon: <ShieldCheck className="w-4 h-4 text-white" />
+      icon: <ShieldCheck className="w-3.5 h-3.5 text-brand-lime" />
     },
     {
       value: '7',
       label: 'Specialists',
       sub: 'In-House Engineers',
-      icon: <Users className="w-4 h-4 text-white" />
+      icon: <Users className="w-3.5 h-3.5 text-brand-lime" />
     },
     {
-      value: 'Worldwide',
-      label: 'Client Reach',
-      sub: 'International Scale',
-      icon: <Globe className="w-4 h-4 text-white" />
+      value: 'Global',
+      label: 'Client Footprint',
+      sub: 'Worldwide Delivery',
+      icon: <Globe className="w-3.5 h-3.5 text-brand-lime" />
     }
   ];
 
   return (
-    <section ref={barRef} className="relative z-20 py-16 border-y border-brand-border bg-brand-charcoal">
+    <section ref={barRef} className="relative z-20 py-12 md:py-16 border-y border-brand-border bg-brand-charcoal/80 backdrop-blur-md">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 md:gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 divide-y md:divide-y-0 lg:divide-x divide-brand-border/60">
           {metrics.map((item, idx) => (
             <div
               key={idx}
-              className={`p-4 rounded-2xl bg-brand-dark border border-brand-border hover:border-brand-borderLight transition-all duration-300 ${
-                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
+              className={`py-4 md:py-2 px-3 md:px-5 flex flex-col justify-between transition-all duration-700 ${
+                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
               }`}
-              style={{ transitionDelay: `${idx * 75}ms` }}
+              style={{ transitionDelay: `${idx * 60}ms` }}
             >
-              <div className="flex items-center gap-2 mb-2">
+              <div className="flex items-center gap-1.5 mb-2">
                 {item.icon}
                 <span className="text-[10px] font-mono uppercase tracking-wider text-brand-silver">
                   {item.sub}
                 </span>
               </div>
-              <p className="text-3xl md:text-4xl font-display font-bold text-white tracking-tight">
+              <p className="text-3xl sm:text-4xl font-display font-bold text-white tracking-tight">
                 {item.value}
               </p>
               <p className="text-xs text-brand-silver font-medium mt-1">
