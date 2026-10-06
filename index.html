@@ -6,43 +6,120 @@
     <title>Pinnancle Group | AI Automation & Digital Systems Agency</title>
     <meta name="description" content="Pinnancle Group builds AI systems, CRM automation, websites, and business workflows that help companies save time and grow." />
     
-    <!-- Open Graph / Meta -->
+    <!-- SEO & Canonical -->
+    <link rel="canonical" href="https://pinnanclegroup.com/" />
+    <meta name="keywords" content="AI automation agency, CRM automation, business workflow automation, AI agents, enterprise Make n8n, GoHighLevel development, bespoke digital systems UK Nigeria" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="author" content="Pinnancle Group" />
+
+    <!-- Open Graph / Facebook / LinkedIn -->
     <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://pinnanclegroup.com/" />
     <meta property="og:title" content="Pinnancle Group | AI Automation & Digital Systems Agency" />
-    <meta property="og:description" content="We Build AI Systems That Help Businesses Grow. Operating between the UK and Nigeria, serving clients worldwide." />
+    <meta property="og:description" content="We Build AI Systems That Help Businesses Grow. Operating between the UK and Nigeria, serving ambitious enterprises worldwide." />
+    <meta property="og:image" content="https://pinnanclegroup.com/images/hero-command-center.jpg" />
+    <meta property="og:image:alt" content="Pinnancle Group AI Systems Operations Center" />
     <meta property="og:site_name" content="Pinnancle Group" />
+    <meta property="og:locale" content="en_GB" />
+
+    <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://pinnanclegroup.com/" />
     <meta name="twitter:title" content="Pinnancle Group | AI Automation & Digital Systems Agency" />
-    <meta name="twitter:description" content="We Build AI Systems That Help Businesses Grow. Operating between the UK and Nigeria, serving clients worldwide." />
+    <meta name="twitter:description" content="We Build AI Systems That Help Businesses Grow. Operating between the UK and Nigeria, serving ambitious enterprises worldwide." />
+    <meta name="twitter:image" content="https://pinnanclegroup.com/images/hero-command-center.jpg" />
+    <meta name="twitter:image:alt" content="Pinnancle Group AI Systems Operations Center" />
     
     <!-- Theme & Icons -->
     <meta name="theme-color" content="#050505" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
 
-    <!-- Google Fonts: Syne, Plus Jakarta Sans & JetBrains Mono -->
+    <!-- Google Fonts: Syne, Plus Jakarta Sans & JetBrains Mono with font-display swap -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
 
-    <!-- Structured Data Schema for Agency / Organization -->
+    <!-- Structured Data Schema Graph: Organization, ProfessionalService, and WebSite -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Pinnancle Group",
-        "url": "https://pinnanclegroup.com",
-        "description": "We Build AI Systems That Help Businesses Grow. AI automation, CRM systems, business workflows, websites, and tender support.",
-        "foundingDate": "2023",
-        "address": [
+        "@graph": [
           {
-            "@type": "PostalAddress",
-            "addressCountry": "GB",
-            "name": "United Kingdom Operations"
+            "@type": "Organization",
+            "@id": "https://pinnanclegroup.com/#organization",
+            "name": "Pinnancle Group",
+            "url": "https://pinnanclegroup.com",
+            "logo": "https://pinnanclegroup.com/favicon.svg",
+            "description": "We Build AI Systems That Help Businesses Grow. High-impact AI automation, CRM systems, business workflows, websites, and tender support.",
+            "foundingDate": "2023",
+            "address": [
+              {
+                "@type": "PostalAddress",
+                "addressCountry": "GB",
+                "name": "United Kingdom Operations"
+              },
+              {
+                "@type": "PostalAddress",
+                "addressCountry": "NG",
+                "name": "Nigeria Operations"
+              }
+            ],
+            "sameAs": [
+              "https://www.linkedin.com/company/pinnancle-group",
+              "https://twitter.com/pinnanclegroup"
+            ]
           },
           {
-            "@type": "PostalAddress",
-            "addressCountry": "NG",
-            "name": "Nigeria Operations"
+            "@type": "ProfessionalService",
+            "@id": "https://pinnanclegroup.com/#service",
+            "name": "Pinnancle Group AI Automation",
+            "url": "https://pinnanclegroup.com",
+            "priceRange": "$$$$",
+            "areaServed": ["United Kingdom", "Nigeria", "Global"],
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "AI Automation & Digital Systems",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "AI Automation & Autonomous Agents"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Business Process Automation & Middleware"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Enterprise CRM Architecture"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "High-Performance Web Design"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://pinnanclegroup.com/#website",
+            "url": "https://pinnanclegroup.com",
+            "name": "Pinnancle Group",
+            "publisher": {
+              "@id": "https://pinnanclegroup.com/#organization"
+            }
           }
         ]
       }

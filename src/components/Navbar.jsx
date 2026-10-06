@@ -95,17 +95,18 @@ export default function Navbar() {
           {/* Mobile Menu Hamburger */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden p-2 rounded-lg bg-brand-charcoal border border-brand-border text-white focus:outline-none"
+            className="lg:hidden p-2.5 rounded-xl bg-brand-charcoal border border-brand-border text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-lime"
             aria-label="Toggle Navigation Menu"
+            aria-expanded={mobileMenuOpen}
           >
-            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
         </div>
       </header>
 
-      {/* Full-Screen Mobile Menu Overlay */}
+      {/* Full-Screen Mobile Menu Overlay with overflow safety */}
       {mobileMenuOpen && (
-        <div className="fixed inset-0 z-40 bg-brand-black/98 backdrop-blur-2xl flex flex-col justify-between p-8 pt-28 lg:hidden animate-fade-in">
+        <div className="fixed inset-0 z-40 bg-brand-black/98 backdrop-blur-2xl flex flex-col justify-between p-6 sm:p-8 pt-24 sm:pt-28 lg:hidden animate-fade-in overflow-y-auto">
           <div className="flex flex-col space-y-6">
             <p className="text-xs font-mono uppercase tracking-widest text-brand-silver">
               Navigation

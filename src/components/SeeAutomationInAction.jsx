@@ -215,7 +215,7 @@ export default function SeeAutomationInAction() {
           {/* ======================================================
               LEFT COLUMN: REALISTIC CUSTOMER CONVERSATION
              ====================================================== */}
-          <div className="lg:col-span-6 rounded-3xl bg-brand-charcoal/95 border border-brand-border shadow-2xl overflow-hidden flex flex-col h-[650px] relative backdrop-blur-md">
+          <div className="lg:col-span-6 rounded-3xl bg-brand-charcoal/95 border border-brand-border shadow-2xl overflow-hidden flex flex-col h-[520px] sm:h-[580px] lg:h-[640px] relative backdrop-blur-md">
             {/* Conversation Window Top Header */}
             <div className="px-5 py-4 border-b border-brand-border bg-brand-dark/90 flex items-center justify-between shrink-0">
               <div className="flex items-center gap-3">
@@ -383,7 +383,7 @@ export default function SeeAutomationInAction() {
           {/* ======================================================
               RIGHT COLUMN: "WHAT THE SYSTEM IS DOING"
              ====================================================== */}
-          <div className="lg:col-span-6 rounded-3xl bg-brand-charcoal/95 border border-brand-border shadow-2xl p-6 sm:p-8 flex flex-col justify-between h-[650px] relative backdrop-blur-md overflow-hidden">
+          <div className="lg:col-span-6 rounded-3xl bg-brand-charcoal/95 border border-brand-border shadow-2xl p-6 sm:p-8 flex flex-col justify-between h-[520px] sm:h-[580px] lg:h-[640px] relative backdrop-blur-md overflow-hidden">
             {/* Ambient Background Glow */}
             <div className="absolute top-0 right-0 w-80 h-80 bg-brand-lime/[0.04] rounded-full blur-3xl pointer-events-none" />
 

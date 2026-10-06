@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -6,24 +6,38 @@ import CustomCursor from './components/CustomCursor';
 import ScrollToTop from './components/ScrollToTop';
 import ScrollProgressBar from './components/ScrollProgressBar';
 import BackToTopButton from './components/BackToTopButton';
+import SeoRouteManager from './components/SeoRouteManager';
 import ErrorBoundary from './components/ErrorBoundary';
 
+// Direct import for instant initial landing load
 import HomePage from './pages/HomePage';
-import ServicesPage from './pages/ServicesPage';
-import IndustriesPage from './pages/IndustriesPage';
-import WorkPage from './pages/WorkPage';
-import CaseStudyPage from './pages/CaseStudyPage';
-import TeamPage from './pages/TeamPage';
-import TeamProfilePage from './pages/TeamProfilePage';
-import AboutPage from './pages/AboutPage';
-import InsightsPage from './pages/InsightsPage';
-import BookPage from './pages/BookPage';
-import ContactPage from './pages/ContactPage';
+
+// Code-split subpages for optimal bundle performance
+const ServicesPage = lazy(() => import('./pages/ServicesPage'));
+const IndustriesPage = lazy(() => import('./pages/IndustriesPage'));
+const WorkPage = lazy(() => import('./pages/WorkPage'));
+const CaseStudyPage = lazy(() => import('./pages/CaseStudyPage'));
+const TeamPage = lazy(() => import('./pages/TeamPage'));
+const TeamProfilePage = lazy(() => import('./pages/TeamProfilePage'));
+const AboutPage = lazy(() => import('./pages/AboutPage'));
+const InsightsPage = lazy(() => import('./pages/InsightsPage'));
+const BookPage = lazy(() => import('./pages/BookPage'));
+const ContactPage = lazy(() => import('./pages/ContactPage'));
+
+// Lightweight route transition fallback
+const RouteFallback = () => (
+  <div className="min-h-[60vh] flex items-center justify-center bg-brand-black">
+    <div className="w-6 h-6 border-2 border-brand-border border-t-brand-lime rounded-full animate-spin" />
+  </div>
+);
 
 export default function App() {
   return (
     <Router>
       <div className="relative min-h-screen bg-brand-black text-brand-offWhite selection:bg-brand-lime selection:text-black flex flex-col justify-between">
+        {/* Dynamic SEO metadata manager */}
+        <SeoRouteManager />
+
         {/* Sleek top-edge scroll depth indicator */}
         <ScrollProgressBar />
 
@@ -39,30 +53,32 @@ export default function App() {
         {/* Global sticky navigation */}
         <Navbar />
 
-        {/* Main Content Area protected by ErrorBoundary */}
+        {/* Main Content Area protected by ErrorBoundary & Suspense */}
         <main className="flex-grow">
           <ErrorBoundary title="Page Content">
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/services" element={<ServicesPage />} />
-              <Route path="/solutions" element={<IndustriesPage />} />
-              <Route path="/industries" element={<IndustriesPage />} />
-              <Route path="/work" element={<WorkPage />} />
-              <Route path="/work/:slug" element={<CaseStudyPage />} />
-              <Route path="/portfolio" element={<WorkPage />} />
-              <Route path="/portfolio/:slug" element={<CaseStudyPage />} />
-              <Route path="/case-studies" element={<WorkPage />} />
-              <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
-              <Route path="/case-study/:slug" element={<CaseStudyPage />} />
-              <Route path="/team" element={<TeamPage />} />
-              <Route path="/team/:slug" element={<TeamProfilePage />} />
-              <Route path="/about" element={<AboutPage />} />
-              <Route path="/insights" element={<InsightsPage />} />
-              <Route path="/book" element={<BookPage />} />
-              <Route path="/contact" element={<ContactPage />} />
-              {/* Catch-all redirect to Home */}
-              <Route path="*" element={<HomePage />} />
-            </Routes>
+            <Suspense fallback={<RouteFallback />}>
+              <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/services" element={<ServicesPage />} />
+                <Route path="/solutions" element={<IndustriesPage />} />
+                <Route path="/industries" element={<IndustriesPage />} />
+                <Route path="/work" element={<WorkPage />} />
+                <Route path="/work/:slug" element={<CaseStudyPage />} />
+                <Route path="/portfolio" element={<WorkPage />} />
+                <Route path="/portfolio/:slug" element={<CaseStudyPage />} />
+                <Route path="/case-studies" element={<WorkPage />} />
+                <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
+                <Route path="/case-study/:slug" element={<CaseStudyPage />} />
+                <Route path="/team" element={<TeamPage />} />
+                <Route path="/team/:slug" element={<TeamProfilePage />} />
+                <Route path="/about" element={<AboutPage />} />
+                <Route path="/insights" element={<InsightsPage />} />
+                <Route path="/book" element={<BookPage />} />
+                <Route path="/contact" element={<ContactPage />} />
+                {/* Catch-all redirect to Home */}
+                <Route path="*" element={<HomePage />} />
+              </Routes>
+            </Suspense>
           </ErrorBoundary>
         </main>
 

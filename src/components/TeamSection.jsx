@@ -55,6 +55,8 @@ export default function TeamSection() {
                         <img
                           src={member.image}
                           alt={member.name}
+                          loading="lazy"
+                          decoding="async"
                           className="w-full h-full object-cover object-top filter contrast-105 group-hover:scale-105 transition-all duration-500"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-brand-black/85 via-transparent to-transparent pointer-events-none" />

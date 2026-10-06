@@ -61,6 +61,8 @@ export default function OurStorySection() {
           <img
             src="/images/our-story-founders.jpg"
             alt="Pinnancle Group Co-Founders in Strategic Workflow Evaluation Session"
+            loading="lazy"
+            decoding="async"
             className="w-full h-full object-cover object-center filter contrast-105 group-hover:scale-105 transition-transform duration-700"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-brand-black/90 via-transparent to-brand-black/40" />

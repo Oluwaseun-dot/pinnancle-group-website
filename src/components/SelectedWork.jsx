@@ -50,6 +50,8 @@ export default function SelectedWork() {
                         <img
                           src={study.image}
                           alt={study.title}
+                          loading="lazy"
+                          decoding="async"
                           className="w-full h-full object-cover filter contrast-105 group-hover/img:scale-105 transition-all duration-700"
                         />
                       ) : null}

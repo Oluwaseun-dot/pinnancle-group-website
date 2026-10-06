@@ -44,7 +44,7 @@ export default function FaqAccordion() {
                 <button
                   type="button"
                   onClick={() => toggle(item.id)}
-                  className="w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none"
+                  className="w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-lime rounded-2xl"
                   aria-expanded={isOpen}
                 >
                   <span className="text-base sm:text-lg font-display font-semibold text-white tracking-tight">
