@@ -3,6 +3,7 @@ import CinematicHero from '../components/CinematicHero';
 import TrustCredibilityBar from '../components/TrustCredibilityBar';
 import ClientMarquee from '../components/ClientMarquee';
 import ServicesInteractive from '../components/ServicesInteractive';
+import SeeAutomationInAction from '../components/SeeAutomationInAction';
 import WhatIsTakingTooMuchTime from '../components/WhatIsTakingTooMuchTime';
 import IndustriesInteractive from '../components/IndustriesInteractive';
 import SelectedWork from '../components/SelectedWork';
@@ -43,7 +44,12 @@ export default function HomePage() {
         <ServicesInteractive />
       </ErrorBoundary>
 
-      {/* 05. "What Is Taking Too Much Time?" Interactive Diagnosis */}
+      {/* 05. See Automation in Action (Major Interactive Product Demo) */}
+      <ErrorBoundary title="Live Automation Demo">
+        <SeeAutomationInAction />
+      </ErrorBoundary>
+
+      {/* 06. "What Is Taking Too Much Time?" Interactive Diagnosis */}
       <ErrorBoundary title="Operational Diagnosis">
         <WhatIsTakingTooMuchTime />
       </ErrorBoundary>
