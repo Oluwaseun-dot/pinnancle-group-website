@@ -5,9 +5,10 @@ import Footer from './components/Footer';
 import CustomCursor from './components/CustomCursor';
 import ScrollToTop from './components/ScrollToTop';
 import ScrollProgressBar from './components/ScrollProgressBar';
-import BackToTopButton from './components/BackToTopButton';
 import SeoRouteManager from './components/SeoRouteManager';
 import ErrorBoundary from './components/ErrorBoundary';
+import ConsultationActivityToast from './components/ConsultationActivityToast';
+import AiSalesAssistant from './components/AiSalesAssistant';
 
 // Direct import for instant initial landing load
 import HomePage from './pages/HomePage';
@@ -81,6 +82,12 @@ export default function App() {
             </Suspense>
           </ErrorBoundary>
         </main>
+
+        {/* Real Consultation Activity Toast */}
+        <ConsultationActivityToast />
+
+        {/* Global Website AI Sales Assistant */}
+        <AiSalesAssistant />
 
         {/* Global editorial footer */}
         <Footer />

@@ -5,6 +5,9 @@ import ClientMarquee from '../components/ClientMarquee';
 import ServicesInteractive from '../components/ServicesInteractive';
 import SeeAutomationInAction from '../components/SeeAutomationInAction';
 import WhatIsTakingTooMuchTime from '../components/WhatIsTakingTooMuchTime';
+import WhatCanWeAutomateTool from '../components/WhatCanWeAutomateTool';
+import AutomationAssessment from '../components/AutomationAssessment';
+import RoiTimeSavedCalculator from '../components/RoiTimeSavedCalculator';
 import IndustriesInteractive from '../components/IndustriesInteractive';
 import SelectedWork from '../components/SelectedWork';
 import CinematicVideoSection from '../components/CinematicVideoSection';
@@ -54,7 +57,22 @@ export default function HomePage() {
         <WhatIsTakingTooMuchTime />
       </ErrorBoundary>
 
-      {/* 06. Industries (We Build For Different Types of Businesses) */}
+      {/* 06B. "What Can We Automate?" Interactive Tool */}
+      <ErrorBoundary title="What Can We Automate Tool">
+        <WhatCanWeAutomateTool />
+      </ErrorBoundary>
+
+      {/* 06C. AI Automation Assessment */}
+      <ErrorBoundary title="Automation Assessment">
+        <AutomationAssessment />
+      </ErrorBoundary>
+
+      {/* 06D. ROI & Time-Saved Calculator */}
+      <ErrorBoundary title="ROI Calculator">
+        <RoiTimeSavedCalculator />
+      </ErrorBoundary>
+
+      {/* 07. Industries (We Build For Different Types of Businesses) */}
       <ErrorBoundary title="Industry Solutions">
         <IndustriesInteractive />
       </ErrorBoundary>

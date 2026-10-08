@@ -39,6 +39,7 @@ import {
 } from 'lucide-react';
 import { caseStudies } from '../data/caseStudiesData';
 import MagneticButton from '../components/MagneticButton';
+import RoiTimeSavedCalculator from '../components/RoiTimeSavedCalculator';
 
 export default function ServicesPage() {
   const [activeTab, setActiveTab] = useState('all');
@@ -710,6 +711,13 @@ export default function ServicesPage() {
             })}
           </div>
         </section>
+
+        {/* ==================================================
+            9B. ROI & TIME-SAVED CALCULATOR
+            ================================================== */}
+        <div className="mb-28 sm:mb-36">
+          <RoiTimeSavedCalculator />
+        </div>
 
         {/* ==================================================
             10. SELECTED WORK SHOWCASE (AUTHENTIC EVIDENCE)
