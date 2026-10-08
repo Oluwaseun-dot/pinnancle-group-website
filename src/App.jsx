@@ -7,6 +7,7 @@ import ScrollToTop from './components/ScrollToTop';
 import ScrollProgressBar from './components/ScrollProgressBar';
 import SeoRouteManager from './components/SeoRouteManager';
 import ErrorBoundary from './components/ErrorBoundary';
+import BackToTopButton from './components/BackToTopButton';
 import ConsultationActivityToast from './components/ConsultationActivityToast';
 import AiSalesAssistant from './components/AiSalesAssistant';
 
