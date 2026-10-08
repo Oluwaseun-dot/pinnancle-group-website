@@ -1,8 +1,38 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
-import { ArrowLeft, ArrowRight, CheckCircle2, ShieldCheck, Quote, Maximize2, X, ExternalLink, Sparkles } from 'lucide-react';
+import {
+  ArrowLeft,
+  ArrowRight,
+  CheckCircle2,
+  ShieldCheck,
+  Quote,
+  Maximize2,
+  X,
+  ExternalLink,
+  Sparkles,
+  Lock,
+  RefreshCw,
+  Sliders,
+  UserCheck,
+  AlertTriangle,
+  Play,
+  RotateCcw,
+  Send,
+  Mic,
+  Mail,
+  Database,
+  Cpu,
+  Layers,
+  Terminal,
+  Check,
+  Clock,
+  Briefcase,
+  Activity,
+  Layers3
+} from 'lucide-react';
 import { caseStudies, getCaseStudyBySlug } from '../data/caseStudiesData';
 import MagneticButton from '../components/MagneticButton';
+import VoiceToEmailSimulator from '../components/VoiceToEmailSimulator';
 
 export default function CaseStudyPage() {
   const { slug } = useParams();
@@ -31,7 +61,7 @@ export default function CaseStudyPage() {
     );
   }
 
-  const currentIndex = caseStudies.findIndex((s) => s.slug === slug);
+  const currentIndex = caseStudies.findIndex((s) => s.slug === study.slug);
   const nextProject = caseStudies[(currentIndex + 1) % caseStudies.length];
 
   return (
@@ -65,7 +95,7 @@ export default function CaseStudyPage() {
             </div>
             <div className="absolute bottom-4 right-4 hidden sm:flex items-center gap-2">
               <span className="px-3 py-1 rounded-full bg-brand-black/85 backdrop-blur-md border border-brand-border text-xs font-mono text-brand-silver">
-                Verified Enterprise Deployment
+                Verified Production Deployment
               </span>
             </div>
           </div>
@@ -80,20 +110,50 @@ export default function CaseStudyPage() {
             <span className="text-xs font-mono text-brand-silver">
               Client: <strong className="text-white">{study.client}</strong> · {study.industry}
             </span>
-            {study.projectCost && (
-              <span className="px-3 py-1 rounded-full bg-brand-dark border border-brand-lime/40 text-brand-lime text-xs font-mono">
-                Investment: <strong className="text-white">{study.projectCost}</strong>
-              </span>
-            )}
           </div>
 
           <h1 className="text-3xl sm:text-5xl md:text-6xl font-display font-bold tracking-tight text-white leading-tight">
             {study.title}
           </h1>
 
-          <p className="text-lg sm:text-xl text-brand-silver leading-relaxed max-w-3xl">
+          {study.subtitle ? (
+            <p className="text-xl sm:text-2xl text-white font-medium leading-relaxed max-w-3xl">
+              {study.subtitle}
+            </p>
+          ) : null}
+
+          <p className="text-base sm:text-lg text-brand-silver leading-relaxed max-w-3xl">
             {study.tagline}
           </p>
+
+          {/* Project Details & Financial Overview Panel */}
+          <div className="p-5 sm:p-6 rounded-2xl bg-brand-charcoal border border-brand-border mt-6">
+            <span className="text-[11px] font-mono uppercase tracking-widest text-brand-silver block mb-4">
+              Project Specification & Deployment Terms
+            </span>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-xs font-mono">
+              <div>
+                <span className="text-brand-silver block text-[10px]">INDUSTRY</span>
+                <span className="text-white font-medium mt-0.5 block">{study.industry}</span>
+              </div>
+              <div>
+                <span className="text-brand-silver block text-[10px]">DELIVERY</span>
+                <span className="text-white font-medium mt-0.5 block">{study.delivery || 'Production Deployment'}</span>
+              </div>
+              {study.projectCost && (
+                <div>
+                  <span className="text-brand-silver block text-[10px]">PROJECT VALUE</span>
+                  <span className="text-brand-lime font-bold mt-0.5 block">{study.projectCost}</span>
+                </div>
+              )}
+              {study.maintenance && (
+                <div>
+                  <span className="text-brand-silver block text-[10px]">ONGOING SLA / MAINTENANCE</span>
+                  <span className="text-white font-medium mt-0.5 block">{study.maintenance}</span>
+                </div>
+              )}
+            </div>
+          </div>
 
           {/* Quick Stats Bar */}
           <div className={`grid grid-cols-1 ${study.results.length === 4 ? 'sm:grid-cols-2 lg:grid-cols-4' : 'sm:grid-cols-3'} gap-4 pt-6`}>
@@ -111,7 +171,22 @@ export default function CaseStudyPage() {
         </div>
 
         {/* Narrative Breakdown */}
-        <section className="py-16 space-y-12">
+        <section className="py-16 space-y-16">
+          {/* Executive Overview Summary */}
+          {study.summary && (
+            <div className="space-y-4">
+              <span className="text-xs font-mono uppercase tracking-widest text-brand-lime font-semibold">
+                Executive Overview
+              </span>
+              <h2 className="text-2xl sm:text-3xl font-display font-bold text-white">
+                Engineered for Real-World Operations
+              </h2>
+              <p className="text-base sm:text-lg text-brand-silver leading-relaxed">
+                {study.summary}
+              </p>
+            </div>
+          )}
+
           {/* What Was Happening Before */}
           <div className="space-y-4">
             <span className="text-xs font-mono uppercase tracking-widest text-red-400 font-semibold">
@@ -154,14 +229,140 @@ export default function CaseStudyPage() {
             </p>
           </div>
 
+          {/* Built for Reliability, Not Just Demonstration - Security & Reliability Grid */}
+          {study.securityReliability && (
+            <div className="space-y-6">
+              <div className="space-y-2">
+                <span className="text-xs font-mono uppercase tracking-widest text-brand-lime font-semibold flex items-center gap-1.5">
+                  <ShieldCheck className="w-3.5 h-3.5" />
+                  Engineering Guardrails
+                </span>
+                <h3 className="text-2xl sm:text-3xl font-display font-bold text-white">
+                  Built for Reliability, Not Just Demonstration
+                </h3>
+                <p className="text-sm text-brand-silver max-w-2xl">
+                  Enterprise client communications require zero unverified assumptions. Our architecture enforces strict authorization, deterministic state transitions, and mandatory human confirmation.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {study.securityReliability.map((guard, idx) => (
+                  <div
+                    key={idx}
+                    className="p-5 rounded-2xl bg-brand-charcoal border border-brand-border space-y-2 hover:border-brand-lime/40 transition-colors"
+                  >
+                    <div className="flex items-center gap-2">
+                      <span className="w-2 h-2 rounded-full bg-brand-lime" />
+                      <h4 className="font-mono text-xs uppercase tracking-wider text-white font-bold">
+                        {guard.title}
+                      </h4>
+                    </div>
+                    <p className="text-xs text-brand-silver leading-relaxed">
+                      {guard.desc}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* 5 Core Engineering Components Deep-Dive */}
+          {study.coreFeatures && study.coreFeatures.length > 0 && (
+            <div className="space-y-8">
+              <div className="space-y-2">
+                <span className="text-xs font-mono uppercase tracking-widest text-brand-lime font-semibold">
+                  Core Engineering Components
+                </span>
+                <h3 className="text-2xl sm:text-3xl font-display font-bold text-white">
+                  The 5 Foundations of This Production Agent
+                </h3>
+                <p className="text-sm text-brand-silver max-w-2xl">
+                  A breakdown of the five critical modules that transform a simple transcription script into a fault-tolerant, business-grade automation system.
+                </p>
+              </div>
+
+              <div className="space-y-6">
+                {study.coreFeatures.map((feat, idx) => (
+                  <div
+                    key={feat.id || idx}
+                    className="rounded-3xl bg-brand-charcoal border border-brand-border p-6 sm:p-8 space-y-5"
+                  >
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4 border-b border-brand-border">
+                      <div className="flex items-center gap-3">
+                        <span className="w-7 h-7 rounded-xl bg-brand-dark border border-brand-border font-mono text-xs text-brand-lime flex items-center justify-center font-bold">
+                          0{idx + 1}
+                        </span>
+                        <h4 className="text-xl font-display font-bold text-white">
+                          {feat.title}
+                        </h4>
+                      </div>
+                      <span className="px-3 py-1 rounded-full bg-brand-dark border border-brand-border text-[11px] font-mono text-brand-silver self-start sm:self-auto">
+                        {feat.tag}
+                      </span>
+                    </div>
+
+                    <p className="text-sm text-brand-silver leading-relaxed">
+                      {feat.desc}
+                    </p>
+
+                    {/* Step Flowchart / States */}
+                    {feat.visualFlow && (
+                      <div className="pt-2">
+                        <span className="text-[10px] font-mono uppercase tracking-widest text-brand-silver block mb-3">
+                          Sequential Node Execution:
+                        </span>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2.5">
+                          {feat.visualFlow.map((vStep, vIdx) => (
+                            <div key={vIdx} className="p-3 rounded-xl bg-brand-dark border border-brand-border space-y-1">
+                              <div className="flex items-center justify-between text-[10px] font-mono text-brand-lime">
+                                <span>STAGE 0{vIdx + 1}</span>
+                              </div>
+                              <p className="text-xs font-mono font-bold text-white">{vStep.step}</p>
+                              <p className="text-[11px] text-brand-silver leading-snug">{vStep.note}</p>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+
+                    {feat.states && (
+                      <div className="pt-2">
+                        <span className="text-[10px] font-mono uppercase tracking-widest text-brand-silver block mb-3">
+                          Deterministic State Machine Lifecycle:
+                        </span>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2.5">
+                          {feat.states.map((st, sIdx) => (
+                            <div key={sIdx} className="p-3 rounded-xl bg-brand-dark border border-brand-border space-y-1">
+                              <span className="text-[10px] font-mono text-brand-lime font-bold block truncate">
+                                {st.name}
+                              </span>
+                              <p className="text-[11px] text-brand-silver leading-snug">
+                                {st.desc}
+                              </p>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Interactive Agent Simulator Widget (for voice-to-email case study) */}
+          {study.slug === 'ai-voice-to-email-agent' && (
+            <VoiceToEmailSimulator />
+          )}
+
           {/* Multi-Layer System Architecture */}
           <div className="rounded-3xl bg-brand-charcoal border border-brand-border p-8 sm:p-10 space-y-6">
             <div className="flex items-center justify-between">
               <h3 className="text-xl font-display font-bold text-white">
-                System Architecture
+                Production System Topology
               </h3>
               <span className="text-xs font-mono text-brand-lime">
-                Live Production Topology
+                Live Production Architecture
               </span>
             </div>
 
@@ -187,7 +388,7 @@ export default function CaseStudyPage() {
               {study.automationWorkflow.map((step, idx) => (
                 <div key={idx} className="flex items-center gap-3 p-3.5 rounded-xl bg-brand-charcoal border border-brand-border">
                   <span className="w-6 h-6 rounded-full bg-brand-dark text-brand-lime font-mono text-xs flex items-center justify-center shrink-0 border border-brand-border">
-                    0{idx + 1}
+                    {idx + 1 < 10 ? `0${idx + 1}` : idx + 1}
                   </span>
                   <span className="text-xs sm:text-sm text-brand-offWhite font-medium">
                     {step}
@@ -197,10 +398,42 @@ export default function CaseStudyPage() {
             </div>
           </div>
 
-          {/* Technology Badges */}
+          {/* Detailed Technology Stack Breakdown */}
+          {study.technologiesDetailed && (
+            <div className="space-y-6">
+              <div className="space-y-2">
+                <span className="text-xs font-mono uppercase tracking-widest text-brand-lime font-semibold">
+                  Technical Stack
+                </span>
+                <h3 className="text-2xl sm:text-3xl font-display font-bold text-white">
+                  Technology Components & Architecture Roles
+                </h3>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {study.technologiesDetailed.map((tech, idx) => (
+                  <div key={idx} className="p-5 rounded-2xl bg-brand-charcoal border border-brand-border space-y-1.5">
+                    <div className="flex items-center justify-between">
+                      <span className="font-display font-bold text-white text-base">
+                        {tech.name}
+                      </span>
+                      <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-brand-dark border border-brand-border text-brand-lime">
+                        {tech.role}
+                      </span>
+                    </div>
+                    <p className="text-xs text-brand-silver leading-relaxed">
+                      {tech.desc}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Technology Badges (Standard) */}
           <div className="p-6 rounded-2xl bg-brand-charcoal border border-brand-border space-y-3">
             <span className="text-xs font-mono uppercase tracking-widest text-brand-silver">
-              Technologies Used
+              Technologies & Protocols
             </span>
             <div className="flex flex-wrap gap-2">
               {study.technologies.map((t, idx) => (
@@ -210,6 +443,30 @@ export default function CaseStudyPage() {
               ))}
             </div>
           </div>
+
+          {/* Project Outcomes & System Delivery */}
+          {study.projectOutcomes && (
+            <div className="p-8 sm:p-10 rounded-3xl bg-brand-charcoal border border-brand-border space-y-6">
+              <div className="space-y-2">
+                <span className="text-xs font-mono uppercase tracking-widest text-brand-lime font-semibold">
+                  Measurable Operational Outcomes
+                </span>
+                <h3 className="text-2xl sm:text-3xl font-display font-bold text-white">
+                  System-Level Improvements & Reliability
+                </h3>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                {study.projectOutcomes.map((outcome, idx) => (
+                  <div key={idx} className="flex items-start gap-3 p-3.5 rounded-xl bg-brand-dark border border-brand-border">
+                    <CheckCircle2 className="w-4 h-4 text-brand-lime shrink-0 mt-0.5" />
+                    <span className="text-xs sm:text-sm text-brand-offWhite">
+                      {outcome}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
 
           {/* Live Production Screenshots / Technical Artifacts */}
           {study.screenshots && study.screenshots.length > 0 && (
@@ -267,21 +524,23 @@ export default function CaseStudyPage() {
           )}
 
           {/* Client Feedback Quote */}
-          <div className="rounded-3xl bg-brand-charcoal border border-brand-border p-8 sm:p-10 shadow-2xl relative">
-            <Quote className="w-8 h-8 text-brand-lime/40 mb-4" />
-            <p className="text-lg sm:text-xl font-display font-medium text-white italic leading-relaxed">
-              "{study.clientFeedback.quote}"
-            </p>
-            <div className="mt-6 pt-4 border-t border-brand-border flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-brand-dark border border-brand-border flex items-center justify-center font-bold text-white">
-                {study.clientFeedback.author.split(' ').map((n) => n[0]).join('')}
-              </div>
-              <div>
-                <p className="text-sm font-semibold text-white">{study.clientFeedback.author}</p>
-                <p className="text-xs text-brand-silver">{study.clientFeedback.role}, {study.clientFeedback.company}</p>
+          {study.clientFeedback && (
+            <div className="rounded-3xl bg-brand-charcoal border border-brand-border p-8 sm:p-10 shadow-2xl relative">
+              <Quote className="w-8 h-8 text-brand-lime/40 mb-4" />
+              <p className="text-lg sm:text-xl font-display font-medium text-white italic leading-relaxed">
+                "{study.clientFeedback.quote}"
+              </p>
+              <div className="mt-6 pt-4 border-t border-brand-border flex items-center gap-3">
+                <div className="w-10 h-10 rounded-xl bg-brand-dark border border-brand-border flex items-center justify-center font-bold text-white">
+                  {study.clientFeedback.author.split(' ').map((n) => n[0]).join('')}
+                </div>
+                <div>
+                  <p className="text-sm font-semibold text-white">{study.clientFeedback.author}</p>
+                  <p className="text-xs text-brand-silver">{study.clientFeedback.role}, {study.clientFeedback.company}</p>
+                </div>
               </div>
             </div>
-          </div>
+          )}
 
           {/* Custom Systems Inquiries Callout */}
           <div className="p-8 sm:p-10 rounded-3xl bg-gradient-to-br from-brand-charcoal to-brand-dark border border-brand-lime/30 relative overflow-hidden">
@@ -295,7 +554,7 @@ export default function CaseStudyPage() {
                   Need a similar automated system for your business?
                 </h3>
                 <p className="text-sm text-brand-silver leading-relaxed">
-                  Whether you require AI lead qualification, real-time Slack/CRM triage, high-ticket calendar appointment funnels, or automated document pipelines, our engineers deploy production systems configured for your growth.
+                  Whether you require AI voice transcription, state-machine CRM workflows, multi-channel triage, or custom API pipelines, Pinnancle Group designs and deploys production systems engineered for reliability.
                 </p>
               </div>
               <div className="shrink-0 flex flex-col sm:flex-row gap-3">
@@ -307,25 +566,27 @@ export default function CaseStudyPage() {
           </div>
 
           {/* Next Project Footer */}
-          <div className="pt-12 border-t border-brand-border flex flex-col sm:flex-row items-center justify-between gap-6">
-            <div>
-              <span className="text-xs font-mono uppercase tracking-widest text-brand-silver">
-                Next Case Study
-              </span>
-              <h4 className="text-xl font-display font-bold text-white mt-1">
-                {nextProject.title}
-              </h4>
-            </div>
+          {nextProject && (
+            <div className="pt-12 border-t border-brand-border flex flex-col sm:flex-row items-center justify-between gap-6">
+              <div>
+                <span className="text-xs font-mono uppercase tracking-widest text-brand-silver">
+                  Next Case Study
+                </span>
+                <h4 className="text-xl font-display font-bold text-white mt-1">
+                  {nextProject.title}
+                </h4>
+              </div>
 
-            <MagneticButton
-              to={`/work/${nextProject.slug}`}
-              variant="primary"
-              size="md"
-              showArrow={true}
-            >
-              View Next Case Study
-            </MagneticButton>
-          </div>
+              <MagneticButton
+                to={`/work/${nextProject.slug}`}
+                variant="primary"
+                size="md"
+                showArrow={true}
+              >
+                View Next Case Study
+              </MagneticButton>
+            </div>
+          )}
         </section>
       </div>
 

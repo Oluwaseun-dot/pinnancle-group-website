@@ -1,5 +1,160 @@
 export const caseStudies = [
   {
+    slug: 'ai-voice-to-email-agent',
+    title: 'Production-Grade AI Voice-to-Email Agent',
+    subtitle: 'A secure AI automation system that turns voice instructions into validated, human-approved email workflows.',
+    client: 'Executive Operations Client',
+    industry: 'Business Automation / AI Systems',
+    category: 'Custom AI Automation',
+    projectType: 'Custom AI Automation',
+    delivery: 'Production Deployment',
+    projectCost: '$4,500 USD',
+    maintenance: '$350 USD/month',
+    image: '/images/case-studies/ai-voice-to-email-agent.png',
+    tagline: 'A secure, fault-tolerant AI automation system turning voice instructions into validated, human-approved email workflows with deterministic state management.',
+    summary: 'The client needed a reliable way to turn voice memos into structured email drafts without manually transcribing messages, searching for recipient information, preparing emails, and managing incomplete instructions. Pinnancle Group designed and engineered a production-grade automation system in n8n connecting voice input, OpenAI Whisper audio transcription, GPT-4o semantic structuring, Supabase database state management, and Telegram-based human confirmation into one controlled workflow.',
+    problem: 'Voice instructions from busy leadership were unstructured and incomplete. Crucial details such as recipient email addresses or complete meeting times were frequently missing from voice memos, meaning emails could not safely be dispatched without manual review.',
+    whatWasHappening: 'Unvalidated AI generation risked sending flawed or hallucinated emails to high-value external partners. Unprotected endpoints created vulnerability to unauthorized users triggering expensive AI operations and consuming API credits. There was zero persistent audit trail or deterministic lifecycle tracking, and automation failures failed silently without structured alert payloads.',
+    theOpportunity: 'Build a reliable, fault-tolerant automation system that can understand a spoken instruction, identify missing information, ask for clarification in a conversational loop, create a structured email draft, wait for explicit human approval, and safely complete the workflow with complete database auditability.',
+    ourApproach: 'Pinnancle Group engineered an event-driven n8n production pipeline backed by Supabase (PostgreSQL), OpenAI Whisper, GPT-4o, and the Telegram Bot API. The architecture enforces strict identity verification before processing audio, transcribes voice notes with high fidelity, uses an AI reasoning node to check parameter completeness, engages in an interactive clarification loop when details are missing, renders formatted draft previews for human-in-the-loop confirmation, dispatches via Gmail API only upon explicit authorization, and logs every transition through a deterministic finite-state machine with centralized error handling.',
+    securityReliability: [
+      { title: 'SECURE', desc: 'Strict Telegram sender ID authentication against Supabase authorization table prevents unauthorized API credit consumption.' },
+      { title: 'VALIDATED', desc: 'AI checks for all essential fields (recipient email, intent, parameters) before allowing email generation.' },
+      { title: 'AUDITABLE', desc: 'Deterministic finite-state machine in PostgreSQL logs every status transition and message payload.' },
+      { title: 'HUMAN-APPROVED', desc: 'Zero autonomous unverified sending; draft preview is rendered in chat and dispatched only upon explicit human confirmation.' },
+      { title: 'FAULT-TOLERANT', desc: 'Centralized error triggers intercept API timeouts or delivery failures, generating diagnostic payloads and notifying admins.' }
+    ],
+    coreFeatures: [
+      {
+        id: 'access-control',
+        title: 'Strict Access Control',
+        tag: 'Security & Cost Protection',
+        desc: 'Every incoming message is checked against an authorized database record in Supabase before the automation continues. This prevents unauthorized users from triggering expensive AI processing and unnecessarily consuming API credits.',
+        visualFlow: [
+          { step: 'Incoming Message', note: 'Telegram webhook payload received' },
+          { step: 'Identity Check', note: 'Query Supabase user table' },
+          { step: 'Authorized?', note: 'Verify active permission record' },
+          { step: 'Continue / Reject', note: 'Proceed to processing or reject instantly' }
+        ]
+      },
+      {
+        id: 'clarification-loop',
+        title: 'AI Clarification Loop',
+        tag: 'Completeness Verification',
+        desc: 'The AI does not blindly generate an email when critical information is missing. The system evaluates whether the instruction is complete. For example, if a user says "Send an email to John telling him I will be late," the system detects that the recipient email is missing, asks "What is John\'s email address?", and resumes the workflow once provided.',
+        visualFlow: [
+          { step: 'Voice Input', note: '"Send an email to John telling him I will be late."' },
+          { step: 'AI Analysis', note: 'Recipient: John · Intent: Late · Email: Missing' },
+          { step: 'Complete?', note: 'Missing critical parameter detected' },
+          { step: 'Clarification Prompt', note: '"What is John\'s email address?"' },
+          { step: 'User Clarification', note: 'User provides email · Workflow resumes' },
+          { step: 'Create Draft', note: 'Draft prepared once all parameters exist' }
+        ]
+      },
+      {
+        id: 'finite-state-machine',
+        title: 'Deterministic Finite-State Machine',
+        tag: 'State & Lifecycle Management',
+        desc: 'The workflow uses a deterministic database lifecycle rather than a simple boolean flag. This provides predictable state management, comprehensive auditing, and safe handling of unfinished workflows.',
+        states: [
+          { name: 'RAW TRANSCRIPT', desc: 'Voice note transcribed into raw text payload' },
+          { name: 'AWAITING CLARIFICATION', desc: 'Pauses execution while awaiting missing parameters' },
+          { name: 'PENDING CONFIRMATION', desc: 'Draft generated and presented for human review' },
+          { name: 'SENT', desc: 'User confirmed; email dispatched via Gmail API' },
+          { name: 'CANCELLED', desc: 'User discarded draft or rejected execution' }
+        ]
+      },
+      {
+        id: 'human-in-the-loop',
+        title: 'Human-in-the-Loop Approval',
+        tag: 'Controlled Execution',
+        desc: 'The AI does not independently dispatch emails based on an uncertain instruction. The workflow prepares the email draft, presents it in Telegram for confirmation, and only proceeds once the user explicitly approves it.',
+        visualFlow: [
+          { step: 'AI Draft Prepared', note: 'Structured subject and body generated' },
+          { step: 'User Reviews Preview', note: 'Formatted card delivered to Telegram' },
+          { step: 'Confirm / Cancel', note: 'Interactive button prompt' },
+          { step: 'Execute Send', note: 'Dispatched via Gmail API upon approval' }
+        ]
+      },
+      {
+        id: 'centralized-error-handling',
+        title: 'Centralized Error Handling',
+        tag: 'Production Fault Tolerance',
+        desc: 'Automation failures (API timeouts, rate limits, database disconnections, or email failures) are captured centrally. The system logs diagnostic telemetry and sends instant alerts to system administrators.',
+        visualFlow: [
+          { step: 'System Error', note: 'API timeout, rate limit, or network fault' },
+          { step: 'Error Handler', note: 'n8n error trigger intercepts failure' },
+          { step: 'Diagnostic Payload', note: 'Compiles stack trace, user ID & timestamp' },
+          { step: 'Admin Notification', note: 'Immediate alert sent to operations team' }
+        ]
+      }
+    ],
+    technologiesDetailed: [
+      { name: 'n8n', role: 'Workflow Orchestration', desc: 'Event-driven visual automation engine hosting webhooks, conditional routers, and execution loops.' },
+      { name: 'OpenAI Whisper', role: 'Speech-to-Text Transcription', desc: 'State-of-the-art neural speech model transcribing voice memos into accurate text across varied accents.' },
+      { name: 'OpenAI GPT-4o', role: 'AI Structuring & Reasoning', desc: 'Understands voice intent, detects missing parameters, formulates clarification prompts, and drafts professional emails.' },
+      { name: 'Supabase', role: 'Database & Auth', desc: 'Real-time database managing user permissions, conversation context, and finite-state machine transitions.' },
+      { name: 'PostgreSQL', role: 'Relational Data Store', desc: 'Deterministic, ACID-compliant storage ensuring persistent audit trails and workflow recovery.' },
+      { name: 'Telegram Bot API', role: 'Voice & Interface Layer', desc: 'Encrypted mobile channel for voice memo intake and interactive inline confirmation buttons.' },
+      { name: 'Gmail API', role: 'Email Dispatch Layer', desc: 'Direct enterprise email delivery with OAuth2 authentication and delivery receipt verification.' },
+      { name: 'REST APIs & Webhooks', role: 'System Interconnectivity', desc: 'Low-latency event communication between cloud components with secure HMAC payloads.' }
+    ],
+    projectOutcomes: [
+      'Reduced manual email preparation and typing overhead for busy executives',
+      'Improved operational control over AI-generated client communication',
+      'Prevented incomplete or erroneous requests from ever being dispatched',
+      'Protected AI and API resources from unauthorized use through database authentication',
+      'Created a fully auditable workflow lifecycle logged in PostgreSQL',
+      'Delivered centralized failure visibility and instant admin alert telemetry',
+      'Enforced mandatory human-in-the-loop approval before final email delivery',
+      'Established a modular, reusable architecture for future enterprise voice automations'
+    ],
+    systemArchitecture: [
+      { layer: 'Telegram Webhook & Access Control', desc: 'Ingests voice note and validates Telegram sender ID against authorized database records in Supabase before invoking AI nodes.' },
+      { layer: 'Audio Ingestion & Whisper Transcription', desc: 'Fetches voice file via Telegram API and converts binary audio into text with high-accuracy speech-to-text.' },
+      { layer: 'AI Semantic Structuring & Completeness Check', desc: 'GPT-4o parses recipient, intent, subject, body, and determines whether any essential parameters are missing.' },
+      { layer: 'Interactive Clarification Loop', desc: 'If key details (such as recipient email) are absent, pauses workflow, prompts user for clarification, and resumes once provided.' },
+      { layer: 'Finite-State Machine (Supabase/Postgres)', desc: 'Transitions lifecycle: RAW_TRANSCRIPT → AWAITING_CLARIFICATION → PENDING_CONFIRMATION → SENT (or CANCELLED).' },
+      { layer: 'Human-in-the-Loop Confirmation & Gmail Dispatch', desc: 'Presents draft review in Telegram; dispatches via Gmail API only upon explicit user confirmation.' },
+      { layer: 'Centralized Error Handling & Audit Log', desc: 'Global error triggers catch API timeouts or delivery faults, compiling diagnostic payloads and alerting admins.' }
+    ],
+    automationWorkflow: [
+      'User records voice memo in Telegram ("Send an email to Sarah...")',
+      'n8n Webhook triggers and verifies user authorization against Supabase table',
+      'Telegram file gateway downloads voice file and routes to OpenAI Whisper',
+      'Whisper transcribes recording into structured text transcript',
+      'OpenAI GPT-4o analyzes intent, extracting recipient, subject, and body',
+      'Validation Router evaluates completeness (Detects missing recipient email)',
+      'Clarification Loop asks user: "What is Sarah\'s email address?"',
+      'User replies with "sarah@example.com" — system enriches payload',
+      'Supabase creates state row: PENDING_CONFIRMATION with draft preview',
+      'Telegram bot sends formatted draft with interactive "Confirm & Send" button',
+      'User clicks "Confirm" — Gmail API executes secure email delivery',
+      'Database updates state to SENT with timestamp; Telegram notifies user of successful delivery'
+    ],
+    technologies: ['n8n', 'OpenAI Whisper', 'GPT-4o', 'Supabase', 'PostgreSQL', 'Telegram Bot API', 'Gmail API', 'REST APIs', 'Webhooks'],
+    results: [
+      { metric: '100%', label: 'Human-Approved Delivery Before Dispatch' },
+      { metric: '0%', label: 'Incomplete or Erroneous Emails Sent' },
+      { metric: '$4,500', label: 'Fixed Production Deployment Investment' },
+      { metric: '$350/mo', label: 'Ongoing Cloud Monitoring & Maintenance' }
+    ],
+    implementationDuration: '2 Weeks + Ongoing Monthly Management',
+    screenshots: [
+      {
+        url: '/images/case-studies/ai-voice-to-email-agent.png',
+        title: 'Complete Production n8n Voice-to-Email Architecture',
+        caption: 'Authentic production canvas showing Telegram Trigger, Switch authorization, Supabase state lookups, Audio check, Whisper transcription, GPT-4o model messaging, validation router, Gmail dispatch, and dual error management.'
+      }
+    ],
+    clientFeedback: {
+      quote: 'Pinnancle Group engineered an automation system that genuinely feels like a senior executive assistant. It does not blindly send half-baked emails; it asks for missing information, drafts a clean message, waits for my confirmation, and logs everything in the database. The $4,500 build fee and $350 monthly maintenance has saved me hours of daily frustration and given me complete peace of mind.',
+      author: 'Operations Leadership',
+      role: 'Managing Partner',
+      company: 'Executive Operations Client'
+    }
+  },
+  {
     slug: 'cleveland-real-estate-ai-ghl',
     title: 'Automated Zillow Inbound Triage & GoHighLevel CRM Sync',
     client: 'Cleveland Real Estate',
@@ -434,6 +589,9 @@ export const caseStudies = [
 ];
 
 export const getCaseStudyBySlug = (slug) => {
+  if (slug === 'ai-voice-to-email' || slug === 'voice-to-email' || slug === 'voice-agent' || slug === 'ai-voice-email') {
+    return caseStudies.find(study => study.slug === 'ai-voice-to-email-agent');
+  }
   if (slug === 'cleveland-real-estate' || slug === 'cleveland') {
     return caseStudies.find(study => study.slug === 'cleveland-real-estate-ai-ghl');
   }
