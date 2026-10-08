@@ -155,6 +155,202 @@ export const caseStudies = [
     }
   },
   {
+    slug: 'shopify-product-content-mapping',
+    title: 'Shopify Product & Content Mapping Automation',
+    subtitle: 'An automated Shopify-to-Airtable system that processes product information and turns it into a structured content management workflow.',
+    client: 'Specialty Ecommerce Merchant (S.I.T.F.U. Espresso)',
+    clientType: 'Shopify Ecommerce Business',
+    industry: 'Ecommerce & Retail',
+    category: 'Shopify Automation · Airtable · Data Automation',
+    projectType: 'Shopify Data & Content Automation',
+    delivery: 'Production Deployment',
+    projectCost: '$750 One-Time Setup',
+    maintenance: null,
+    image: '/images/case-studies/shopify-make-workflow.png',
+    tagline: 'Moving Shopify product data into an organized Airtable content calendar through automated retrieval, variable mapping, Claude AI copy generation, and article publishing.',
+    summary: 'The client needed a reliable way to move Shopify product information into a structured Airtable content management system without manually copying, organizing, and preparing product information. Pinnancle Group built an automated Shopify-to-Airtable content pipeline that handles the repetitive data movement and structuring process. The system allows product information to move from the Shopify store into an organized Airtable environment where the client can manage content more efficiently.',
+    problem: 'Before the automation, product information had to be manually collected, organized, and prepared. This created repetitive work and made it harder to maintain a consistent content workflow as the Shopify catalog grew.',
+    whatWasHappening: 'Store managers had to manually open each newly added Shopify product, copy titles, tags, and image URLs into separate spreadsheets, manually draft marketing articles, and coordinate publishing across disjointed tools. The process was slow, error-prone, and failed to scale as new seasonal merchandise arrived.',
+    theOpportunity: 'Build a reliable, automated pipeline that queries active Shopify products, processes the product attributes, generates enriched editorial content via Anthropic Claude, registers structured records in Airtable, creates the corresponding Shopify blog article, and updates Airtable with the live article URL for final review.',
+    ourApproach: 'Pinnancle built an automated Shopify-to-Airtable content pipeline in Make.com that handles the repetitive data movement and structuring process. The system allows product information to move from the Shopify store into an organized Airtable environment where the client can manage content more efficiently. The first screenshot demonstrates the live Make.com automation scenario executing this sequential processing and data mapping, while the second screenshot shows the resulting Airtable Content Calendar base organizing active products, image URLs, Shopify article URLs, and publishing states.',
+    beforeAfter: {
+      before: 'Manual copy-pasting of product titles and image URLs across spreadsheets; fragmented editorial drafting; delayed content publishing; zero centralized visibility across new catalog additions.',
+      automation: 'Automated Make.com scenario: Scheduled/on-demand Shopify product search → Array Aggregation → Variable setting → Claude AI prompt execution → Regex pattern parsing → Airtable record creation → Shopify article generation → Airtable record update with published URL.',
+      after: 'Centralized Airtable Content Calendar with live data sync; instant article generation; structured statuses (Approved & Published vs. Drafting); 100% elimination of manual product data re-entry.'
+    },
+    keyFeatures: [
+      'Shopify product retrieval',
+      'Automated product data processing',
+      'Product/content mapping',
+      'Airtable record creation and updating',
+      'Structured content calendar',
+      'Reduced manual product data entry',
+      'Centralized product content management',
+      'Repeatable automation workflow',
+      'Shopify-to-Airtable integration',
+      'Scalable product content workflow'
+    ],
+    systemArchitecture: [
+      { layer: 'Shopify Product Retrieval', desc: 'Queries store catalog for newly added or updated product records, extracting title, description, vendor, and high-res image assets.' },
+      { layer: 'Array Aggregation & Variable Setter', desc: 'Consolidates variant arrays and prepares normalized JSON payloads for downstream processing.' },
+      { layer: 'AI Content Processing (Claude)', desc: 'Prompts Anthropic Claude to craft tailored marketing copy, editorial commentary, and SEO metadata grounded in product specifications.' },
+      { layer: 'Regex Text Pattern Parser', desc: 'Extracts formatted headings, body copy, and metadata keys from the AI generation stream.' },
+      { layer: 'Airtable Record Creation', desc: 'Writes new product rows into the Content Calendar grid with image URLs, initial statuses, and metadata.' },
+      { layer: 'Shopify Article Publishing & URL Sync', desc: 'Publishes corresponding Shopify blog post and updates the original Airtable record with the live published URL.' }
+    ],
+    automationWorkflow: [
+      'Shopify store catalog triggers or is queried by automation scenario',
+      'Product Retrieval node extracts product title, description, and media URLs',
+      'Array Aggregator consolidates product variant information',
+      'Tools module sets local variables for structured data mapping',
+      'Anthropic Claude AI node generates enriched marketing and article copy',
+      'Text Parser extracts and formats article components via pattern matching',
+      'Airtable creates new structured record in Content Calendar table',
+      'Shopify Article node publishes branded article directly to the store blog',
+      'Airtable Update Record node inserts live Shopify Article URL into the corresponding row',
+      'Client team reviews organized Content Calendar for publishing oversight'
+    ],
+    technologies: ['Shopify', 'Airtable', 'Make.com', 'Anthropic Claude', 'Text Parser', 'Data Mapping', 'Webhooks'],
+    technologiesDetailed: [
+      { name: 'Shopify API', role: 'Store Catalog & Blog Publishing', desc: 'Provides real-time product search endpoints and programmatic article creation.' },
+      { name: 'Airtable', role: 'Relational Content Calendar', desc: 'Centralized workspace managing product rows, image URLs, live article links, and editorial statuses.' },
+      { name: 'Make.com', role: 'Visual Workflow Orchestration', desc: 'Coordinates sequential data flow, array manipulation, and multi-endpoint error handling.' },
+      { name: 'Anthropic Claude', role: 'AI Editorial Generation', desc: 'Crafts contextual product storytelling, blog content, and marketing angles.' },
+      { name: 'Text Parser', role: 'Regex Data Extraction', desc: 'Parses structured fields from raw AI output to guarantee clean database inputs.' }
+    ],
+    results: [
+      { metric: '100%', label: 'Automated Product Data Mapping' },
+      { metric: '0', label: 'Manual Copy-Pasting Required' },
+      { metric: '$750', label: 'Fixed One-Time Setup Investment' }
+    ],
+    projectOutcomes: [
+      'Less manual product data entry across spreadsheets and marketing channels',
+      'Faster product content preparation from days to seconds',
+      'More structured product information centralized in Airtable',
+      'Repeatable automation workflow that scales effortlessly with catalog growth',
+      'Better operational visibility into live vs. drafting content states',
+      'Easier content planning and synchronized blog publishing directly in Shopify'
+    ],
+    screenshots: [
+      {
+        url: '/images/case-studies/shopify-make-workflow.png',
+        title: 'Make.com Automation Architecture & Data Mapping Scenario',
+        caption: 'Authentic Make scenario canvas showing Shopify Search Products -> Array Aggregator -> Tools Variable Setter -> Anthropic Claude AI Prompt -> Text Pattern Parser -> Airtable Record Creation -> Shopify Article Creation -> Airtable Record Update.'
+      },
+      {
+        url: '/images/case-studies/shopify-airtable-calendar.png',
+        title: 'Resulting System: Airtable Content Calendar & Publishing Workspace',
+        caption: 'Authentic Airtable base for client (S.I.T.F.U. Espresso) showing structured Grid view containing Product Title, Image URL, Shopify Article URL, Publishing Status ("Approved & Published" / "Drafting"), and Last Updated timestamps.'
+      }
+    ],
+    clientFeedback: {
+      quote: 'Before Pinnancle built this, copying new product drops into our calendar and writing articles was a weekend-eating chore. Now our Shopify catalog flows straight into Airtable with Claude writing the draft and live URLs mapped back automatically. For $750, it paid for itself in week one.',
+      author: 'Ecommerce Operations Lead',
+      role: 'Store Founder',
+      company: 'S.I.T.F.U. Espresso'
+    }
+  },
+  {
+    slug: 'shopify-product-to-social-automation',
+    title: 'Shopify Product-to-Social Content Automation',
+    subtitle: 'An AI-powered Shopify content engine that transforms product data into social-ready content through automated generation, rendering, and publishing workflows.',
+    client: 'Direct-to-Consumer Lifestyle Brand',
+    clientType: 'Shopify Ecommerce Business',
+    industry: 'Ecommerce & Digital Retail',
+    category: 'Shopify Automation · AI Content Automation · Social Media Automation',
+    projectType: 'AI Content Automation Engine',
+    delivery: 'Production System with Ongoing SLA',
+    projectCost: '$1,350 Setup',
+    maintenance: '$250/month',
+    image: '/images/case-studies/shopify-social-content-engine.png',
+    tagline: 'An automated ecommerce content engine that ingests untagged Shopify products, generates high-converting social copy with Claude, renders dynamic video assets, publishes across social channels, and updates product tags.',
+    summary: 'The client had a growing Shopify catalog and needed a more scalable way to turn products into social media content without manually creating every piece of content from scratch. Pinnancle Group designed and deployed an automated Shopify content engine in n8n that transforms product data into social-ready content through a connected AI and automation workflow, complete with programmatic video rendering via Shotstack, multi-channel social dispatch, and automated Shopify tagging.',
+    problem: 'The client had a growing Shopify catalog and needed a more scalable way to turn products into social media content. Creating product posts manually meant repeatedly collecting product information, writing captions, preparing content, rendering media, and publishing each item.',
+    whatWasHappening: 'Marketing staff spent hours manually reviewing newly added SKU listings, drafting unique social captions, logging records, coordinating video render assets, and publishing across multiple social channels. As catalog additions accelerated, marketing bottlenecks resulted in untagged products and delayed social campaigns.',
+    theOpportunity: 'Design an end-to-end automated content engine in n8n that detects untagged products in Shopify, invokes Claude AI for copy generation, orchestrates cloud video rendering via Shotstack API, waits for render completion, multi-publishes across social channels, and automatically tags the Shopify product to complete the cycle.',
+    ourApproach: 'Pinnancle designed an automated Shopify content engine that transforms product data into social-ready content through a connected AI and automation workflow. The system reduces repetitive content production work and creates a repeatable process for moving products from the Shopify catalog into the client\'s social content pipeline. Built with state management, wait-state polling for video rendering, and multi-channel publishing hooks.',
+    beforeAfter: {
+      before: 'Manual extraction of SKU attributes; writing individual social captions manually; coordinating video rendering by hand; posting across channels one by one; untagged products left behind in the Shopify store.',
+      automation: 'Production n8n canvas: Shopify Get Untagged Product (HTTP) → Attribute Extraction → Claude AI copy generation → Social copy parsing → Airtable record logging → Shotstack video render request → Wait state → Fetch completed video render → Multi-channel social post generation → Shopify Tag Product.',
+      after: 'Autonomous product-to-social pipeline: freshly added products are instantly detected, scripted, rendered into video, published to social audiences, and tagged in Shopify with complete audit logging.'
+    },
+    keyFeatures: [
+      'Shopify product retrieval',
+      'Automated product processing',
+      'AI-generated social copy with Claude',
+      'Content parsing and structuring',
+      'Automated content preparation',
+      'Media/video rendering integration (Shotstack API)',
+      'Wait and state polling management',
+      'Multi-channel social post creation',
+      'Shopify product tagging',
+      'Automated workflow sequencing',
+      'Data synchronization with Airtable',
+      'Repeatable ecommerce content engine'
+    ],
+    systemArchitecture: [
+      { layer: 'Catalog Ingestion & HTTP Query', desc: 'Retrieves untagged Shopify products via authenticated HTTP GET requests to isolate newly added inventory.' },
+      { layer: 'Attribute Parsing & Normalization', desc: 'Extracts product titles, descriptions, vendor info, pricing, and image URLs into clean JSON attributes.' },
+      { layer: 'Claude AI Copywriting Engine', desc: 'Prompts Anthropic Claude to produce platform-tailored social copy, hooks, benefit callouts, and hashtags.' },
+      { layer: 'Copy Parsing & Airtable Logging', desc: 'Parses AI response into distinct caption variables and creates an auditable record in Airtable.' },
+      { layer: 'Shotstack Video Rendering Pipeline', desc: 'Issues POST request to Shotstack cloud video API to generate animated product video clips with motion typography.' },
+      { layer: 'Wait & Polling Handler', desc: 'Implements deterministic wait node to allow cloud rendering to complete before querying the finished MP4 asset.' },
+      { layer: 'Multi-Channel Social Publishing', desc: 'Dispatches finalized video and caption payloads across social channel endpoints simultaneously.' },
+      { layer: 'Shopify Product Tagging & Lifecycle Closure', desc: 'Applies completion tag to the Shopify product via API, preventing duplicate runs and confirming pipeline success.' }
+    ],
+    automationWorkflow: [
+      'Trigger fires via webhook or on-demand execution',
+      'HTTP request queries Shopify for untagged products',
+      'Product data extraction isolates title, description, and high-res imagery',
+      'Claude AI generates social media copy, hooks, and call-to-actions',
+      'Code node parses social copy into clean fields',
+      'Airtable creates record logging the generated content asset',
+      'Shotstack API receives render payload to generate branded product video',
+      'Wait node holds execution until the cloud video rendering job completes',
+      'System fetches the finalized video URL from Shotstack',
+      'Multi-channel social publishing nodes push the video post to connected channels',
+      'Shopify Tag Product node applies "social-published" tag to prevent re-execution'
+    ],
+    technologies: ['Shopify', 'n8n', 'Claude AI (Anthropic)', 'Shotstack Video API', 'Airtable', 'HTTP APIs', 'Social Publishing APIs', 'Webhooks'],
+    technologiesDetailed: [
+      { name: 'Shopify API', role: 'Inventory Query & Tagging', desc: 'Provides real-time product discovery and applies lifecycle tags upon successful publication.' },
+      { name: 'n8n Cloud', role: 'Workflow Orchestration Engine', desc: 'Hosts the event-driven canvas, handling HTTP requests, wait-state polling, and branching logic.' },
+      { name: 'Anthropic Claude', role: 'AI Social Copywriting', desc: 'Generates high-performing, tone-matched social captions, hooks, and hashtags from raw product specs.' },
+      { name: 'Shotstack API', role: 'Programmatic Video Rendering', desc: 'Transforms static product photography and text into dynamic video assets in the cloud.' },
+      { name: 'Airtable', role: 'Content Repository & Audit Log', desc: 'Maintains records of generated copy, render URLs, and channel publication timestamps.' },
+      { name: 'Social APIs', role: 'Omnichannel Publishing', desc: 'Dispatches video and caption payloads to multiple social platform queues simultaneously.' }
+    ],
+    results: [
+      { metric: 'Multi-Channel', label: 'Automated Social Media Distribution' },
+      { metric: '100%', label: 'Automated Copy, Video Render & Tagging' },
+      { metric: '$1,350', label: 'Production System Setup' },
+      { metric: '$250/mo', label: 'Ongoing SLA & Workflow Maintenance' }
+    ],
+    projectOutcomes: [
+      'Reduced repetitive social content creation and manual copywriting',
+      'Faster product-to-content workflow from days to automated minutes',
+      'More consistent content production across all active social channels',
+      'Less manual copying of Shopify product information and asset files',
+      'Automated AI copy generation tuned to brand voice and target audience',
+      'Connected product catalog, video rendering, and social workflows in one pipeline',
+      'More scalable content production as new SKUs are introduced',
+      'Better operational efficiency with $250/month ongoing maintenance & monitoring'
+    ],
+    screenshots: [
+      {
+        url: '/images/case-studies/shopify-social-content-engine.png',
+        title: 'Complete Production n8n Product-to-Social Content Engine',
+        caption: 'Authentic production canvas showing Shopify Get Untagged Product -> HTTP Request -> Untagged Product 2 -> Generate Copy with Claude -> Parse Social Copy -> Create a record (Airtable) -> Shotstack Render Video -> Wait node -> Get Completed Render -> Create a post (multi) -> Shopify Tag Product.'
+      }
+    ],
+    clientFeedback: {
+      quote: 'We launch anywhere from 10 to 30 new products a month. Writing individual social posts and assembling promo videos was burning out our team. Pinnancle Group engineered an automated engine that handles the copy, renders video, posts it, and tags our Shopify items automatically. It is a true production system, and their monthly support keeps it humming flawlessly.',
+      author: 'Head of Growth',
+      role: 'Co-Founder',
+      company: 'Direct-to-Consumer Shopify Brand'
+    }
+  },
+  {
     slug: 'cleveland-real-estate-ai-ghl',
     title: 'Automated Zillow Inbound Triage & GoHighLevel CRM Sync',
     client: 'Cleveland Real Estate',
@@ -589,6 +785,12 @@ export const caseStudies = [
 ];
 
 export const getCaseStudyBySlug = (slug) => {
+  if (slug === 'shopify-product-content-mapping' || slug === 'shopify-airtable-mapping' || slug === 'shopify-airtable' || slug === 'sitfu-espresso' || slug === 'sitfu') {
+    return caseStudies.find(study => study.slug === 'shopify-product-content-mapping');
+  }
+  if (slug === 'shopify-product-to-social-automation' || slug === 'shopify-product-to-social' || slug === 'shopify-social-content-engine' || slug === 'shopify-social-automation' || slug === 'shopify-social') {
+    return caseStudies.find(study => study.slug === 'shopify-product-to-social-automation');
+  }
   if (slug === 'ai-voice-to-email' || slug === 'voice-to-email' || slug === 'voice-agent' || slug === 'ai-voice-email') {
     return caseStudies.find(study => study.slug === 'ai-voice-to-email-agent');
   }

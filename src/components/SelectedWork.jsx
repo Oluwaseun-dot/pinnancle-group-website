@@ -112,7 +112,7 @@ export default function SelectedWork() {
                     <div className="pt-4 border-t border-brand-border flex items-center justify-between">
                       {study.projectCost && (
                         <div className="text-xs font-mono text-brand-silver">
-                          Investment: <span className="text-white font-medium">{study.projectCost}</span>
+                          Investment: <span className="text-white font-medium">{study.maintenance ? `${study.projectCost} · ${study.maintenance}` : study.projectCost}</span>
                         </div>
                       )}
                       <Link

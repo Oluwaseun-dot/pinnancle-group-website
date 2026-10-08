@@ -229,6 +229,52 @@ export default function CaseStudyPage() {
             </p>
           </div>
 
+          {/* Before -> Automation -> After Operational Transformation Matrix */}
+          {study.beforeAfter && (
+            <div className="space-y-6">
+              <div className="space-y-2">
+                <span className="text-xs font-mono uppercase tracking-widest text-brand-lime font-semibold">
+                  Operational Transformation
+                </span>
+                <h3 className="text-2xl sm:text-3xl font-display font-bold text-white">
+                  Before → Automation → After
+                </h3>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div className="p-6 rounded-2xl bg-brand-charcoal border border-red-500/20 space-y-3">
+                  <div className="flex items-center gap-2 text-xs font-mono font-bold text-red-400">
+                    <span className="w-2 h-2 rounded-full bg-red-400" />
+                    <span>01. BEFORE AUTOMATION</span>
+                  </div>
+                  <p className="text-xs sm:text-sm text-brand-silver leading-relaxed">
+                    {study.beforeAfter.before}
+                  </p>
+                </div>
+
+                <div className="p-6 rounded-2xl bg-brand-charcoal border border-brand-lime/40 space-y-3">
+                  <div className="flex items-center gap-2 text-xs font-mono font-bold text-brand-lime">
+                    <span className="w-2 h-2 rounded-full bg-brand-lime animate-pulse" />
+                    <span>02. THE AUTOMATED ENGINE</span>
+                  </div>
+                  <p className="text-xs sm:text-sm text-white leading-relaxed">
+                    {study.beforeAfter.automation}
+                  </p>
+                </div>
+
+                <div className="p-6 rounded-2xl bg-brand-charcoal border border-emerald-500/30 space-y-3">
+                  <div className="flex items-center gap-2 text-xs font-mono font-bold text-emerald-400">
+                    <span className="w-2 h-2 rounded-full bg-emerald-400" />
+                    <span>03. SYSTEM-LEVEL RESULT</span>
+                  </div>
+                  <p className="text-xs sm:text-sm text-brand-silver leading-relaxed">
+                    {study.beforeAfter.after}
+                  </p>
+                </div>
+              </div>
+            </div>
+          )}
+
           {/* Built for Reliability, Not Just Demonstration - Security & Reliability Grid */}
           {study.securityReliability && (
             <div className="space-y-6">
@@ -353,6 +399,30 @@ export default function CaseStudyPage() {
           {/* Interactive Agent Simulator Widget (for voice-to-email case study) */}
           {study.slug === 'ai-voice-to-email-agent' && (
             <VoiceToEmailSimulator />
+          )}
+
+          {/* Key System Features */}
+          {study.keyFeatures && study.keyFeatures.length > 0 && (
+            <div className="space-y-6">
+              <div className="space-y-2">
+                <span className="text-xs font-mono uppercase tracking-widest text-brand-lime font-semibold">
+                  Core Capabilities
+                </span>
+                <h3 className="text-2xl sm:text-3xl font-display font-bold text-white">
+                  Key System Features & Automation Modules
+                </h3>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                {study.keyFeatures.map((feat, idx) => (
+                  <div key={idx} className="flex items-center gap-3 p-4 rounded-xl bg-brand-charcoal border border-brand-border">
+                    <CheckCircle2 className="w-4 h-4 text-brand-lime shrink-0" />
+                    <span className="text-xs sm:text-sm text-brand-offWhite font-medium">
+                      {feat}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
           )}
 
           {/* Multi-Layer System Architecture */}
@@ -485,6 +555,30 @@ export default function CaseStudyPage() {
                   Click any artifact to enlarge & inspect workflow
                 </p>
               </div>
+
+              {study.slug === 'shopify-product-content-mapping' && (
+                <div className="p-4 sm:p-5 rounded-2xl bg-brand-charcoal border border-brand-lime/30 text-xs text-brand-silver leading-relaxed space-y-1.5">
+                  <span className="text-white font-mono font-bold block flex items-center gap-2">
+                    <span className="w-2 h-2 rounded-full bg-brand-lime" />
+                    Workflow Engine vs. Resulting Centralized System
+                  </span>
+                  <p>
+                    The two authentic artifacts below document the complete implementation: <strong>Artifact 01</strong> shows the live Make.com automation scenario retrieving Shopify products, mapping attributes, prompting Claude AI, and creating articles. <strong>Artifact 02</strong> shows the resulting Airtable Content Calendar workspace where the client manages approved and drafted product publications.
+                  </p>
+                </div>
+              )}
+
+              {study.slug === 'shopify-product-to-social-automation' && (
+                <div className="p-4 sm:p-5 rounded-2xl bg-brand-charcoal border border-brand-lime/30 text-xs text-brand-silver leading-relaxed space-y-1.5">
+                  <span className="text-white font-mono font-bold block flex items-center gap-2">
+                    <span className="w-2 h-2 rounded-full bg-brand-lime" />
+                    Production Architecture & Execution Pipeline
+                  </span>
+                  <p>
+                    The production canvas below demonstrates the full automated pipeline: from automated HTTP retrieval of untagged Shopify products, through Claude AI social copywriting and code parsing, to asynchronous cloud video rendering via Shotstack API, deterministic wait-state polling, multi-channel social post generation, and lifecycle tagging on the Shopify store.
+                  </p>
+                </div>
+              )}
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {study.screenshots.map((shot, idx) => (

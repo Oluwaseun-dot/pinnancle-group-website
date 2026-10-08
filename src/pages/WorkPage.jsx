@@ -14,6 +14,7 @@ export default function WorkPage() {
   const filterOptions = [
     'All',
     'AI Automation',
+    'Shopify Automation',
     'CRM',
     'Websites',
     'Ecommerce',
@@ -23,6 +24,7 @@ export default function WorkPage() {
 
   const filteredProjects = caseStudies.filter((study) => {
     if (selectedFilter === 'All') return true;
+    if (selectedFilter === 'Shopify Automation') return study.category.includes('Shopify') || study.technologies.some(t => t.toLowerCase().includes('shopify'));
     if (selectedFilter === 'CRM') return study.category.includes('CRM') || study.technologies.some(t => t.includes('CRM') || t.includes('Airtable') || t.includes('GoHighLevel'));
     if (selectedFilter === 'Ecommerce') return study.category.includes('Ecommerce') || study.category.includes('Shopify');
     if (selectedFilter === 'Business Automation') return study.category.includes('Workflow') || study.category.includes('Automation') || study.category.includes('API');
@@ -102,8 +104,8 @@ export default function WorkPage() {
                   </span>
                   <div className="flex items-center gap-2">
                     {project.projectCost && (
-                      <span className="text-[11px] font-mono px-2 py-0.5 rounded bg-brand-dark border border-brand-lime/40 text-brand-lime font-semibold">
-                        Fee: {project.projectCost}
+                      <span className="text-[11px] font-mono px-2.5 py-0.5 rounded bg-brand-dark border border-brand-lime/40 text-brand-lime font-semibold">
+                        {project.maintenance ? `${project.projectCost} · ${project.maintenance}` : project.projectCost}
                       </span>
                     )}
                     <span className="text-[11px] font-mono text-brand-silver">
@@ -140,7 +142,7 @@ export default function WorkPage() {
 
               {/* Technologies & CTA link */}
               <div className="pt-6 mt-8 border-t border-brand-border flex items-center justify-between">
-                <div className="flex flex-wrap gap-1.5 max-w-[65%]">
+                <div className="flex flex-wrap gap-1.5 max-w-[60%]">
                   {project.technologies.slice(0, 3).map((t, idx) => (
                     <span key={idx} className="text-[10px] font-mono px-2 py-0.5 rounded bg-brand-dark border border-brand-border text-brand-silver">
                       {t}
@@ -152,9 +154,9 @@ export default function WorkPage() {
                   to={`/work/${project.slug}`}
                   data-cursor="project"
                   data-cursor-label="VIEW CASE STUDY"
-                  className="inline-flex items-center gap-1.5 text-xs font-semibold text-white hover:text-brand-lime transition-colors group/btn"
+                  className="inline-flex items-center gap-1.5 text-xs font-mono font-semibold text-white hover:text-brand-lime transition-colors group/btn"
                 >
-                  <span>Case Study</span>
+                  <span>View Case Study</span>
                   <ArrowRight className="w-3.5 h-3.5 group-hover/btn:translate-x-1" />
                 </Link>
               </div>
