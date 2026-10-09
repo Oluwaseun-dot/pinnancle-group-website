@@ -25,6 +25,8 @@ const AboutPage = lazy(() => import('./pages/AboutPage'));
 const InsightsPage = lazy(() => import('./pages/InsightsPage'));
 const BookPage = lazy(() => import('./pages/BookPage'));
 const ContactPage = lazy(() => import('./pages/ContactPage'));
+const AutomationDemoPage = lazy(() => import('./pages/AutomationDemoPage'));
+const AutomationAssessmentPage = lazy(() => import('./pages/AutomationAssessmentPage'));
 
 // Lightweight route transition fallback
 const RouteFallback = () => (
@@ -77,6 +79,10 @@ export default function App() {
                 <Route path="/insights" element={<InsightsPage />} />
                 <Route path="/book" element={<BookPage />} />
                 <Route path="/contact" element={<ContactPage />} />
+                <Route path="/automation-demo" element={<AutomationDemoPage />} />
+                <Route path="/demo" element={<AutomationDemoPage />} />
+                <Route path="/automation-assessment" element={<AutomationAssessmentPage />} />
+                <Route path="/assessment" element={<AutomationAssessmentPage />} />
                 {/* Catch-all redirect to Home */}
                 <Route path="*" element={<HomePage />} />
               </Routes>

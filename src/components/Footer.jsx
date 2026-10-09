@@ -174,12 +174,14 @@ export default function Footer() {
               COMPANY
             </p>
             <ul className="space-y-2 text-xs text-brand-silver">
-              <li><Link to="/about" className="hover:text-white transition-colors">About</Link></li>
+              <li><Link to="/about" className="hover:text-white transition-colors">About Us</Link></li>
               <li><Link to="/about#story" className="hover:text-white transition-colors">Our Story</Link></li>
               <li><Link to="/team" className="hover:text-white transition-colors">Our Team</Link></li>
-              <li><Link to="/work" className="hover:text-white transition-colors">Our Work</Link></li>
+              <li><Link to="/work" className="hover:text-white transition-colors">Selected Work</Link></li>
+              <li><Link to="/automation-demo" className="text-brand-lime hover:underline transition-colors">Automation Demos</Link></li>
+              <li><Link to="/automation-assessment" className="text-brand-lime hover:underline transition-colors">Assessment & ROI</Link></li>
               <li><Link to="/insights" className="hover:text-white transition-colors">Insights</Link></li>
-              <li><Link to="/contact" className="hover:text-white transition-colors">Contact</Link></li>
+              <li><Link to="/contact" className="hover:text-white transition-colors">Contact Desk</Link></li>
             </ul>
           </div>
 

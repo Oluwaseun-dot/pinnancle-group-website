@@ -32,9 +32,9 @@ export default function AiSalesAssistant() {
 
   const quickPrompts = [
     'What can you automate?',
-    'What services do you offer?',
+    'See live demos',
+    'Calculate time saved',
     'I want to book a consultation',
-    'Can you automate my business?',
     'Show me your work'
   ];
 
@@ -98,6 +98,20 @@ export default function AiSalesAssistant() {
       return {
         text: 'For Shopify store owners, we build automations that connect your store to Airtable content calendars, generate marketing copy with Claude AI, render promotional videos with Shotstack, and dispatch multi-channel social posts automatically when new SKUs are added.',
         showWorkLink: true
+      };
+    }
+
+    if (q.includes('demo') || q.includes('simulation') || q.includes('see in action') || q.includes('action')) {
+      return {
+        text: 'You can test simulated live customer conversations across HVAC, Real Estate, Dental Clinic, Automotive, and Shopify on our dedicated Automation Demos page.',
+        showDemoLink: true
+      };
+    }
+
+    if (q.includes('assess') || q.includes('calculator') || q.includes('roi') || q.includes('hours') || q.includes('time saved') || q.includes('save time')) {
+      return {
+        text: 'You can evaluate your business operations using our 7-question readiness diagnostic and calculate the exact hours and labor costs your team could save on our Assessment & Calculator page.',
+        showAssessmentLink: true
       };
     }
 
@@ -265,6 +279,30 @@ export default function AiSalesAssistant() {
                         className="inline-flex items-center gap-1 text-[11px] font-mono text-brand-lime hover:underline"
                       >
                         View Portfolio Case Studies →
+                      </Link>
+                    </div>
+                  )}
+
+                  {msg.showDemoLink && (
+                    <div className="mt-3 pt-2.5 border-t border-brand-border/60 flex gap-2">
+                      <Link
+                        to="/automation-demo"
+                        onClick={() => setIsOpen(false)}
+                        className="inline-flex items-center gap-1 text-[11px] font-mono text-brand-lime hover:underline"
+                      >
+                        Open Automation Demos →
+                      </Link>
+                    </div>
+                  )}
+
+                  {msg.showAssessmentLink && (
+                    <div className="mt-3 pt-2.5 border-t border-brand-border/60 flex gap-2">
+                      <Link
+                        to="/automation-assessment"
+                        onClick={() => setIsOpen(false)}
+                        className="inline-flex items-center gap-1 text-[11px] font-mono text-brand-lime hover:underline"
+                      >
+                        Start Assessment & ROI Calculator →
                       </Link>
                     </div>
                   )}

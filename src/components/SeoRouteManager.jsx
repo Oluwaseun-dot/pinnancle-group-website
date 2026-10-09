@@ -41,6 +41,14 @@ const routeSeoMap = {
   '/contact': {
     title: 'Contact Commercial Desk | Pinnancle Group',
     description: 'Get in touch with our leadership and technical teams in London and Lagos. Direct email, WhatsApp, and consultation inquiry.'
+  },
+  '/automation-demo': {
+    title: 'Interactive AI Automation Demos | Pinnancle Group',
+    description: 'Experience simulated live customer conversations across multiple industries showing how AI qualifies leads, books appointments, and updates CRMs automatically.'
+  },
+  '/automation-assessment': {
+    title: 'AI Automation Assessment & ROI Calculator | Pinnancle Group',
+    description: 'Evaluate your business operations with our 7-question readiness diagnostic and calculate the exact hours and labor costs your team could save.'
   }
 };
 
