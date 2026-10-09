@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Bot, Workflow, Database, Monitor, FileText, Video, ArrowRight, CheckCircle2, Sparkles } from 'lucide-react';
 import MagneticButton from './MagneticButton';
+import ScrollReveal from './ScrollReveal';
 
 const servicesSummary = [
   {
@@ -80,32 +81,34 @@ const servicesSummary = [
 
 export default function ServicesOverview() {
   return (
-    <section id="services-overview" className="py-20 sm:py-28 md:py-36 bg-brand-black text-brand-offWhite relative border-t border-brand-border">
+    <section id="services-overview" className="py-14 sm:py-18 md:py-20 bg-brand-black text-brand-offWhite relative border-t border-brand-border">
       <div className="max-w-7xl mx-auto px-5 sm:px-6 md:px-12 relative z-10">
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 sm:mb-20">
-          <div className="max-w-2xl">
-            <span className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/5 border border-brand-border text-brand-silver text-xs font-mono uppercase tracking-widest mb-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-brand-lime" />
-              Core Capabilities
-            </span>
-            <h2 className="text-3xl sm:text-5xl md:text-6xl font-display font-bold tracking-tight text-white leading-[1.08]">
-              What We Do.
-            </h2>
-            <p className="text-sm sm:text-base md:text-lg text-brand-silver mt-4 leading-relaxed font-normal">
-              We design and deploy autonomous AI systems, business automations, enterprise CRMs, and high-performance websites that keep companies organized and operating at speed.
-            </p>
-          </div>
+        <ScrollReveal>
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 sm:mb-14">
+            <div className="max-w-2xl">
+              <span className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/5 border border-brand-border text-brand-silver text-xs font-mono uppercase tracking-widest mb-4">
+                <span className="w-1.5 h-1.5 rounded-full bg-brand-lime" />
+                Core Capabilities
+              </span>
+              <h2 className="text-3xl sm:text-5xl md:text-6xl font-display font-bold tracking-tight text-white leading-[1.08]">
+                What We Do.
+              </h2>
+              <p className="text-sm sm:text-base md:text-lg text-brand-silver mt-4 leading-relaxed font-normal">
+                We design and deploy autonomous AI systems, business automations, enterprise CRMs, and high-performance websites that keep companies organized and operating at speed.
+              </p>
+            </div>
 
-          <div className="flex flex-col sm:items-end gap-2.5">
-            <MagneticButton to="/services#pricing" variant="primary" size="md" showArrow={true}>
-              View All Services & Pricing
-            </MagneticButton>
-            <p className="text-xs text-brand-silver sm:text-right max-w-xs leading-relaxed">
-              Explore our services, compare packages, and find the right solution for your business.
-            </p>
+            <div className="flex flex-col sm:items-end gap-2.5">
+              <MagneticButton to="/services#pricing" variant="primary" size="md" showArrow={true}>
+                View All Services & Pricing
+              </MagneticButton>
+              <p className="text-xs text-brand-silver sm:text-right max-w-xs leading-relaxed">
+                Explore our services, compare packages, and find the right solution for your business.
+              </p>
+            </div>
           </div>
-        </div>
+        </ScrollReveal>
 
         {/* 6 Services Grid with Images */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">

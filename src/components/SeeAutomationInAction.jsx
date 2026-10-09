@@ -127,7 +127,7 @@ export default function SeeAutomationInAction() {
   const displayedMessages = allMessages.slice(0, currentStepIndex + 1);
 
   return (
-    <section id="demo" className="py-24 sm:py-32 md:py-40 bg-brand-black text-brand-offWhite relative border-t border-brand-border overflow-hidden">
+    <section id="demo" className="py-14 sm:py-18 md:py-20 bg-brand-black text-brand-offWhite relative border-t border-brand-border overflow-hidden">
       {/* Background Ambience Grid & Glow */}
       <div className="absolute inset-0 z-0 pointer-events-none select-none">
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] h-[450px] bg-brand-lime/[0.03] rounded-full blur-[140px]" />
@@ -138,7 +138,7 @@ export default function SeeAutomationInAction() {
         {/* ========================================================
             01. SECTION INTRO
            ======================================================== */}
-        <div className="max-w-4xl mx-auto text-center mb-16 sm:mb-20">
+        <div className="max-w-4xl mx-auto text-center mb-10 sm:mb-12">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-charcoal/90 border border-brand-border text-xs font-mono uppercase tracking-widest text-brand-lime font-semibold mb-6 shadow-xl backdrop-blur-md">
             <span className="w-2 h-2 rounded-full bg-brand-lime animate-pulse" />
             <span>LIVE AUTOMATION DEMO</span>
@@ -160,7 +160,7 @@ export default function SeeAutomationInAction() {
         {/* ========================================================
             02. BUSINESS SELECTOR TABS
            ======================================================== */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2.5 sm:gap-3 mb-10 sm:mb-14">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2.5 sm:gap-3 mb-8 sm:mb-10">
           {businessDemos.map((b) => {
             const isSelected = b.id === selectedBusinessId;
             const IconComponent = iconMap[b.icon] || MessageSquare;

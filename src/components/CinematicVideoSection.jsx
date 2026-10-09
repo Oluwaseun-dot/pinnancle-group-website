@@ -129,7 +129,7 @@ export default function CinematicVideoSection() {
   };
 
   return (
-    <section id="technology-philosophy" className="py-28 md:py-36 bg-brand-black relative border-t border-brand-border">
+    <section id="technology-philosophy" className="py-14 sm:py-18 md:py-20 bg-brand-black relative border-t border-brand-border">
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         
         {/* Section Header Above Video Container */}

@@ -106,12 +106,12 @@ export default function ServicesPage() {
   ];
 
   return (
-    <div className="pt-28 sm:pt-32 pb-24 bg-brand-black text-brand-offWhite min-h-screen">
+    <div className="pt-24 sm:pt-28 pb-16 bg-brand-black text-brand-offWhite min-h-screen">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         {/* ==================================================
             1. HERO SECTION
             ================================================== */}
-        <section className="max-w-4xl mb-20 sm:mb-28">
+        <section className="max-w-4xl mb-14 sm:mb-18">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-brand-border text-brand-lime text-xs font-mono uppercase tracking-widest mb-6">
             <span className="w-1.5 h-1.5 rounded-full bg-brand-lime" />
             Core Practice Areas & Services

@@ -143,10 +143,10 @@ export default function PlatformMarquee() {
   return (
     <section
       id="tools-platforms"
-      className="py-16 sm:py-20 bg-brand-dark/60 border-y border-brand-border/80 relative overflow-hidden"
+      className="py-10 sm:py-12 bg-brand-dark/60 border-y border-brand-border/80 relative overflow-hidden"
       aria-label="Tools and platforms we work with"
     >
-      <div className="max-w-7xl mx-auto px-5 sm:px-6 md:px-12 mb-8 sm:mb-10 text-center">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 md:px-12 mb-6 sm:mb-8 text-center">
         <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/5 border border-brand-border text-brand-silver text-xs font-mono uppercase tracking-widest mb-3">
           <Layers className="w-3.5 h-3.5 text-brand-lime" />
           <span>Integrations & Tech Stack</span>

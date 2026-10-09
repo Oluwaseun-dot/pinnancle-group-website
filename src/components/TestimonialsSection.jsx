@@ -3,6 +3,7 @@ import { Star, ShieldCheck, ChevronLeft, ChevronRight, ArrowRight, Quote, Sparkl
 import { Link } from 'react-router-dom';
 import { testimonialsData, clientLogos } from '../data/testimonialsData';
 import MagneticButton from './MagneticButton';
+import ScrollReveal from './ScrollReveal';
 
 const categories = [
   'All',
@@ -48,16 +49,17 @@ export default function TestimonialsSection() {
   };
 
   return (
-    <section id="testimonials" className="py-20 sm:py-28 md:py-36 bg-brand-black text-brand-offWhite relative border-t border-brand-border">
+    <section id="testimonials" className="py-14 sm:py-18 md:py-20 bg-brand-black text-brand-offWhite relative border-t border-brand-border">
       <div className="max-w-7xl mx-auto px-5 sm:px-6 md:px-12 relative z-10">
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 sm:mb-16">
-          <div className="max-w-2xl">
-            <span className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/5 border border-brand-border text-brand-lime text-xs font-mono uppercase tracking-widest mb-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-brand-lime" />
-              Verified Client Outcomes
-            </span>
-            <h2 className="text-3xl sm:text-5xl md:text-6xl font-display font-bold tracking-tight text-white leading-[1.08]">
+        <ScrollReveal>
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 sm:mb-12">
+            <div className="max-w-2xl">
+              <span className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/5 border border-brand-border text-brand-lime text-xs font-mono uppercase tracking-widest mb-4">
+                <span className="w-1.5 h-1.5 rounded-full bg-brand-lime" />
+                Verified Client Outcomes
+              </span>
+              <h2 className="text-3xl sm:text-5xl md:text-6xl font-display font-bold tracking-tight text-white leading-[1.08]">
               Trusted by Businesses <br />
               <span className="text-brand-silver">Ready to Grow.</span>
             </h2>
@@ -91,6 +93,7 @@ export default function TestimonialsSection() {
             </div>
           )}
         </div>
+      </ScrollReveal>
 
         {/* Category Filter Pills */}
         <div className="flex items-center gap-2 overflow-x-auto pb-4 mb-8 no-scrollbar">

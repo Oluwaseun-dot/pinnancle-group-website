@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, ArrowUpRight } from 'lucide-react';
 import { caseStudies } from '../data/caseStudiesData';
 import MagneticButton from './MagneticButton';
+import ScrollReveal from './ScrollReveal';
 
 const conciseCardDescriptions = {
   'ai-voice-to-email-agent':
@@ -17,33 +18,35 @@ export default function SelectedWork() {
   const featured = caseStudies.slice(0, 3);
 
   return (
-    <section id="work" className="py-20 sm:py-28 md:py-36 bg-brand-black text-brand-offWhite relative border-t border-brand-border">
+    <section id="work" className="py-14 sm:py-18 md:py-20 bg-brand-black text-brand-offWhite relative border-t border-brand-border">
       <div className="max-w-7xl mx-auto px-5 sm:px-6 md:px-12 relative z-10">
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 sm:mb-20">
-          <div className="max-w-2xl">
-            <span className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/5 border border-brand-border text-brand-silver text-xs font-mono uppercase tracking-widest mb-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-brand-lime" />
-              Selected Client Systems
-            </span>
-            <h2 className="text-3xl sm:text-5xl md:text-6xl font-display font-bold tracking-tight text-white leading-[1.08]">
-              Real Systems. <br />
-              <span className="text-brand-silver">Real Businesses.</span>
-            </h2>
-            <p className="text-sm sm:text-base md:text-lg text-brand-silver mt-4 leading-relaxed font-normal">
-              A selected showcase of live client automation pipelines, CRM deployments, and digital systems built for expanding companies.
-            </p>
-          </div>
+        <ScrollReveal>
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 sm:mb-14">
+            <div className="max-w-2xl">
+              <span className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/5 border border-brand-border text-brand-silver text-xs font-mono uppercase tracking-widest mb-4">
+                <span className="w-1.5 h-1.5 rounded-full bg-brand-lime" />
+                Selected Client Systems
+              </span>
+              <h2 className="text-3xl sm:text-5xl md:text-6xl font-display font-bold tracking-tight text-white leading-[1.08]">
+                Real Systems. <br />
+                <span className="text-brand-silver">Real Businesses.</span>
+              </h2>
+              <p className="text-sm sm:text-base md:text-lg text-brand-silver mt-4 leading-relaxed font-normal">
+                A selected showcase of live client automation pipelines, CRM deployments, and digital systems built for expanding companies.
+              </p>
+            </div>
 
-          <div className="flex items-center">
-            <MagneticButton to="/work" variant="secondary" size="md" showArrow={true}>
-              View All Case Studies
-            </MagneticButton>
+            <div className="flex items-center">
+              <MagneticButton to="/work" variant="secondary" size="md" showArrow={true}>
+                View All Case Studies
+              </MagneticButton>
+            </div>
           </div>
-        </div>
+        </ScrollReveal>
 
         {/* Editorial Case Study Showcases */}
-        <div className="space-y-12 sm:space-y-16 md:space-y-20">
+        <div className="space-y-8 sm:space-y-10 md:space-y-12">
           {featured.map((study, idx) => {
             const isReversed = idx % 2 === 1;
             const description =

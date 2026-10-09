@@ -4,6 +4,7 @@ import TrustCredibilityBar from '../components/TrustCredibilityBar';
 import PlatformMarquee from '../components/PlatformMarquee';
 import BusinessGrowthMessageSection from '../components/BusinessGrowthMessageSection';
 import ServicesOverview from '../components/ServicesOverview';
+import InteractivePhoneExperience from '../components/InteractivePhoneExperience';
 import SeeAutomationInAction from '../components/SeeAutomationInAction';
 import CinematicVideoSection from '../components/CinematicVideoSection';
 import SelectedWork from '../components/SelectedWork';
@@ -46,7 +47,12 @@ export default function HomePage() {
         <ServicesOverview />
       </ErrorBoundary>
 
-      {/* 06. Demonstration: Interactive Live Automation Simulator */}
+      {/* 06. Pocket Telemetry: Interactive Smartphone Automation Experience */}
+      <ErrorBoundary title="Interactive Smartphone Experience">
+        <InteractivePhoneExperience />
+      </ErrorBoundary>
+
+      {/* 07. Demonstration: Interactive Live Automation Simulator */}
       <ErrorBoundary title="Live Automation Demo">
         <SeeAutomationInAction />
       </ErrorBoundary>

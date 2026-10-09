@@ -2,15 +2,17 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Sparkles, ArrowRight, CheckCircle2, ShieldCheck, TrendingUp, Layers } from 'lucide-react';
 import MagneticButton from './MagneticButton';
+import ScrollReveal from './ScrollReveal';
 
 export default function BusinessGrowthMessageSection() {
   return (
-    <section id="growth-message" className="py-20 sm:py-28 md:py-36 bg-brand-black text-brand-offWhite relative border-t border-brand-border overflow-hidden">
+    <section id="growth-message" className="py-14 sm:py-18 md:py-20 bg-brand-black text-brand-offWhite relative border-t border-brand-border overflow-hidden">
       {/* Subtle Ambient Background Accents */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-lime/5 rounded-full blur-[140px] pointer-events-none" />
 
       <div className="max-w-5xl mx-auto px-5 sm:px-6 md:px-12 relative z-10">
-        <div className="rounded-3xl bg-brand-charcoal border border-brand-border p-8 sm:p-12 md:p-16 shadow-2xl relative overflow-hidden">
+        <ScrollReveal>
+          <div className="rounded-3xl bg-brand-charcoal border border-brand-border p-8 sm:p-12 md:p-14 shadow-2xl relative overflow-hidden">
           {/* Subtle Accent Glow */}
           <div className="absolute top-0 right-0 w-72 h-72 bg-gradient-to-bl from-brand-lime/10 via-transparent to-transparent pointer-events-none" />
 
@@ -86,7 +88,8 @@ export default function BusinessGrowthMessageSection() {
             </MagneticButton>
           </div>
         </div>
-      </div>
-    </section>
-  );
+      </ScrollReveal>
+    </div>
+  </section>
+);
 }

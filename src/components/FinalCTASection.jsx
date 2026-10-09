@@ -1,10 +1,11 @@
 import React from 'react';
 import { ArrowRight, ShieldCheck, Sparkles, CheckCircle2 } from 'lucide-react';
 import MagneticButton from './MagneticButton';
+import ScrollReveal from './ScrollReveal';
 
 export default function FinalCTASection() {
   return (
-    <section className="py-24 sm:py-32 md:py-40 bg-brand-black text-brand-offWhite relative border-t border-brand-border overflow-hidden">
+    <section className="py-16 sm:py-20 md:py-24 bg-brand-black text-brand-offWhite relative border-t border-brand-border overflow-hidden">
       {/* Executive Consultation Studio Photographic Backdrop */}
       <div className="absolute inset-0 z-0 pointer-events-none select-none">
         <img
@@ -16,7 +17,8 @@ export default function FinalCTASection() {
       </div>
 
       <div className="max-w-4xl mx-auto px-6 md:px-12 relative z-10 text-center">
-        {/* Badge */}
+        <ScrollReveal>
+          {/* Badge */}
         <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-charcoal/90 border border-brand-border text-xs font-mono text-brand-silver mb-8 shadow-xl backdrop-blur-md">
           <span className="w-1.5 h-1.5 rounded-full bg-brand-lime shadow-lime-glow-sm" />
           <span className="text-white font-medium">Start Your Operational Transformation</span>
@@ -72,6 +74,7 @@ export default function FinalCTASection() {
             UK & Nigeria Continuous Operations
           </span>
         </div>
+        </ScrollReveal>
       </div>
     </section>
   );

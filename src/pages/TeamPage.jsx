@@ -10,10 +10,10 @@ export default function TeamPage() {
   }, []);
 
   return (
-    <div className="pt-32 pb-24 bg-brand-black text-brand-offWhite min-h-screen">
+    <div className="pt-24 sm:pt-28 pb-16 bg-brand-black text-brand-offWhite min-h-screen">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         {/* Header */}
-        <div className="max-w-4xl mb-16">
+        <div className="max-w-4xl mb-12">
           <span className="text-xs font-mono uppercase tracking-widest text-brand-lime font-semibold">
             The Specialists
           </span>
@@ -104,7 +104,7 @@ export default function TeamPage() {
         </div>
 
         {/* Closing Note */}
-        <div className="mt-20 p-10 rounded-3xl bg-brand-charcoal border border-brand-border text-center max-w-3xl mx-auto space-y-4">
+        <div className="mt-12 sm:mt-14 p-8 sm:p-10 rounded-3xl bg-brand-charcoal border border-brand-border text-center max-w-3xl mx-auto space-y-4">
           <h3 className="text-2xl font-display font-bold text-white">
             Direct Access to Senior Practitioners.
           </h3>

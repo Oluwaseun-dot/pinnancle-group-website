@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Calculator, Clock, DollarSign, Users, Sparkles, ArrowRight, ShieldCheck, AlertCircle } from 'lucide-react';
 import MagneticButton from './MagneticButton';
+import ScrollReveal from './ScrollReveal';
 import { BOOKING_CALENDAR_URL } from '../config/bookingConfig';
 
 export default function RoiTimeSavedCalculator() {
@@ -21,10 +22,11 @@ export default function RoiTimeSavedCalculator() {
   const potentialReclaimedHoursMonthly = Math.round(totalHoursMonthly * 0.7);
 
   return (
-    <section id="roi-calculator" className="py-20 sm:py-32 bg-brand-black text-brand-offWhite relative border-t border-brand-border">
+    <section id="roi-calculator" className="py-14 sm:py-18 md:py-20 bg-brand-black text-brand-offWhite relative border-t border-brand-border">
       <div className="max-w-7xl mx-auto px-5 sm:px-6 md:px-12">
         {/* Header */}
-        <div className="max-w-3xl mb-10 sm:mb-16">
+        <ScrollReveal>
+          <div className="max-w-3xl mb-8 sm:mb-12">
           <span className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/5 border border-brand-border text-brand-lime text-xs font-mono uppercase tracking-widest mb-4">
             <Calculator className="w-3.5 h-3.5" />
             Operational Capacity Estimator
@@ -37,6 +39,7 @@ export default function RoiTimeSavedCalculator() {
             Identify opportunities to reduce repetitive manual tasks, improve customer response times, and streamline your workflows. Adjust the parameters below to see how much time your team could reclaim each week.
           </p>
         </div>
+      </ScrollReveal>
 
         {/* Calculator Main Grid */}
         <div className="rounded-2xl sm:rounded-3xl bg-brand-charcoal border border-brand-border p-5 sm:p-8 md:p-12 shadow-2xl">

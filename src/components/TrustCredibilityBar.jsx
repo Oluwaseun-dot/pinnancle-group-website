@@ -63,7 +63,7 @@ export default function TrustCredibilityBar() {
   ];
 
   return (
-    <section ref={barRef} className="relative z-20 py-12 md:py-16 border-y border-brand-border bg-brand-charcoal/80 backdrop-blur-md">
+    <section ref={barRef} className="relative z-20 py-8 md:py-10 border-y border-brand-border bg-brand-charcoal/80 backdrop-blur-md">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6 lg:gap-8">
           {metrics.map((item, idx) => (

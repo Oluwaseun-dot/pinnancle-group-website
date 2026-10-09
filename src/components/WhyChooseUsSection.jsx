@@ -1,6 +1,7 @@
 import React from 'react';
 import { Target, Cpu, Workflow, Users, CheckCircle2, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import ScrollReveal from './ScrollReveal';
 
 const reasons = [
   {
@@ -31,10 +32,11 @@ const reasons = [
 
 export default function WhyChooseUsSection() {
   return (
-    <section id="why-choose-us" className="py-20 sm:py-28 md:py-36 bg-brand-black text-brand-offWhite relative border-t border-brand-border">
+    <section id="why-choose-us" className="py-14 sm:py-18 md:py-20 bg-brand-black text-brand-offWhite relative border-t border-brand-border">
       <div className="max-w-7xl mx-auto px-5 sm:px-6 md:px-12 relative z-10">
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 sm:mb-16">
+        <ScrollReveal>
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 sm:mb-12">
           <div className="max-w-2xl">
             <span className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/5 border border-brand-border text-brand-lime text-xs font-mono uppercase tracking-widest mb-4">
               <span className="w-1.5 h-1.5 rounded-full bg-brand-lime" />
@@ -59,6 +61,7 @@ export default function WhyChooseUsSection() {
             </Link>
           </div>
         </div>
+      </ScrollReveal>
 
         {/* 4 Reasons Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
