@@ -2,12 +2,13 @@ import React, { useEffect } from 'react';
 import CinematicHero from '../components/CinematicHero';
 import TrustCredibilityBar from '../components/TrustCredibilityBar';
 import PlatformMarquee from '../components/PlatformMarquee';
-import ServicesOverview from '../components/ServicesOverview';
-import SelectedWork from '../components/SelectedWork';
-import CinematicVideoSection from '../components/CinematicVideoSection';
-import WhyChooseUsSection from '../components/WhyChooseUsSection';
 import BusinessGrowthMessageSection from '../components/BusinessGrowthMessageSection';
+import ServicesOverview from '../components/ServicesOverview';
 import SeeAutomationInAction from '../components/SeeAutomationInAction';
+import CinematicVideoSection from '../components/CinematicVideoSection';
+import SelectedWork from '../components/SelectedWork';
+import TestimonialsSection from '../components/TestimonialsSection';
+import WhyChooseUsSection from '../components/WhyChooseUsSection';
 import RoiTimeSavedCalculator from '../components/RoiTimeSavedCalculator';
 import TeamSection from '../components/TeamSection';
 import FinalCTASection from '../components/FinalCTASection';
@@ -20,62 +21,67 @@ export default function HomePage() {
 
   return (
     <div className="relative bg-brand-black text-brand-offWhite overflow-x-hidden">
-      {/* 01. Existing Hero Section (Cinematic Atmosphere, Clear Value Proposition, Direct CTAs) */}
+      {/* 01. Hook & Positioning: Hero Section with Direct Consultation CTAs */}
       <ErrorBoundary title="Hero Section">
         <CinematicHero />
       </ErrorBoundary>
 
-      {/* 02. Trust Statistics Bar (50+ Businesses, 100+ Systems, 4.9/5 Rating) */}
+      {/* 02. Instant Proof of Scale: 50+ Businesses, 100+ Systems, 4.9/5 Rating */}
       <ErrorBoundary title="Credibility Statistics">
         <TrustCredibilityBar />
       </ErrorBoundary>
 
-      {/* 03. Restored Technology & Tools Section (Platforms & Software Marquee) */}
+      {/* 03. Technology Stack & Software Compatibility Marquee */}
       <ErrorBoundary title="Tools & Platforms Marquee">
         <PlatformMarquee />
       </ErrorBoundary>
 
-      {/* 04. Improved “What We Do” Services Section with Authentic Images & Pricing Link */}
-      <ErrorBoundary title="Core Services Overview">
-        <ServicesOverview />
-      </ErrorBoundary>
-
-      {/* 05. Selected Projects & Authentic Client Case Studies */}
-      <ErrorBoundary title="Selected Work">
-        <SelectedWork />
-      </ErrorBoundary>
-
-      {/* 06. Restored Homepage Video Section (Framed Container, Audio Handling, Clear Heading) */}
-      <ErrorBoundary title="Agency Presentation Video">
-        <CinematicVideoSection />
-      </ErrorBoundary>
-
-      {/* 07. “Why Choose Pinnacle Group?” Section (4 Clear Operational Standards) */}
-      <ErrorBoundary title="Why Choose Pinnacle Group">
-        <WhyChooseUsSection />
-      </ErrorBoundary>
-
-      {/* 08. Business Growth & Investment Message (“Your Business Deserves More Than Just Hard Work”) */}
+      {/* 04. The Core Bottleneck: “Your Business Deserves More Than Just Hard Work” */}
       <ErrorBoundary title="Business Growth Message">
         <BusinessGrowthMessageSection />
       </ErrorBoundary>
 
-      {/* 08B. Interactive Live Automation Simulator */}
+      {/* 05. The Solution: 6 Practice Areas with Authentic Photos & Pricing Matrix Link */}
+      <ErrorBoundary title="Core Services Overview">
+        <ServicesOverview />
+      </ErrorBoundary>
+
+      {/* 06. Demonstration: Interactive Live Automation Simulator */}
       <ErrorBoundary title="Live Automation Demo">
         <SeeAutomationInAction />
       </ErrorBoundary>
 
-      {/* 09. Restored Business Automation Calculator (“Discover What Your Business Could Automate”) */}
+      {/* 07. Visual Immersion: Agency Film & Technology Philosophy */}
+      <ErrorBoundary title="Agency Presentation Video">
+        <CinematicVideoSection />
+      </ErrorBoundary>
+
+      {/* 08. Deliverable Proof: Selected Client Case Studies */}
+      <ErrorBoundary title="Selected Work">
+        <SelectedWork />
+      </ErrorBoundary>
+
+      {/* 09. Social Proof & Client Validation: “Trusted by Businesses Ready to Grow” */}
+      <ErrorBoundary title="Client Testimonials">
+        <TestimonialsSection />
+      </ErrorBoundary>
+
+      {/* 10. Foundational Principles: Why Choose Pinnacle Group */}
+      <ErrorBoundary title="Why Choose Pinnacle Group">
+        <WhyChooseUsSection />
+      </ErrorBoundary>
+
+      {/* 11. Self-Diagnosis: Interactive Operational Hours-Reclaimed Calculator */}
       <ErrorBoundary title="Automation Calculator">
         <RoiTimeSavedCalculator />
       </ErrorBoundary>
 
-      {/* 10. Restored Concise Team Section (7 Multidisciplinary Specialists) */}
+      {/* 12. Human Expertise: The 7 In-House Senior Specialists */}
       <ErrorBoundary title="Specialist Team">
         <TeamSection />
       </ErrorBoundary>
 
-      {/* 11. Final Consultation Call to Action */}
+      {/* 13. Direct Action: Final Consultation & Discovery Call Booking */}
       <ErrorBoundary title="Final Call to Action">
         <FinalCTASection />
       </ErrorBoundary>
