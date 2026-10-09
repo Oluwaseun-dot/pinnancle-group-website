@@ -28,7 +28,7 @@ export default {
       },
       fontFamily: {
         sans: ['Plus Jakarta Sans', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
-        display: ['Syne', 'Plus Jakarta Sans', 'sans-serif'],
+        display: ['Outfit', 'Plus Jakarta Sans', 'sans-serif'],
         mono: ['JetBrains Mono', 'Menlo', 'monospace']
       },
       boxShadow: {

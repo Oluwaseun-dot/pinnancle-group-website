@@ -10,9 +10,11 @@ const servicesSummary = [
     name: 'AI Automation',
     tag: 'Flagship Capability',
     icon: Bot,
+    image: '/images/ai-agent-interface.jpg',
+    imageAlt: 'Realistic AI Autonomous Voice and Chat Assistant Interface',
     description:
-      'Autonomous AI phone receptionists, WhatsApp assistants, and website chat agents that respond in under 15 seconds, qualify leads, and book appointments directly on your calendar 24/7.',
-    highlights: ['24/7 Instant Customer Response', 'AI Voice & WhatsApp Agents', 'Direct Calendar Booking Sync']
+      'Autonomous AI phone receptionists, WhatsApp assistants, and website chat agents that respond in seconds, qualify leads, and book appointments directly on your calendar 24/7.',
+    highlights: ['24/7 Voice & Chat Agents', 'Lead Qualification & CRM Sync', 'Direct Calendar Booking']
   },
   {
     id: 'business-automation',
@@ -20,9 +22,11 @@ const servicesSummary = [
     name: 'Business Automation',
     tag: 'Operational Efficiency',
     icon: Workflow,
+    image: '/images/business-automation-workflow.jpg',
+    imageAlt: 'Business Workflow Automation Pipeline and Webhook Integration',
     description:
-      'Resilient Make.com and n8n backend workflows that connect your forms, spreadsheets, and software tools to eliminate repetitive manual data entry and save 20+ hours per employee each week.',
-    highlights: ['Multi-Step Webhook Workflows', 'Cross-Platform Data Sync', 'Automated Notifications & Docs']
+      'Resilient Make.com and n8n backend workflows that connect your forms, spreadsheets, and software tools to eliminate repetitive manual data entry and save hours of staff time.',
+    highlights: ['Multi-Step Webhook Scenarios', 'Cross-Platform Data Sync', 'Automated Notifications & Docs']
   },
   {
     id: 'crm-automation',
@@ -30,6 +34,8 @@ const servicesSummary = [
     name: 'CRM Automation',
     tag: 'Sales Pipeline Architecture',
     icon: Database,
+    image: '/images/crm-pipeline-dashboard.jpg',
+    imageAlt: 'Realistic CRM Sales Pipeline and Contact Management Dashboard',
     description:
       'Complete GoHighLevel and HubSpot CRM deployments with automated deal pipelines, missed-call text-back, SMS follow-ups, and customer lifecycle management that stop leads from slipping away.',
     highlights: ['GoHighLevel & HubSpot Setups', 'Automated Deal Pipelines', 'Missed-Call Instant Text-Back']
@@ -40,6 +46,8 @@ const servicesSummary = [
     name: 'Website Design',
     tag: 'Digital Conversion Architecture',
     icon: Monitor,
+    image: '/images/website-design-showcase.jpg',
+    imageAlt: 'High-Performance Responsive Website Across Desktop and Mobile Devices',
     description:
       'Modern, high-speed, conversion-focused websites engineered with React and modern web technologies to position your brand as an industry leader and turn site traffic into paying clients.',
     highlights: ['Bespoke Aesthetic & Performance', 'Mobile-First Responsive Layouts', 'Integrated Lead Capture']
@@ -50,6 +58,8 @@ const servicesSummary = [
     name: 'Tender Support',
     tag: 'Commercial Procurement',
     icon: FileText,
+    image: '/images/tender-support-procurement.jpg',
+    imageAlt: 'Professional Tender Documentation and Procurement Review Scene',
     description:
       'Professional bid writing, technical documentation, compliance matrices, and presentation decks that help expanding companies win competitive commercial and government tenders.',
     highlights: ['Compliant Proposal Writing', 'Executive Bid Architecture', 'Proven High-Value Win Rates']
@@ -60,6 +70,8 @@ const servicesSummary = [
     name: 'Creative & AI Media',
     tag: 'Brand Production',
     icon: Video,
+    image: '/images/creative-ai-media-studio.jpg',
+    imageAlt: 'Modern Creative Media Video Editing and Dynamic AI Content Studio',
     description:
       'Studio-grade commercial media, AI-augmented video production, and high-converting creative assets that tell your company’s story with clarity and command market attention.',
     highlights: ['Cinematic Brand Media', 'Automated Social Video Engines', 'Creative Direction & Graphics']
@@ -85,67 +97,91 @@ export default function ServicesOverview() {
             </p>
           </div>
 
-          <div className="flex items-center">
-            <MagneticButton to="/services" variant="secondary" size="md" showArrow={true}>
-              Explore Detailed Specifications
+          <div className="flex flex-col sm:items-end gap-2.5">
+            <MagneticButton to="/services#pricing" variant="primary" size="md" showArrow={true}>
+              View All Services & Pricing
             </MagneticButton>
+            <p className="text-xs text-brand-silver sm:text-right max-w-xs leading-relaxed">
+              Explore our services, compare packages, and find the right solution for your business.
+            </p>
           </div>
         </div>
 
-        {/* 6 Services Grid */}
+        {/* 6 Services Grid with Images */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {servicesSummary.map((srv) => {
             const Icon = srv.icon;
             return (
               <div
                 key={srv.id}
-                className="p-6 sm:p-8 rounded-2xl sm:rounded-3xl bg-brand-charcoal border border-brand-border hover:border-brand-borderLight transition-all duration-300 flex flex-col justify-between group shadow-xl relative overflow-hidden"
+                className="rounded-2xl sm:rounded-3xl bg-brand-charcoal border border-brand-border hover:border-brand-borderLight transition-all duration-300 flex flex-col justify-between group shadow-xl relative overflow-hidden"
               >
                 {/* Accent Top Line on Hover */}
-                <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-brand-lime to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-brand-lime to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10" />
 
                 <div>
-                  {/* Top Bar with Number & Icon */}
-                  <div className="flex items-center justify-between mb-6">
-                    <span className="text-xs font-mono uppercase tracking-widest text-brand-silver/60">
-                      {srv.num} · {srv.tag}
-                    </span>
-                    <div className="w-10 h-10 rounded-xl bg-brand-dark border border-brand-border flex items-center justify-center text-brand-silver group-hover:text-brand-lime group-hover:border-brand-lime/50 transition-colors">
-                      <Icon className="w-5 h-5" />
+                  {/* Service Image Frame */}
+                  <div className="relative aspect-[16/10] overflow-hidden bg-brand-dark border-b border-brand-border">
+                    <img
+                      src={srv.image}
+                      alt={srv.imageAlt}
+                      loading="lazy"
+                      decoding="async"
+                      className="w-full h-full object-cover filter contrast-105 group-hover:scale-105 transition-transform duration-700"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-brand-charcoal via-transparent to-brand-black/30" />
+                    
+                    {/* Top Bar with Number & Icon Badge over Image */}
+                    <div className="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between">
+                      <span className="px-2.5 py-1 rounded-full bg-brand-black/85 backdrop-blur-md border border-brand-border text-[10px] font-mono uppercase tracking-widest text-brand-silver">
+                        {srv.num} · {srv.tag}
+                      </span>
+                      <div className="w-8 h-8 rounded-lg bg-brand-black/85 backdrop-blur-md border border-brand-border flex items-center justify-center text-brand-silver group-hover:text-brand-lime transition-colors">
+                        <Icon className="w-4 h-4" />
+                      </div>
                     </div>
                   </div>
 
-                  {/* Title */}
-                  <h3 className="text-xl sm:text-2xl font-display font-bold text-white tracking-tight group-hover:text-brand-lime transition-colors mb-3">
-                    <Link to={`/services#${srv.id}`}>
-                      {srv.name}
-                    </Link>
-                  </h3>
+                  {/* Content Body */}
+                  <div className="p-6 sm:p-7 pb-4">
+                    {/* Title */}
+                    <h3 className="text-xl sm:text-2xl font-display font-bold text-white tracking-tight group-hover:text-brand-lime transition-colors mb-3">
+                      <Link to={`/services#${srv.id}`}>
+                        {srv.name}
+                      </Link>
+                    </h3>
 
-                  {/* Short 1-2 sentence description */}
-                  <p className="text-xs sm:text-sm text-brand-silver leading-relaxed font-normal mb-6">
-                    {srv.description}
-                  </p>
+                    {/* Short 1-2 sentence description */}
+                    <p className="text-xs sm:text-sm text-brand-silver leading-relaxed font-normal mb-5">
+                      {srv.description}
+                    </p>
 
-                  {/* Highlights list */}
-                  <div className="space-y-2 pb-6 border-b border-brand-border/80">
-                    {srv.highlights.map((item, idx) => (
-                      <div key={idx} className="flex items-center gap-2 text-xs text-brand-silver">
-                        <CheckCircle2 className="w-3.5 h-3.5 text-brand-lime shrink-0" />
-                        <span>{item}</span>
-                      </div>
-                    ))}
+                    {/* Highlights list */}
+                    <div className="space-y-2 pb-5 border-b border-brand-border/70">
+                      {srv.highlights.map((item, idx) => (
+                        <div key={idx} className="flex items-center gap-2 text-xs text-brand-silver">
+                          <CheckCircle2 className="w-3.5 h-3.5 text-brand-lime shrink-0" />
+                          <span>{item}</span>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 </div>
 
                 {/* Card Footer Link */}
-                <div className="pt-4 flex items-center justify-between">
+                <div className="px-6 sm:px-7 pb-6 pt-2 flex items-center justify-between gap-2">
                   <Link
                     to={`/services#${srv.id}`}
                     className="inline-flex items-center gap-1.5 text-xs font-mono font-medium text-white group-hover:text-brand-lime transition-colors"
                   >
-                    <span>View Service Details</span>
+                    <span>Learn More</span>
                     <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                  </Link>
+                  <Link
+                    to={`/services?category=${srv.id}#pricing`}
+                    className="text-[11px] font-mono text-brand-lime hover:underline shrink-0"
+                  >
+                    Packages from $650 →
                   </Link>
                 </div>
               </div>
@@ -157,24 +193,18 @@ export default function ServicesOverview() {
         <div className="mt-12 sm:mt-16 p-6 sm:p-8 rounded-2xl bg-brand-charcoal/60 border border-brand-border flex flex-col sm:flex-row items-center justify-between gap-6">
           <div className="space-y-1 text-center sm:text-left">
             <h4 className="font-display font-bold text-white text-base sm:text-lg">
-              Not sure which system your business needs?
+              Want to see transparent investment packages for each service?
             </h4>
             <p className="text-xs sm:text-sm text-brand-silver">
-              Take our interactive assessment or calculate how many hours your team could save each week.
+              Every service offers four distinct tiers: Basic ($650), Standard ($1,500), Pro ($3,500), and Custom.
             </p>
           </div>
           <div className="flex flex-wrap items-center gap-3">
             <Link
-              to="/automation-assessment"
-              className="px-4 py-2 rounded-full bg-brand-dark hover:bg-brand-card border border-brand-border hover:border-brand-lime text-xs font-mono text-white hover:text-brand-lime transition-all"
+              to="/services#pricing"
+              className="px-5 py-2.5 rounded-full bg-brand-lime text-black font-mono text-xs font-semibold hover:bg-brand-lime/90 transition-all shadow-lime-glow-sm"
             >
-              Take Assessment →
-            </Link>
-            <Link
-              to="/automation-demo"
-              className="px-4 py-2 rounded-full bg-white text-black hover:bg-brand-lime font-mono text-xs font-semibold transition-all"
-            >
-              See Live Demo →
+              View All Services & Pricing →
             </Link>
           </div>
         </div>

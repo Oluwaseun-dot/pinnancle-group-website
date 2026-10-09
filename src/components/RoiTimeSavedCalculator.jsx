@@ -27,13 +27,14 @@ export default function RoiTimeSavedCalculator() {
         <div className="max-w-3xl mb-10 sm:mb-16">
           <span className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/5 border border-brand-border text-brand-lime text-xs font-mono uppercase tracking-widest mb-4">
             <Calculator className="w-3.5 h-3.5" />
-            Interactive Operational Estimator
+            Operational Capacity Estimator
           </span>
-          <h2 className="text-3xl sm:text-5xl font-display font-bold text-white tracking-tight leading-tight">
-            How Much Time Could You Save?
+          <h2 className="text-3xl sm:text-5xl md:text-6xl font-display font-bold text-white tracking-tight leading-tight">
+            Discover What Your Business <br className="hidden sm:inline" />
+            <span className="text-brand-silver">Could Automate.</span>
           </h2>
           <p className="text-sm sm:text-base md:text-lg text-brand-silver mt-3 leading-relaxed">
-            Estimate how much your team currently spends on repetitive work. Adjust the sliders below to see the manual cost and the hours that could be redirected to high-value client work.
+            Identify opportunities to reduce repetitive manual tasks, improve customer response times, and streamline your workflows. Adjust the parameters below to see how much time your team could reclaim each week.
           </p>
         </div>
 

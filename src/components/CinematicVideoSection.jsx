@@ -132,7 +132,22 @@ export default function CinematicVideoSection() {
     <section id="technology-philosophy" className="py-28 md:py-36 bg-brand-black relative border-t border-brand-border">
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         
-        {/* Large Cinematic Video Container */}
+        {/* Section Header Above Video Container */}
+        <div className="max-w-3xl mb-8 sm:mb-12">
+          <span className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/5 border border-brand-border text-brand-lime text-xs font-mono uppercase tracking-widest mb-4">
+            <span className="w-1.5 h-1.5 rounded-full bg-brand-lime" />
+            Agency Film · Systems in Action
+          </span>
+          <h2 className="text-3xl sm:text-5xl md:text-6xl font-display font-bold tracking-tight text-white leading-tight">
+            Technology Should Work <br />
+            <span className="text-brand-silver">For Your Business.</span>
+          </h2>
+          <p className="text-sm sm:text-base md:text-lg text-brand-silver mt-4 leading-relaxed font-normal">
+            Watch how Pinnacle Group designs, builds, and connects autonomous AI systems, CRM pipelines, and automated workflows that help modern companies operate without friction.
+          </p>
+        </div>
+
+        {/* Cinematic Video Container */}
         <div
           ref={containerRef}
           onMouseEnter={() => setIsHovered(true)}
@@ -145,13 +160,13 @@ export default function CinematicVideoSection() {
           <div className="absolute inset-0 z-0">
             <img
               src="/images/hero-command-center.jpg"
-              alt="Pinnancle Group Global Operations"
+              alt="Pinnacle Group Global Operations"
               className={`w-full h-full object-cover filter contrast-110 brightness-75 transition-opacity duration-700 ${
-                hasStarted ? 'opacity-0 pointer-events-none' : 'opacity-40'
+                hasStarted ? 'opacity-0 pointer-events-none' : 'opacity-70'
               }`}
             />
             {/* Dark gradient & atmospheric grid */}
-            <div className="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/80 to-brand-black/60" />
+            <div className="absolute inset-0 bg-gradient-to-t from-brand-black/90 via-brand-black/40 to-brand-black/60" />
             <div className="absolute inset-0 bg-grid-subtle opacity-20 pointer-events-none" />
           </div>
 
@@ -181,42 +196,31 @@ export default function CinematicVideoSection() {
             </div>
           )}
 
-          {/* Initial Title Card Overlay (Shown before clicking Play) */}
+          {/* Initial Play Overlay (Shown before clicking Play) */}
           <div
-            className={`absolute inset-0 flex flex-col items-center justify-center p-8 md:p-16 text-center z-20 transition-all duration-500 ${
+            className={`absolute inset-0 flex flex-col items-center justify-center p-6 sm:p-10 text-center z-20 transition-all duration-500 ${
               hasStarted ? 'opacity-0 pointer-events-none' : 'opacity-100'
             }`}
           >
-            <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-dark/90 border border-brand-border text-brand-silver text-xs font-mono uppercase tracking-widest mb-6 backdrop-blur-md shadow-lg">
-              <span className="w-1.5 h-1.5 rounded-full bg-brand-lime shadow-lime-glow-sm" />
-              Agency Film · The Philosophy
-            </span>
-
-            <h2 className="text-3xl sm:text-5xl md:text-6xl font-display font-bold tracking-tight text-white max-w-4xl leading-tight">
-              Technology Should Work <br />
-              <span className="text-brand-silver">For Your Business.</span>
-            </h2>
-
-            <p className="text-base sm:text-lg md:text-xl text-brand-silver max-w-2xl mt-4 leading-relaxed font-normal">
-              The right system does more than automate tasks. It gives your team more time to focus on the work that actually matters.
-            </p>
-
             {/* Play Button with Premium Hover Glow */}
-            <div className="mt-8">
+            <div className="relative">
               <button
                 type="button"
                 onClick={togglePlay}
                 data-cursor="play"
                 data-cursor-label="PLAY FILM"
-                className="group relative flex items-center justify-center w-20 h-20 rounded-full bg-white text-black shadow-2xl hover:scale-105 hover:bg-black hover:text-white hover:border hover:border-brand-lime hover:shadow-lime-glow-sm transition-all duration-300 focus:outline-none"
+                className="group relative flex items-center justify-center w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-brand-lime text-black shadow-2xl hover:scale-105 hover:bg-white transition-all duration-300 focus:outline-none"
                 aria-label="Play agency presentation video"
               >
-                <Play className="w-7 h-7 fill-current translate-x-0.5" />
+                <Play className="w-8 h-8 sm:w-9 sm:h-9 fill-current translate-x-0.5" />
               </button>
             </div>
 
-            <p className="text-[11px] font-mono uppercase tracking-widest text-brand-silver mt-4">
-              Watch System Overview ({duration > 0 ? formatTime(duration) : 'Play Video'})
+            <p className="text-xs sm:text-sm font-mono uppercase tracking-widest text-white mt-5 font-semibold">
+              Click to Watch Agency Overview Film
+            </p>
+            <p className="text-[11px] font-mono text-brand-silver/80 mt-1">
+              Audio enabled on tap · {duration > 0 ? formatTime(duration) : 'Full High-Definition'}
             </p>
           </div>
 

@@ -1,8 +1,29 @@
 import React, { useState, useEffect } from 'react';
-import { Mail, Phone, MapPin, Send, CheckCircle2, Globe2 } from 'lucide-react';
+import { useSearchParams } from 'react-router-dom';
+import { Mail, Phone, MapPin, Send, CheckCircle2, Globe2, Sparkles } from 'lucide-react';
 import MagneticButton from '../components/MagneticButton';
 
+const serviceMapping = {
+  'ai-automation': 'AI Automation',
+  'business-automation': 'Business Automation',
+  'crm-automation': 'CRM Automation',
+  'website-design': 'Website Design',
+  'tender-support': 'Tender Support',
+  'creative-media': 'Creative & AI Media'
+};
+
+const packageNames = {
+  basic: 'Basic Package ($650)',
+  standard: 'Standard Package ($1,500)',
+  pro: 'Pro Package ($3,500)',
+  custom: 'Custom Quote / Bespoke Scope'
+};
+
 export default function ContactPage() {
+  const [searchParams] = useSearchParams();
+  const serviceParam = searchParams.get('service');
+  const packageParam = searchParams.get('package');
+
   const [submitted, setSubmitted] = useState(false);
   const [form, setForm] = useState({
     name: '',
@@ -10,9 +31,11 @@ export default function ContactPage() {
     phone: '',
     company: '',
     website: '',
-    serviceNeeded: 'AI Automation',
-    budgetRange: '£5,000 - £15,000 (or equivalent)',
-    projectDescription: '',
+    serviceNeeded: serviceMapping[serviceParam] || 'AI Automation',
+    budgetRange: '£3,000 - £7,500',
+    projectDescription: packageParam
+      ? `Inquiring about ${serviceMapping[serviceParam] || 'this service'} — ${packageNames[packageParam] || packageParam}.`
+      : '',
     howDidYouHear: 'Referral / Colleague'
   });
 
@@ -118,6 +141,14 @@ export default function ContactPage() {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-5">
+                  {packageParam && (
+                    <div className="p-3.5 rounded-xl bg-brand-lime/10 border border-brand-lime/30 flex items-center justify-between text-xs font-mono">
+                      <span className="text-white">
+                        Inquiring About: <strong className="text-brand-lime">{serviceMapping[serviceParam] || 'Custom Project'} · {packageNames[packageParam] || packageParam}</strong>
+                      </span>
+                      <span className="text-brand-silver hidden sm:inline">Starting Investment</span>
+                    </div>
+                  )}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                       <label className="block text-xs font-mono uppercase text-brand-silver mb-1.5 font-semibold">

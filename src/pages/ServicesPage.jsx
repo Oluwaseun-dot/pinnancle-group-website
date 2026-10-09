@@ -40,12 +40,20 @@ import {
 import { caseStudies } from '../data/caseStudiesData';
 import MagneticButton from '../components/MagneticButton';
 import RoiTimeSavedCalculator from '../components/RoiTimeSavedCalculator';
+import ServicesPricingMatrix from '../components/ServicesPricingMatrix';
 
 export default function ServicesPage() {
   const [activeTab, setActiveTab] = useState('all');
 
   useEffect(() => {
-    document.title = 'Services & Systems | Pinnancle Group';
+    document.title = 'Services & Packages | Pinnacle Group';
+    if (window.location.hash) {
+      const el = document.querySelector(window.location.hash);
+      if (el) {
+        setTimeout(() => el.scrollIntoView({ behavior: 'smooth' }), 100);
+        return;
+      }
+    }
     window.scrollTo(0, 0);
   }, []);
 
@@ -122,6 +130,9 @@ export default function ServicesPage() {
             <MagneticButton to="/book" variant="primary" size="md" showArrow={true}>
               Book a Systems Consultation
             </MagneticButton>
+            <MagneticButton to="/services#pricing" variant="secondary" size="md">
+              View Pricing Packages (From $650)
+            </MagneticButton>
             <MagneticButton to="/work" variant="secondary" size="md">
               View Our Client Work
             </MagneticButton>
@@ -178,18 +189,26 @@ export default function ServicesPage() {
                   ))}
                 </div>
 
-                {/* Evidence Callout */}
+                {/* Evidence Callout & Package Link */}
                 <div className="pt-4 border-t border-brand-border flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                   <div className="text-xs font-mono text-brand-silver">
                     Verified Deployment: <strong className="text-white">AI Voice-to-Email Agent ($4,500)</strong>
                   </div>
-                  <Link
-                    to="/work/ai-voice-to-email-agent"
-                    className="inline-flex items-center gap-1.5 text-xs font-mono text-brand-lime hover:underline"
-                  >
-                    <span>View Case Study</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
-                  </Link>
+                  <div className="flex items-center gap-4">
+                    <Link
+                      to="/work/ai-voice-to-email-agent"
+                      className="inline-flex items-center gap-1.5 text-xs font-mono text-brand-silver hover:text-white"
+                    >
+                      <span>Case Study</span>
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </Link>
+                    <a
+                      href="#pricing"
+                      className="inline-flex items-center gap-1.5 text-xs font-mono text-brand-lime hover:underline font-semibold"
+                    >
+                      <span>AI Packages (from $650) →</span>
+                    </a>
+                  </div>
                 </div>
               </div>
 
@@ -318,17 +337,25 @@ export default function ServicesPage() {
                   ))}
                 </div>
 
-                <div className="pt-4 border-t border-brand-border flex items-center justify-between">
+                <div className="pt-4 border-t border-brand-border flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                   <span className="text-xs font-mono text-brand-silver">
                     Built with Make.com, n8n, Zapier & Custom APIs
                   </span>
-                  <Link
-                    to="/work/shopify-product-content-mapping"
-                    className="inline-flex items-center gap-1.5 text-xs font-mono text-brand-lime hover:underline"
-                  >
-                    <span>View Airtable Sync ($750)</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
-                  </Link>
+                  <div className="flex items-center gap-4">
+                    <Link
+                      to="/work/shopify-product-content-mapping"
+                      className="inline-flex items-center gap-1.5 text-xs font-mono text-brand-silver hover:text-white"
+                    >
+                      <span>Airtable Sync ($750)</span>
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </Link>
+                    <a
+                      href="#pricing"
+                      className="inline-flex items-center gap-1.5 text-xs font-mono text-brand-lime hover:underline font-semibold"
+                    >
+                      <span>Packages (from $650) →</span>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -382,14 +409,20 @@ export default function ServicesPage() {
                   </div>
                 </div>
 
-                <div className="pt-2">
+                <div className="pt-2 flex flex-wrap items-center justify-between gap-3">
                   <Link
                     to="/work/cleveland-real-estate-ai-ghl"
-                    className="inline-flex items-center gap-1.5 text-xs font-mono text-brand-lime hover:underline"
+                    className="inline-flex items-center gap-1.5 text-xs font-mono text-brand-silver hover:text-white"
                   >
-                    <span>View GoHighLevel Deployment Case Study ($500)</span>
+                    <span>View GoHighLevel Case Study ($500)</span>
                     <ArrowRight className="w-3.5 h-3.5" />
                   </Link>
+                  <a
+                    href="#pricing"
+                    className="inline-flex items-center gap-1.5 text-xs font-mono text-brand-lime hover:underline font-semibold"
+                  >
+                    <span>CRM Packages (from $650) →</span>
+                  </a>
                 </div>
               </div>
 
@@ -477,6 +510,18 @@ export default function ServicesPage() {
                 </div>
               ))}
             </div>
+
+            <div className="pt-4 border-t border-brand-border flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+              <span className="text-xs font-mono text-brand-silver">
+                React, Next.js, Tailwind, Shopify, WordPress & Custom CMS
+              </span>
+              <a
+                href="#pricing"
+                className="inline-flex items-center gap-1.5 text-xs font-mono text-brand-lime hover:underline font-semibold"
+              >
+                <span>Website Packages (from $650) →</span>
+              </a>
+            </div>
           </div>
         </section>
 
@@ -542,10 +587,16 @@ export default function ServicesPage() {
                   ))}
                 </div>
 
-                <div className="pt-4 border-t border-brand-border">
+                <div className="pt-4 border-t border-brand-border flex flex-wrap items-center justify-between gap-3">
                   <MagneticButton to="/contact" variant="secondary" size="sm">
                     Inquire About Tender Research
                   </MagneticButton>
+                  <a
+                    href="#pricing"
+                    className="inline-flex items-center gap-1.5 text-xs font-mono text-brand-lime hover:underline font-semibold"
+                  >
+                    <span>Tender Packages (from $650) →</span>
+                  </a>
                 </div>
               </div>
             </div>
@@ -620,20 +671,33 @@ export default function ServicesPage() {
               ))}
             </div>
 
-            <div className="pt-2">
+            <div className="pt-2 flex flex-wrap items-center justify-between gap-3">
               <Link
                 to="/work/shopify-product-to-social-automation"
-                className="inline-flex items-center gap-1.5 text-xs font-mono text-brand-lime hover:underline"
+                className="inline-flex items-center gap-1.5 text-xs font-mono text-brand-silver hover:text-white"
               >
-                <span>View Product-to-Social Content Engine Case Study ($1,350)</span>
+                <span>Social Content Engine ($1,350)</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </Link>
+              <a
+                href="#pricing"
+                className="inline-flex items-center gap-1.5 text-xs font-mono text-brand-lime hover:underline font-semibold"
+              >
+                <span>Creative & AI Media Packages (from $650) →</span>
+              </a>
             </div>
           </div>
         </section>
 
         {/* ==================================================
-            8. HOW WE HELP (6-STEP VISUAL PROCESS)
+            8. SERVICE PRICING PACKAGES (TRANSPARENT 4-TIER MATRIX)
+            ================================================== */}
+        <div className="mb-28 sm:mb-36">
+          <ServicesPricingMatrix />
+        </div>
+
+        {/* ==================================================
+            9. HOW WE HELP (6-STEP VISUAL PROCESS)
             ================================================== */}
         <section className="mb-28 sm:mb-36">
           <div className="max-w-3xl mb-12">

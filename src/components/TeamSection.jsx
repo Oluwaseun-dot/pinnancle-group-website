@@ -13,14 +13,14 @@ export default function TeamSection() {
           <div className="max-w-2xl">
             <span className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/5 border border-brand-border text-brand-silver text-xs font-mono uppercase tracking-widest mb-5">
               <span className="w-1.5 h-1.5 rounded-full bg-brand-lime" />
-              In-House Engineering Team
+              In-House Multidisciplinary Team
             </span>
             <h2 className="text-3xl sm:text-5xl md:text-6xl font-display font-bold tracking-tight text-white leading-[1.08]">
               Meet The Specialists <br />
-              <span className="text-brand-silver">Building Pinnancle.</span>
+              <span className="text-brand-silver">Building Pinnacle.</span>
             </h2>
             <p className="text-base sm:text-lg text-brand-silver mt-5 leading-relaxed font-normal">
-              An in-house multidisciplinary collective of seven senior specialists covering AI automation, CRM pipelines, software architecture, commercial tenders, and creative media.
+              Our team brings together expertise in AI automation, CRM systems, website design, tender support, creative work, and digital business solutions—giving you direct access to experienced practitioners without agency bureaucracy.
             </p>
           </div>
 
@@ -31,7 +31,7 @@ export default function TeamSection() {
               size="md"
               showArrow={true}
             >
-              All 7 Specialist Profiles
+              Meet Our Team
             </MagneticButton>
           </div>
         </div>

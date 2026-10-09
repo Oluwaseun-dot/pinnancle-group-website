@@ -1,6 +1,32 @@
 import React, { useState, useEffect } from 'react';
-import { Calendar, Clock, Globe, User, Mail, Phone, Building, CheckCircle2, ArrowRight, ArrowLeft } from 'lucide-react';
+import { useSearchParams } from 'react-router-dom';
+import { Calendar, Clock, Globe, User, Mail, Phone, Building, CheckCircle2, ArrowRight, ArrowLeft, Sparkles } from 'lucide-react';
 import MagneticButton from './MagneticButton';
+
+const serviceTypeMap = {
+  'ai-automation': 'ai-automation',
+  'business-automation': 'custom-automation',
+  'crm-automation': 'crm-workflow',
+  'website-design': 'web-digital',
+  'tender-support': 'custom-automation',
+  'creative-media': 'custom-automation'
+};
+
+const serviceLabels = {
+  'ai-automation': 'AI Automation',
+  'business-automation': 'Business Automation',
+  'crm-automation': 'CRM Automation',
+  'website-design': 'Website Design',
+  'tender-support': 'Tender Support',
+  'creative-media': 'Creative & AI Media'
+};
+
+const packageLabels = {
+  basic: 'Basic Package ($650)',
+  standard: 'Standard Package ($1,500)',
+  pro: 'Pro Package ($3,500)',
+  custom: 'Custom Quote / Bespoke Scope'
+};
 
 export default function BookingCalendar() {
   const [step, setStep] = useState(1); // 1: Select Type & Date, 2: Select Time & Info, 3: Confirmed
@@ -42,7 +68,12 @@ export default function BookingCalendar() {
     }
   ];
 
-  const [selectedType, setSelectedType] = useState(appointmentTypes[0].id);
+  const [searchParams] = useSearchParams();
+  const serviceParam = searchParams.get('service');
+  const packageParam = searchParams.get('package');
+
+  const defaultTypeId = serviceTypeMap[serviceParam] || appointmentTypes[0].id;
+  const [selectedType, setSelectedType] = useState(defaultTypeId);
   const [selectedDate, setSelectedDate] = useState('2026-10-05');
   const [selectedTime, setSelectedTime] = useState('14:00');
 
@@ -52,7 +83,9 @@ export default function BookingCalendar() {
     phone: '',
     company: '',
     website: '',
-    helpNeeded: 'AI lead follow-up and CRM automation',
+    helpNeeded: packageParam
+      ? `${serviceLabels[serviceParam] || 'System Consultation'} (${packageLabels[packageParam] || packageParam})`
+      : 'AI lead follow-up and CRM automation',
     additionalInfo: ''
   });
 
@@ -106,6 +139,19 @@ export default function BookingCalendar() {
           <span>Timezone: {timezone}</span>
         </div>
       </div>
+
+      {/* Selected Package Banner */}
+      {packageParam && step < 3 && (
+        <div className="mt-6 p-4 rounded-2xl bg-brand-lime/10 border border-brand-lime/40 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs font-mono">
+          <div className="flex items-center gap-2 text-white">
+            <span className="w-2 h-2 rounded-full bg-brand-lime animate-pulse" />
+            <span>
+              Preselected Package: <strong className="text-brand-lime">{serviceLabels[serviceParam] || 'System'} · {packageLabels[packageParam] || packageParam}</strong>
+            </span>
+          </div>
+          <span className="text-brand-silver">Starting investment · 30-min discovery audit</span>
+        </div>
+      )}
 
       {/* STEP 1: Consultation Type & Date */}
       {step === 1 && (
