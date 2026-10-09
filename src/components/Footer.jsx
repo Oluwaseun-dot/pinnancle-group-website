@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, MapPin, Globe2, Mail, Phone } from 'lucide-react';
+import { ArrowRight, ArrowUp, MapPin, Globe2, Mail, Phone } from 'lucide-react';
 import MagneticButton from './MagneticButton';
 import PinnancleLogo from './PinnancleLogo';
 
@@ -81,6 +81,14 @@ export default function Footer() {
       if (handleResize) window.removeEventListener('resize', handleResize);
     };
   }, []);
+
+  const scrollToTop = () => {
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.scrollTo({
+      top: 0,
+      behavior: prefersReducedMotion ? 'auto' : 'smooth'
+    });
+  };
 
   return (
     <footer className="relative bg-brand-black text-brand-offWhite border-t border-brand-border overflow-hidden pt-24 pb-12">
@@ -236,6 +244,15 @@ export default function Footer() {
             <Link to="/contact" className="hover:text-white transition-colors">Terms</Link>
             <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">LinkedIn</a>
             <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Instagram</a>
+            <button
+              type="button"
+              onClick={scrollToTop}
+              className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/5 border border-brand-border text-brand-silver hover:text-brand-lime hover:border-brand-lime/50 transition-all focus:outline-none focus:ring-1 focus:ring-brand-lime cursor-pointer"
+              aria-label="Scroll back to top of page"
+            >
+              <span>Back to Top</span>
+              <ArrowUp className="w-3.5 h-3.5" />
+            </button>
             <span>© 2026 Pinnancle Group</span>
           </div>
         </div>

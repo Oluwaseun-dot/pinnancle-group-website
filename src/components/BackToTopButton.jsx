@@ -6,7 +6,7 @@ export default function BackToTopButton() {
 
   useEffect(() => {
     const toggleVisibility = () => {
-      if (window.scrollY > 450) {
+      if (window.scrollY > 400) {
         setIsVisible(true);
       } else {
         setIsVisible(false);
@@ -18,9 +18,10 @@ export default function BackToTopButton() {
   }, []);
 
   const scrollToTop = () => {
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     window.scrollTo({
       top: 0,
-      behavior: 'smooth'
+      behavior: prefersReducedMotion ? 'auto' : 'smooth'
     });
   };
 
@@ -28,9 +29,9 @@ export default function BackToTopButton() {
     <button
       type="button"
       onClick={scrollToTop}
-      aria-label="Scroll back to top"
-      className={`fixed bottom-6 right-6 z-40 p-3 rounded-full bg-brand-charcoal/90 backdrop-blur-md border border-brand-border text-brand-silver hover:text-black hover:bg-brand-lime hover:border-brand-lime transition-all duration-300 shadow-2xl group ${
-        isVisible ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 translate-y-4 pointer-events-none'
+      aria-label="Scroll back to top of page"
+      className={`fixed bottom-24 right-5 sm:bottom-24 sm:right-6 z-30 p-2.5 sm:p-3 rounded-full bg-brand-charcoal/90 hover:bg-brand-dark backdrop-blur-md border border-brand-border hover:border-brand-lime text-brand-silver hover:text-brand-lime transition-all duration-300 shadow-2xl group focus:outline-none focus:ring-2 focus:ring-brand-lime ${
+        isVisible ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 translate-y-3 pointer-events-none'
       }`}
     >
       <ArrowUp className="w-4 h-4 transition-transform group-hover:-translate-y-0.5" />

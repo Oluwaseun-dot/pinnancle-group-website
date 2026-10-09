@@ -168,10 +168,10 @@ export default function AutomationAssessment() {
   const recommendedAreas = isCompleted ? getReadinessResults() : [];
 
   return (
-    <section id="automation-assessment" className="py-24 sm:py-32 bg-brand-black text-brand-offWhite relative border-t border-brand-border">
-      <div className="max-w-5xl mx-auto px-6 md:px-12">
+    <section id="automation-assessment" className="py-20 sm:py-32 bg-brand-black text-brand-offWhite relative border-t border-brand-border">
+      <div className="max-w-5xl mx-auto px-5 sm:px-6 md:px-12">
         {/* Header */}
-        <div className="max-w-3xl mb-12 sm:mb-16">
+        <div className="max-w-3xl mb-10 sm:mb-16">
           <span className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/5 border border-brand-border text-brand-lime text-xs font-mono uppercase tracking-widest mb-4">
             <Zap className="w-3.5 h-3.5" />
             Operational Diagnostic
@@ -179,13 +179,13 @@ export default function AutomationAssessment() {
           <h2 className="text-3xl sm:text-5xl font-display font-bold text-white tracking-tight leading-tight">
             How Ready Is Your Business for Automation?
           </h2>
-          <p className="text-base sm:text-lg text-brand-silver mt-3 leading-relaxed">
+          <p className="text-sm sm:text-base md:text-lg text-brand-silver mt-3 leading-relaxed">
             Answer a few simple questions and see where automation could help your business save hours and convert more inquiries.
           </p>
         </div>
 
         {/* Assessment Card */}
-        <div className="rounded-3xl bg-brand-charcoal border border-brand-border p-6 sm:p-10 md:p-12 shadow-2xl relative">
+        <div className="rounded-2xl sm:rounded-3xl bg-brand-charcoal border border-brand-border p-5 sm:p-8 md:p-12 shadow-2xl relative">
           {!isCompleted ? (
             <div className="space-y-8 animate-fadeIn">
               {/* Progress Indicator */}

@@ -124,9 +124,9 @@ export default function WhatCanWeAutomateTool() {
 
   return (
     <section id="what-can-we-automate" className="py-24 sm:py-32 bg-brand-black text-brand-offWhite relative border-t border-brand-border">
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 md:px-12">
         {/* Header */}
-        <div className="max-w-3xl mb-12 sm:mb-16">
+        <div className="max-w-3xl mb-10 sm:mb-16">
           <span className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/5 border border-brand-border text-brand-lime text-xs font-mono uppercase tracking-widest mb-4">
             <Sparkles className="w-3.5 h-3.5" />
             Interactive Problem Solver
@@ -134,13 +134,13 @@ export default function WhatCanWeAutomateTool() {
           <h2 className="text-3xl sm:text-5xl font-display font-bold text-white tracking-tight leading-tight">
             What Can We Automate?
           </h2>
-          <p className="text-base sm:text-lg text-brand-silver mt-3 leading-relaxed">
+          <p className="text-sm sm:text-base md:text-lg text-brand-silver mt-3 leading-relaxed">
             Tell us what is taking too much time in your business. Select one or more tasks below to see the exact system that can solve it for you.
           </p>
         </div>
 
         {/* Interactive Tool Container */}
-        <div className="rounded-3xl bg-brand-charcoal border border-brand-border p-6 sm:p-10 md:p-12 shadow-2xl space-y-10">
+        <div className="rounded-2xl sm:rounded-3xl bg-brand-charcoal border border-brand-border p-5 sm:p-8 md:p-12 shadow-2xl space-y-8 sm:space-y-10">
           {/* Selectable Options Grid */}
           <div>
             <div className="flex items-center justify-between mb-4">

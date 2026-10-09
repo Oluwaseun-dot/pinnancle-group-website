@@ -9,6 +9,7 @@ import WhatCanWeAutomateTool from '../components/WhatCanWeAutomateTool';
 import AutomationAssessment from '../components/AutomationAssessment';
 import RoiTimeSavedCalculator from '../components/RoiTimeSavedCalculator';
 import IndustriesInteractive from '../components/IndustriesInteractive';
+import PlatformMarquee from '../components/PlatformMarquee';
 import SelectedWork from '../components/SelectedWork';
 import CinematicVideoSection from '../components/CinematicVideoSection';
 import OurStorySection from '../components/OurStorySection';
@@ -77,7 +78,12 @@ export default function HomePage() {
         <IndustriesInteractive />
       </ErrorBoundary>
 
-      {/* 07. Selected Work (Real Systems. Real Businesses.) */}
+      {/* 07B. Platform & Technology Marquee (Tools & Platforms We Work With) */}
+      <ErrorBoundary title="Tools & Platforms Marquee">
+        <PlatformMarquee />
+      </ErrorBoundary>
+
+      {/* 08. Selected Work (Real Systems. Real Businesses.) */}
       <ErrorBoundary title="Selected Work">
         <SelectedWork />
       </ErrorBoundary>
