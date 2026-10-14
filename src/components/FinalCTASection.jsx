@@ -71,7 +71,7 @@ export default function FinalCTASection() {
           </span>
           <span className="flex items-center gap-2">
             <span className="w-1.5 h-1.5 rounded-full bg-white/40" />
-            UK & Nigeria Continuous Operations
+            Worldwide Continuous Operations
           </span>
         </div>
         </ScrollReveal>

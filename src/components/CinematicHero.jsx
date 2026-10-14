@@ -139,7 +139,7 @@ export default function CinematicHero() {
         {/* Geographic / Enterprise Footprint Pill */}
         <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-charcoal/90 border border-brand-border text-[11px] sm:text-xs font-mono text-brand-silver mb-5 sm:mb-8 backdrop-blur-md shadow-2xl animate-fade-in">
           <span className="w-1.5 h-1.5 rounded-full bg-brand-lime shadow-lime-glow-sm" />
-          <span className="text-white font-medium tracking-tight">UK · Nigeria · Worldwide</span>
+          <span className="text-white font-medium tracking-tight">Worldwide Delivery</span>
           <span className="text-brand-borderLight">|</span>
           <span className="text-brand-silver">AI & Digital Systems</span>
         </div>

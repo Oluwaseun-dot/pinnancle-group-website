@@ -825,12 +825,12 @@ export const businessDemos = [
       {
         id: 1,
         sender: 'customer',
-        text: 'Hi, we are closing a £1.2M seed round and need cross-border corporate tax advisory between the UK and Delaware.',
+        text: 'Hi, we are closing a $1.2M seed round and need cross-border corporate tax advisory for our international entity structure.',
         timestamp: '16:05',
         backendStep: {
           category: 'NEW LEAD',
           title: 'High-Value Advisory Lead Ingested',
-          detail: 'Inbound web intake flagged: [Deal Value: £1.2M, Domain: UK-US Cross-Border Tax].',
+          detail: 'Inbound web intake flagged: [Deal Value: $1.2M, Domain: International Cross-Border Tax].',
           systemState: {
             leadStatus: 'Enterprise Inbound',
             crmStage: 'High-Value Lead',
@@ -841,7 +841,7 @@ export const businessDemos = [
       {
         id: 2,
         sender: 'ai',
-        text: 'Hello Rachel, congratulations on the funding round! Are you currently structured as a UK Ltd, or has the Delaware C-Corp flip already completed?',
+        text: 'Hello Rachel, congratulations on the funding round! Are you currently structured as an international entity, or has the Delaware holding company flip already completed?',
         timestamp: '16:05',
         backendStep: {
           category: 'QUALIFICATION',
@@ -857,12 +857,12 @@ export const businessDemos = [
       {
         id: 3,
         sender: 'customer',
-        text: 'UK Ltd currently, planning the US holding company structure next month.',
+        text: 'Operating entity currently, planning the global holding company structure next month.',
         timestamp: '16:06',
         backendStep: {
           category: 'CRM ENRICHMENT',
-          title: 'Lead Tagged: [Delaware Flip, £15k+ Retainer]',
-          detail: 'Company enriched with Companies House records. Lead Score: 98/100.',
+          title: 'Lead Tagged: [Delaware Flip, $15k+ Retainer]',
+          detail: 'Company enriched with registry records. Lead Score: 98/100.',
           systemState: {
             leadStatus: 'Score: 98 (Tier 1)',
             crmStage: 'Partner Consultation Ready',
@@ -873,7 +873,7 @@ export const businessDemos = [
       {
         id: 4,
         sender: 'ai',
-        text: 'Understood. Our international tax partners specialize in UK-US EIS, IP holding transfer, and cross-border structuring. We have advisory consultation openings with our Managing Partner on Wednesday at 11:00 AM or Thursday at 3:00 PM BST. Which fits your schedule?',
+        text: 'Understood. Our international tax partners specialize in global corporate tax, IP holding transfer, and cross-border structuring. We have advisory consultation openings with our Managing Partner on Wednesday at 11:00 AM or Thursday at 3:00 PM UTC. Which fits your schedule?',
         timestamp: '16:06',
         interactiveOptions: ['Wednesday 11:00 AM', 'Thursday 3:00 PM'],
         backendStep: {

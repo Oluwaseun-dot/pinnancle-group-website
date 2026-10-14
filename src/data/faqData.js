@@ -31,8 +31,8 @@ export const faqData = [
   },
   {
     id: 7,
-    question: 'Do you work with businesses outside the UK and Nigeria?',
-    answer: 'Yes. While our core leadership and engineering teams operate between the United Kingdom and Nigeria, our client base is international. We regularly deliver digital systems and automations for clients across North America, Europe, the Middle East, and Sub-Saharan Africa, structuring communication and deployment around your local business hours.'
+    question: 'Do you work with businesses worldwide?',
+    answer: 'Yes. Pinnacle Group operates 100% worldwide, serving ambitious enterprises globally. We regularly deliver digital systems, automations, and web platforms for clients across North America, Europe, the Middle East, Africa, and Asia-Pacific, structuring communication and deployment around your local business hours.'
   },
   {
     id: 8,

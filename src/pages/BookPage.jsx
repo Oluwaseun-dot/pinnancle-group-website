@@ -36,7 +36,7 @@ export default function BookPage() {
           </div>
           <div className="flex items-center gap-2 p-3.5 rounded-xl bg-brand-charcoal border border-brand-border">
             <Globe2 className="w-4 h-4 text-brand-lime" />
-            <span>UK, Nigeria & Worldwide Hours</span>
+            <span>24/7 Worldwide Operating Hours</span>
           </div>
         </div>
 

@@ -31,14 +31,14 @@ export const teamMembers = [
     selectedProjects: [
       {
         title: 'Cross-Border Bid & Procurement Automation',
-        impact: 'Reduced bid assembly time by 72% across UK/Nigeria infrastructure procurement tenders.'
+        impact: 'Reduced bid assembly time by 72% across global infrastructure procurement tenders.'
       },
       {
         title: 'Autonomous Multi-Channel Lead Distribution',
         impact: 'Engineered sub-30-second inbound lead qualification routing for international real estate firm.'
       }
     ],
-    location: 'United Kingdom & Nigeria',
+    location: 'Worldwide',
     experienceYears: '5+ Years in Digital Systems',
     email: 'mosesayodeji25@gmail.com',
     image: '/images/ayodeji-moses.jpg'
@@ -82,7 +82,7 @@ export const teamMembers = [
         impact: 'Fully automated booking and deposit collection with 2-way calendar sync.'
       }
     ],
-    location: 'Lagos, Nigeria',
+    location: 'Worldwide',
     experienceYears: '6+ Years Architecture',
     email: 'Oluwaseungrowthstrategist@gmail.com',
     portfolio: 'https://olatunjisystems.lovable.app/',
@@ -126,7 +126,7 @@ export const teamMembers = [
         impact: 'Automated qualification metrics for high-ticket service companies.'
       }
     ],
-    location: 'Lagos & Remote',
+    location: 'Worldwide',
     experienceYears: '4+ Years',
     image: '/images/praise-salami.jpg'
   },
@@ -167,7 +167,7 @@ export const teamMembers = [
         impact: 'Created unified visual language for high-volume logistics monitoring.'
       }
     ],
-    location: 'Lagos, Nigeria',
+    location: 'Worldwide',
     experienceYears: '5+ Years Creative Design',
     image: '/images/babatunde-david.jpg'
   },
@@ -208,7 +208,7 @@ export const teamMembers = [
         impact: 'High-touch video delivery triggered immediately after high-value enterprise inquiries.'
       }
     ],
-    location: 'Lagos, Nigeria',
+    location: 'Worldwide',
     experienceYears: '4+ Years Media Production',
     image: '/images/babatunde-odunayo.jpg'
   },
@@ -249,7 +249,7 @@ export const teamMembers = [
         impact: 'Synced test-drive bookings across WhatsApp, SMS, and showroom staff calendars.'
       }
     ],
-    location: 'Lagos, Nigeria',
+    location: 'Worldwide',
     experienceYears: '5+ Years CRM Design',
     email: 'sandradamilola68@gmail.com',
     image: '/images/babatunde-damilola.jpg'
@@ -291,7 +291,7 @@ export const teamMembers = [
         impact: 'Published 90+ branded short videos monthly with human quality review checkpoints.'
       }
     ],
-    location: 'Lagos, Nigeria',
+    location: 'Worldwide',
     experienceYears: '4+ Years AI Video',
     image: '/images/azeez-anuoluwapo.jpg'
   }

@@ -366,7 +366,7 @@ export const servicesPricingData = [
     id: 'tender-support',
     name: 'Tender Support',
     badge: 'Commercial Procurement',
-    description: 'Specialized bid writing, compliance verification, and proposal architecture for competitive UK and international public & private procurement.',
+    description: 'Specialized bid writing, compliance verification, and proposal architecture for competitive worldwide and international public & private procurement.',
     tiers: [
       {
         id: 'basic',
@@ -438,7 +438,7 @@ export const servicesPricingData = [
         summary: 'Ongoing continuous tender monitoring, bid library development, and dedicated outsourced bid management.',
         turnaround: 'Ongoing Partnership',
         deliverables: [
-          'Continuous automated monitoring across UK Find a Tender, Contracts Finder & global portals',
+          'Continuous automated monitoring across leading international procurement & global tender portals',
           'Dedicated bid management team preparing recurring monthly tender submissions',
           'Creation and maintenance of a centralized corporate bid repository (boilerplates, CVs, case studies)',
           'Executive attendance and support during pre-tender market engagements and contract negotiations',

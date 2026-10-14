@@ -145,7 +145,7 @@ export const servicesData = [
     highlightMetric: '72% Faster Tender Document Preparation',
     services: [
       { name: 'Tender Research', desc: 'Identify tender notices and contract opportunities matching your business capability.' },
-      { name: 'Tender Opportunity Search', desc: 'Continuous monitoring of procurement portals across the UK, Nigeria, and international markets.' },
+      { name: 'Tender Opportunity Search', desc: 'Continuous monitoring of procurement portals across worldwide and international markets.' },
       { name: 'Tender Preparation', desc: 'Structure mandatory compliance documents, executive summaries, and technical responses.' },
       { name: 'Tender Documentation', desc: 'Create organized company credential libraries, certificates, and case study profiles.' },
       { name: 'Submission Support', desc: 'Ensure submissions meet every evaluation criteria before official submission deadlines.' },

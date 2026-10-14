@@ -77,26 +77,26 @@ export default function ContactPage() {
               <div className="p-5 rounded-2xl bg-brand-charcoal border border-brand-border space-y-2">
                 <div className="flex items-center gap-2 text-white font-semibold text-sm">
                   <MapPin className="w-4 h-4 text-brand-lime" />
-                  <span>United Kingdom Operations</span>
+                  <span>Global Operations Desk</span>
                 </div>
                 <p className="text-xs text-brand-silver leading-relaxed">
-                  London Strategic Desk: Strategic governance, European tender strategy, and corporate client support.
+                  International Advisory Desk: Strategic governance, global procurement strategy, and corporate client support.
                 </p>
                 <p className="text-xs font-mono text-brand-lime pt-1">
-                  desk.uk@pinnanclegroup.com
+                  desk.global@pinnanclegroup.com
                 </p>
               </div>
 
               <div className="p-5 rounded-2xl bg-brand-charcoal border border-brand-border space-y-2">
                 <div className="flex items-center gap-2 text-white font-semibold text-sm">
                   <MapPin className="w-4 h-4 text-brand-lime" />
-                  <span>Nigeria Systems & Media Hub</span>
+                  <span>Worldwide Systems & Media Hub</span>
                 </div>
                 <p className="text-xs text-brand-silver leading-relaxed">
-                  Lagos Engineering Center: Full-stack automation, CRM pipelines, software integrations, and multimedia.
+                  Global Engineering Center: Full-stack automation, CRM pipelines, software integrations, and multimedia.
                 </p>
                 <p className="text-xs font-mono text-brand-lime pt-1">
-                  desk.ng@pinnanclegroup.com
+                  engineering@pinnanclegroup.com
                 </p>
               </div>
 
@@ -106,7 +106,7 @@ export default function ContactPage() {
                   <span>Worldwide Client Engagements</span>
                 </div>
                 <p className="text-xs text-brand-silver leading-relaxed">
-                  Deployments structured across UK, European, US, and African business time zones.
+                  Continuous 24/7 deployments structured across international and global business time zones.
                 </p>
                 <p className="text-xs font-mono text-white pt-1">
                   hello@pinnanclegroup.com

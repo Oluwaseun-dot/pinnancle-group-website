@@ -547,7 +547,7 @@ export default function ServicesPage() {
                 </div>
 
                 <div className="p-4 rounded-xl bg-brand-dark border border-brand-border text-xs font-mono text-brand-silver">
-                  Focus: <strong className="text-white">UK & International Government and Corporate Procurement</strong>
+                  Focus: <strong className="text-white">Worldwide & International Government and Corporate Procurement</strong>
                 </div>
               </div>
 

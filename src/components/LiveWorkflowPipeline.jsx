@@ -27,7 +27,7 @@ const workflowSteps = [
     payload: {
       source: 'web_consultation_form',
       prospect: 'Marcus Vance (COO, Logistics)',
-      location: 'London, UK',
+      location: 'Worldwide',
       inquiry: 'Need multi-location CRM automation & AI dispatch'
     }
   },
@@ -60,7 +60,7 @@ const workflowSteps = [
       crm_id: 'GHL_REC_849204',
       stage: 'Discovery & Consultation Pending',
       lead_owner: 'Ayodeji Moses',
-      tags: ['Enterprise', 'UK-Logistics', 'Q4-Rollout']
+      tags: ['Enterprise', 'Global-Logistics', 'Q4-Rollout']
     }
   },
   {

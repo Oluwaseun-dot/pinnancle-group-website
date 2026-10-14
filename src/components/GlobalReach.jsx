@@ -3,20 +3,20 @@ import { MapPin, Globe2 } from 'lucide-react';
 
 export default function GlobalReach() {
   return (
-    <section className="py-28 md:py-36 bg-brand-black text-brand-offWhite relative border-t border-brand-border">
+    <section className="py-20 md:py-24 bg-brand-black text-brand-offWhite relative border-t border-brand-border">
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         {/* Section Header */}
-        <div className="max-w-4xl mb-16">
+        <div className="max-w-4xl mb-12 sm:mb-16">
           <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-brand-border text-brand-silver text-xs font-mono uppercase tracking-widest mb-4">
             <span className="w-1.5 h-1.5 rounded-full bg-brand-lime" />
             Global Delivery
           </span>
           <h2 className="text-3xl sm:text-5xl md:text-6xl font-display font-bold tracking-tight text-white leading-tight">
-            UK. Nigeria. <br />
-            <span className="text-brand-silver">Worldwide.</span>
+            Built for Scale. <br />
+            <span className="text-brand-lime">Delivered Worldwide.</span>
           </h2>
           <p className="text-base sm:text-lg text-brand-silver mt-4 leading-relaxed">
-            Based across the United Kingdom and Nigeria, Pinnancle Group works with businesses around the world.
+            Pinnacle Group architects and deploys autonomous AI systems, enterprise CRMs, and connected digital operations for businesses around the world.
           </p>
         </div>
 
@@ -26,8 +26,8 @@ export default function GlobalReach() {
             {/* Photographic Twilight Dual-Hub Composite */}
             <div className="absolute inset-0 z-0 pointer-events-none">
               <img
-                src="/images/global-uk-nigeria-network.jpg"
-                alt="London and Lagos Twilight Connected Network"
+                src="/images/global-worldwide-network.jpg"
+                alt="Worldwide Connected Systems Network"
                 className="w-full h-full object-cover filter contrast-125 brightness-75 opacity-30"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/75 to-brand-dark/85" />
@@ -52,7 +52,7 @@ export default function GlobalReach() {
               </defs>
               <rect width="1000" height="500" fill="url(#dotPatternClean)" />
 
-              {/* Connecting subtle line London (490, 145) to Lagos (498, 285) */}
+              {/* Connecting subtle line Hub 1 to Hub 2 */}
               <path
                 d="M 490 145 Q 520 215 498 285"
                 stroke="url(#limeLineGrad)"
@@ -60,7 +60,7 @@ export default function GlobalReach() {
                 strokeDasharray="3 3"
               />
 
-              {/* London to North America (280, 180) */}
+              {/* Americas Route */}
               <path
                 d="M 490 145 Q 380 130 280 180"
                 stroke="#666666"
@@ -68,7 +68,7 @@ export default function GlobalReach() {
                 strokeDasharray="3 3"
               />
 
-              {/* London to Middle East (620, 210) */}
+              {/* Asia & Pacific Route */}
               <path
                 d="M 490 145 Q 560 165 620 210"
                 stroke="#666666"
@@ -77,34 +77,34 @@ export default function GlobalReach() {
               />
             </svg>
 
-            {/* London Hub Marker */}
+            {/* Global Operations Marker */}
             <div className="absolute" style={{ top: '29%', left: '49%' }}>
               <div className="relative flex items-center justify-center">
                 <span className="w-3.5 h-3.5 rounded-full bg-brand-lime shadow-lime-glow-sm" />
                 <span className="absolute w-6 h-6 rounded-full border border-brand-lime/60 animate-ping opacity-50" />
               </div>
               <div className="absolute -top-10 -left-12 whitespace-nowrap bg-brand-black/90 border border-brand-border text-white text-[10px] font-mono px-2.5 py-1 rounded-full shadow-lg">
-                London Operations
+                Global Operations
               </div>
             </div>
 
-            {/* Lagos Hub Marker */}
+            {/* Systems Engineering Marker */}
             <div className="absolute" style={{ top: '57%', left: '49.8%' }}>
               <div className="relative flex items-center justify-center">
                 <span className="w-3.5 h-3.5 rounded-full bg-brand-lime shadow-lime-glow-sm" />
                 <span className="absolute w-6 h-6 rounded-full border border-brand-lime/60 animate-ping opacity-50" />
               </div>
               <div className="absolute -bottom-9 -left-12 whitespace-nowrap bg-brand-black/90 border border-brand-border text-white text-[10px] font-mono px-2.5 py-1 rounded-full shadow-lg">
-                Lagos Systems Hub
+                Worldwide Engineering Hub
               </div>
             </div>
 
             {/* Worldwide tags */}
             <div className="absolute top-[36%] left-[28%] text-[10px] font-mono text-brand-silver">
-              North America Clients
+              Americas Client Network
             </div>
             <div className="absolute top-[42%] left-[62%] text-[10px] font-mono text-brand-silver">
-              Middle East & Europe
+              International Operations
             </div>
           </div>
 
@@ -112,21 +112,21 @@ export default function GlobalReach() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
             <div className="p-5 rounded-2xl bg-brand-dark border border-brand-border space-y-1.5">
               <div className="flex items-center gap-2">
-                <MapPin className="w-4 h-4 text-brand-lime" />
-                <h4 className="text-sm font-semibold text-white">United Kingdom Operations</h4>
+                <Globe2 className="w-4 h-4 text-brand-lime" />
+                <h4 className="text-sm font-semibold text-white">Global Client Operations</h4>
               </div>
               <p className="text-xs text-brand-silver leading-relaxed">
-                Strategic client leadership, commercial tenders, compliance coordination, and UK/European timezone support.
+                Strategic client leadership, commercial tenders, compliance coordination, and dedicated 24/7 global timezone support.
               </p>
             </div>
 
             <div className="p-5 rounded-2xl bg-brand-dark border border-brand-border space-y-1.5">
               <div className="flex items-center gap-2">
                 <MapPin className="w-4 h-4 text-brand-lime" />
-                <h4 className="text-sm font-semibold text-white">Nigeria Engineering Hub</h4>
+                <h4 className="text-sm font-semibold text-white">Worldwide Engineering Hub</h4>
               </div>
               <p className="text-xs text-brand-silver leading-relaxed">
-                Full-stack systems development, AI workflow automation, CRM architectures, and digital media production.
+                Full-stack systems development, AI workflow automation, CRM architectures, and digital media production delivered worldwide.
               </p>
             </div>
           </div>

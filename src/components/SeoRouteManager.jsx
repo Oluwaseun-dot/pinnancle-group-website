@@ -4,7 +4,7 @@ import { useLocation } from 'react-router-dom';
 const routeSeoMap = {
   '/': {
     title: 'Pinnancle Group | AI Automation & Digital Systems Agency',
-    description: 'We Build AI Systems That Help Businesses Grow. Custom AI automations, intelligent CRM workflows, and autonomous agents for fast-growing companies in the UK, Nigeria, and worldwide.'
+    description: 'We Build AI Systems That Help Businesses Grow. Custom AI automations, intelligent CRM workflows, and autonomous agents for fast-growing companies worldwide.'
   },
   '/services': {
     title: 'Core Practice Areas & Enterprise Services | Pinnancle Group',
@@ -24,7 +24,7 @@ const routeSeoMap = {
   },
   '/team': {
     title: 'The Specialists & Founders | Pinnancle Group',
-    description: 'Meet the seven multidisciplinary practitioners and systems engineers powering Pinnancle Group in the UK and Nigeria.'
+    description: 'Meet the seven multidisciplinary practitioners and systems engineers powering Pinnancle Group worldwide.'
   },
   '/about': {
     title: 'Our Story & Heritage | Pinnancle Group',
@@ -40,7 +40,7 @@ const routeSeoMap = {
   },
   '/contact': {
     title: 'Contact Commercial Desk | Pinnancle Group',
-    description: 'Get in touch with our leadership and technical teams in London and Lagos. Direct email, WhatsApp, and consultation inquiry.'
+    description: 'Get in touch with our leadership and technical teams. Direct email, WhatsApp, and consultation inquiry worldwide.'
   },
   '/automation-demo': {
     title: 'Interactive AI Automation Demos | Pinnancle Group',

@@ -27,7 +27,7 @@ export default function TrustCredibilityBar() {
     {
       value: '50+',
       label: 'Businesses Served',
-      sub: 'UK, Nigeria & Global',
+      sub: 'Worldwide',
       icon: <Building className="w-3.5 h-3.5 text-brand-lime" />
     },
     {

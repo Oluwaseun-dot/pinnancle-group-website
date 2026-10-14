@@ -342,7 +342,7 @@ export default function CinematicVideoSection() {
           {/* Corner Metadata (Only visible before video begins playing) */}
           {!hasStarted && (
             <div className="absolute bottom-4 left-6 right-6 flex items-center justify-between text-[11px] font-mono text-brand-silver/50 pointer-events-none">
-              <span>LONDON & LAGOS DESKS</span>
+              <span>WORLDWIDE OPERATIONS</span>
               <span>SYSTEMS THAT MOVE BUSINESSES FORWARD</span>
             </div>
           )}

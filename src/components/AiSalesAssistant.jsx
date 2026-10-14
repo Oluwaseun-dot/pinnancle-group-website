@@ -69,7 +69,7 @@ export default function AiSalesAssistant() {
 
     if (q.includes('ayodeji') || q.includes('moses')) {
       return {
-        text: 'Ayodeji Moses is Co-Founder and Team Leader at Pinnacle Group. He directs our autonomous AI systems, commercial tender engineering, and cross-border operations between the UK and Nigeria.',
+        text: 'Ayodeji Moses is Co-Founder and Team Leader at Pinnacle Group. He directs our autonomous AI systems, commercial tender engineering, and worldwide enterprise client operations.',
         showTeamLink: true
       };
     }
@@ -81,10 +81,10 @@ export default function AiSalesAssistant() {
       };
     }
 
-    // 2. Locations & Cross-Border Delivery
-    if (q.includes('uk') || q.includes('nigeria') || q.includes('location') || q.includes('where are you') || q.includes('office') || q.includes('country')) {
+    // 2. Locations & Worldwide Delivery
+    if (q.includes('location') || q.includes('where are you') || q.includes('office') || q.includes('country') || q.includes('worldwide') || q.includes('global')) {
       return {
-        text: 'Pinnacle Group operates between the United Kingdom and Nigeria, serving ambitious enterprises worldwide. We maintain continuous operational hours across UK/European (BST/GMT) and West African time zones.',
+        text: 'Pinnacle Group operates worldwide, serving ambitious enterprises globally. We maintain continuous operational hours across international business time zones.',
         showBookingButton: true
       };
     }

@@ -704,7 +704,7 @@ export default function InteractivePhoneExperience() {
                                 app: 'DOCUSIGN & MAKE PIPELINE',
                                 icon: ShieldCheck,
                                 title: '📑 Tender Submission Signed',
-                                desc: 'UK Infrastructure bid packet archived in secure cloud vault.',
+                                desc: 'Worldwide Infrastructure bid packet archived in secure cloud vault.',
                                 time: '41m ago',
                                 tag: 'Tender',
                               },

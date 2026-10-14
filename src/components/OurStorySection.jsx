@@ -9,7 +9,7 @@ export default function OurStorySection() {
     {
       phase: '2023 · The Genesis',
       headline: 'Three Founders. One Common Realization.',
-      narrative: 'Pinnancle Group was founded in 2023 by Ayodeji Moses, Praise Salami, and Oluwaseun Olatunji. Working across London and Lagos, we initially focused on engineering high-conversion web platforms and preparing commercial procurement tenders.',
+      narrative: 'Pinnancle Group was founded in 2023 by Ayodeji Moses, Praise Salami, and Oluwaseun Olatunji. Operating globally, we initially focused on engineering high-conversion web platforms and preparing commercial procurement tenders.',
       keyFact: 'Ayodeji Moses · Praise Salami · Oluwaseun Olatunji'
     },
     {
@@ -32,7 +32,7 @@ export default function OurStorySection() {
     },
     {
       phase: 'Present Day',
-      headline: 'Built Between the UK & Nigeria. Delivered Worldwide.',
+      headline: 'Built for High-Growth Enterprises. Delivered Worldwide.',
       narrative: 'Today, Pinnancle Group powers mission-critical automation systems for over 50 businesses globally—delivering measurable reductions in manual overhead, faster customer response, and higher commercial revenue.',
       keyFact: '50+ Businesses · 100+ Projects · 4.9/5 Rating'
     }
@@ -72,7 +72,7 @@ export default function OurStorySection() {
             </span>
             <span className="px-3 py-1 rounded-full bg-brand-black/85 backdrop-blur-md border border-brand-lime/40 text-xs font-mono text-brand-lime flex items-center gap-1.5">
               <span className="w-1.5 h-1.5 rounded-full bg-brand-lime" />
-              Engineering Studio · London & Lagos
+              Engineering Studio · Worldwide
             </span>
           </div>
           <div className="absolute bottom-4 left-4 right-4 hidden sm:flex items-center justify-between text-xs font-mono text-brand-silver">
@@ -80,7 +80,7 @@ export default function OurStorySection() {
               "Technology should directly serve business outcomes."
             </span>
             <span className="px-3.5 py-1.5 rounded-full bg-brand-black/85 backdrop-blur-md border border-brand-border text-brand-silver">
-              UK & Nigeria Continuous Operations
+              Worldwide Continuous Operations
             </span>
           </div>
         </div>

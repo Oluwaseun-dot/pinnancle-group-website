@@ -263,7 +263,7 @@ export default function Navbar() {
           {/* Mobile Footer Area with prominent Booking CTA */}
           <div className="pt-6 border-t border-brand-border space-y-4 mt-6">
             <div className="flex items-center justify-between text-xs text-brand-silver font-mono">
-              <span>UK & NIGERIA OPERATIONS</span>
+              <span>WORLDWIDE OPERATIONS</span>
               <span>EST. 2023</span>
             </div>
             <MagneticButton

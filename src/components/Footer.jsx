@@ -123,11 +123,11 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 py-8 border-b border-brand-border mb-16 text-xs text-brand-silver">
           <div className="flex items-start gap-3">
             <div className="p-2 rounded-lg bg-brand-dark border border-brand-border text-white">
-              <MapPin className="w-4 h-4 text-brand-lime" />
+              <Globe2 className="w-4 h-4 text-brand-lime" />
             </div>
             <div>
-              <p className="font-semibold text-white uppercase tracking-wider text-[11px]">United Kingdom</p>
-              <p className="mt-0.5">London Strategic Desk · Client Operations</p>
+              <p className="font-semibold text-white uppercase tracking-wider text-[11px]">Global Architecture</p>
+              <p className="mt-0.5">Autonomous AI & Full-Stack System Engineering</p>
             </div>
           </div>
 
@@ -136,8 +136,8 @@ export default function Footer() {
               <MapPin className="w-4 h-4 text-brand-lime" />
             </div>
             <div>
-              <p className="font-semibold text-white uppercase tracking-wider text-[11px]">Nigeria</p>
-              <p className="mt-0.5">Lagos Engineering & Creative Hub</p>
+              <p className="font-semibold text-white uppercase tracking-wider text-[11px]">Worldwide Operations</p>
+              <p className="mt-0.5">Continuous 24/7 Deployment Across Global Time Zones</p>
             </div>
           </div>
 
@@ -146,8 +146,8 @@ export default function Footer() {
               <Globe2 className="w-4 h-4 text-brand-lime" />
             </div>
             <div>
-              <p className="font-semibold text-white uppercase tracking-wider text-[11px]">Worldwide</p>
-              <p className="mt-0.5">Deployments across UK, US, Europe & Africa</p>
+              <p className="font-semibold text-white uppercase tracking-wider text-[11px]">Worldwide Reach</p>
+              <p className="mt-0.5">Serving Ambitious Enterprises Across All Continents</p>
             </div>
           </div>
         </div>
@@ -163,8 +163,8 @@ export default function Footer() {
               We Build AI Systems That Help Businesses Grow.
             </p>
             <div className="pt-2 text-[11px] font-mono text-brand-silver space-y-1">
-              <p className="text-brand-lime">Built between the UK & Nigeria.</p>
-              <p>Delivered worldwide.</p>
+              <p className="text-brand-lime">Engineering Autonomous Systems.</p>
+              <p>Delivered Worldwide.</p>
             </div>
           </div>
 
@@ -223,11 +223,10 @@ export default function Footer() {
               CONTACT
             </p>
             <ul className="space-y-2 text-xs text-brand-silver">
-              <li className="text-white font-medium">United Kingdom</li>
-              <li className="text-white font-medium">Nigeria</li>
-              <li className="text-brand-lime">Worldwide Delivery</li>
+              <li className="text-white font-medium">Global Delivery</li>
+              <li className="text-brand-lime font-medium">Worldwide Operations</li>
               <li><a href="mailto:contact@pinnanclegroup.com" className="hover:text-white transition-colors flex items-center gap-1.5"><Mail className="w-3.5 h-3.5" /> Email Direct</a></li>
-              <li><Link to="/contact" className="hover:text-white transition-colors">Office Coordinates</Link></li>
+              <li><Link to="/contact" className="hover:text-white transition-colors">Global Coordinates</Link></li>
               <li><Link to="/book" className="text-white hover:text-brand-lime transition-colors">Schedule Consultation</Link></li>
             </ul>
           </div>
@@ -238,7 +237,7 @@ export default function Footer() {
           <div className="space-y-1">
             <p className="text-white font-semibold">PINNANCLE GROUP</p>
             <p>AI Automation · Digital Systems · Business Technology</p>
-            <p className="text-brand-lime">Built between the UK & Nigeria. Delivered worldwide.</p>
+            <p className="text-brand-lime">Autonomous Systems Delivered Worldwide.</p>
           </div>
 
           <div className="flex flex-wrap items-center gap-6">

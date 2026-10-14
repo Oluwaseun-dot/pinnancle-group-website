@@ -21,7 +21,7 @@ export default function AboutPage() {
             <span className="text-brand-silver">That Help Businesses Grow.</span>
           </h1>
           <p className="text-lg md:text-xl text-brand-silver mt-6 leading-relaxed">
-            Operating between the United Kingdom and Nigeria, Pinnancle Group builds digital systems that help businesses automate repetitive work, respond to customers faster, manage leads, improve sales, and connect the tools they use every day.
+            Operating worldwide, Pinnancle Group builds digital systems that help businesses automate repetitive work, respond to customers faster, manage leads, improve sales, and connect the tools they use every day.
           </p>
         </div>
 
@@ -43,7 +43,7 @@ export default function AboutPage() {
               </span>
               <span className="px-3 py-1 rounded-full bg-brand-black/85 backdrop-blur-md border border-brand-lime/40 text-xs font-mono text-brand-lime flex items-center gap-1.5">
                 <span className="w-1.5 h-1.5 rounded-full bg-brand-lime" />
-                Engineering Studio · London & Lagos
+                Engineering Studio · Worldwide Operations
               </span>
             </div>
           </div>
@@ -59,7 +59,7 @@ export default function AboutPage() {
               In 2023, Pinnancle Group was founded by <strong className="text-white">Ayodeji Moses</strong>, <strong className="text-white">Salami Praise</strong>, and <strong className="text-white">Olatunji Oluwaseun</strong>, uniting their expertise to engineer transformative digital systems, high-conversion web platforms, and automated commercial tender infrastructure.
             </p>
             <p>
-              Working with expanding companies across the UK and Nigeria showed our founders that businesses were suffering from identical operational bottlenecks: overwhelming manual data entry, lost sales leads, delayed follow-up, disconnected software tools, and fragmented communication.
+              Working with expanding companies worldwide showed our founders that businesses were suffering from identical operational bottlenecks: overwhelming manual data entry, lost sales leads, delayed follow-up, disconnected software tools, and fragmented communication.
             </p>
             <p className="text-white font-medium">
               We recognized early on that an isolated website or standard template never resolves broken operational pipelines.
@@ -94,8 +94,8 @@ export default function AboutPage() {
         <div className="space-y-8">
           <div className="relative w-full aspect-[21/9] sm:aspect-[16/7] rounded-3xl overflow-hidden border border-brand-border bg-brand-dark shadow-2xl group">
             <img
-              src="/images/global-uk-nigeria-network.jpg"
-              alt="Pinnancle Group Global Network — London & Lagos"
+              src="/images/global-worldwide-network.jpg"
+              alt="Pinnancle Group Global Network — Worldwide Operations"
               className="w-full h-full object-cover filter contrast-105 group-hover:scale-105 transition-transform duration-700"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-brand-black/90 via-transparent to-brand-black/40" />
@@ -105,18 +105,18 @@ export default function AboutPage() {
               </span>
               <span className="px-3 py-1 rounded-full bg-brand-black/85 backdrop-blur-md border border-brand-lime/40 text-xs font-mono text-brand-lime flex items-center gap-1.5">
                 <span className="w-1.5 h-1.5 rounded-full bg-brand-lime animate-pulse" />
-                London & Lagos Synced Desks
+                Worldwide Synced Operations
               </span>
             </div>
             <div className="absolute bottom-4 left-4 right-4 hidden sm:flex items-center justify-between text-xs font-mono text-brand-silver">
               <span className="px-3 py-1 rounded-full bg-brand-black/80 backdrop-blur-md border border-brand-border text-white">
-                UK Strategic Direction
+                Global Strategic Direction
               </span>
               <span className="px-3 py-1 rounded-full bg-brand-black/80 backdrop-blur-md border border-brand-border text-brand-lime">
-                High-Speed Transatlantic Fiber
+                High-Speed Distributed Cloud Fiber
               </span>
               <span className="px-3 py-1 rounded-full bg-brand-black/80 backdrop-blur-md border border-brand-border text-white">
-                Lagos Engineering Center
+                Worldwide Engineering Center
               </span>
             </div>
           </div>
@@ -125,20 +125,20 @@ export default function AboutPage() {
           <div className="p-8 rounded-3xl bg-brand-charcoal border border-brand-border space-y-3">
             <div className="flex items-center gap-2 text-white">
               <MapPin className="w-5 h-5 text-brand-lime" />
-              <h3 className="text-xl font-display font-bold">United Kingdom Operations</h3>
+              <h3 className="text-xl font-display font-bold">Global Architecture Hub</h3>
             </div>
             <p className="text-sm text-brand-silver leading-relaxed">
-              London Strategic Desk managing European client engagements, tender research, and executive consultations.
+              International Strategic Desk managing global enterprise engagements, tender research, and executive consultations.
             </p>
           </div>
 
           <div className="p-8 rounded-3xl bg-brand-charcoal border border-brand-border space-y-3">
             <div className="flex items-center gap-2 text-white">
               <MapPin className="w-5 h-5 text-brand-lime" />
-              <h3 className="text-xl font-display font-bold">Nigeria Systems Hub</h3>
+              <h3 className="text-xl font-display font-bold">Worldwide Engineering Center</h3>
             </div>
             <p className="text-sm text-brand-silver leading-relaxed">
-              Lagos Engineering Center delivering AI automation, software integrations, CRM workflows, and creative media pipelines.
+              Global Systems Hub delivering AI automation, software integrations, CRM workflows, and creative media pipelines.
             </p>
           </div>
         </div>
@@ -161,7 +161,7 @@ export default function AboutPage() {
 
           <div className="pt-6 border-t border-brand-border flex flex-col sm:flex-row items-center justify-between gap-4">
             <span className="text-xs font-mono text-brand-silver">
-              Serving Clients Across the UK, Nigeria & Worldwide
+              Serving Enterprise Clients Worldwide
             </span>
             <MagneticButton to="/book" variant="primary" size="md" showArrow={true}>
               Book a Consultation
