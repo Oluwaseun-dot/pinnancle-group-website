@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ArrowRight, ChevronDown, Sparkles, Play, Zap, Building2, BookOpen } from 'lucide-react';
+import ThemeToggle from './ThemeToggle';
 import MagneticButton from './MagneticButton';
 import PinnancleLogo from './PinnancleLogo';
 
@@ -186,8 +187,9 @@ export default function Navbar() {
             </div>
           </nav>
 
-          {/* Desktop CTA Action */}
-          <div className="hidden lg:flex items-center gap-4">
+          {/* Desktop CTA Action & Theme Switcher */}
+          <div className="hidden lg:flex items-center gap-3">
+            <ThemeToggle />
             <MagneticButton
               to="/book"
               variant="primary"
@@ -198,15 +200,18 @@ export default function Navbar() {
             </MagneticButton>
           </div>
 
-          {/* Mobile Menu Hamburger */}
-          <button
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden p-2.5 rounded-xl bg-brand-charcoal border border-brand-border text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-lime"
-            aria-label="Toggle Navigation Menu"
-            aria-expanded={mobileMenuOpen}
-          >
-            {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-          </button>
+          {/* Mobile Actions: Theme Switcher & Menu Hamburger */}
+          <div className="flex items-center gap-2 lg:hidden">
+            <ThemeToggle compact={true} />
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="p-2.5 rounded-xl bg-brand-charcoal border border-brand-border text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-lime"
+              aria-label="Toggle Navigation Menu"
+              aria-expanded={mobileMenuOpen}
+            >
+              {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+            </button>
+          </div>
         </div>
       </header>
 
@@ -260,8 +265,13 @@ export default function Navbar() {
             </div>
           </div>
 
-          {/* Mobile Footer Area with prominent Booking CTA */}
+          {/* Mobile Footer Area with Theme Selector & prominent Booking CTA */}
           <div className="pt-6 border-t border-brand-border space-y-4 mt-6">
+            <div className="flex items-center justify-between p-3.5 rounded-2xl bg-brand-charcoal border border-brand-border">
+              <span className="text-xs font-mono text-brand-silver">Appearance Mode</span>
+              <ThemeToggle showLabel={true} />
+            </div>
+
             <div className="flex items-center justify-between text-xs text-brand-silver font-mono">
               <span>WORLDWIDE OPERATIONS</span>
               <span>EST. 2023</span>

@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: 'class',
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -8,22 +9,23 @@ export default {
     extend: {
       colors: {
         brand: {
-          black: '#050505',
-          dark: '#0a0a0a',
-          charcoal: '#121212',
-          card: '#161616',
-          cardLight: '#1f1f1f',
-          border: '#242424',
-          borderLight: '#383838',
-          grey: '#737373',
-          silver: '#a3a3a3',
-          light: '#e5e5e5',
-          offWhite: '#f5f5f5',
+          black: 'var(--brand-black, #050505)',
+          dark: 'var(--brand-dark, #0a0a0a)',
+          charcoal: 'var(--brand-charcoal, #121212)',
+          card: 'var(--brand-card, #161616)',
+          cardLight: 'var(--brand-card-light, #1f1f1f)',
+          border: 'var(--brand-border, #242424)',
+          borderLight: 'var(--brand-border-light, #383838)',
+          grey: 'var(--brand-grey, #737373)',
+          silver: 'var(--brand-silver, #a3a3a3)',
+          light: 'var(--brand-light, #e5e5e5)',
+          offWhite: 'var(--brand-off-white, #f5f5f5)',
           white: '#ffffff',
           // Controlled Electric-Lime Accent (used strictly for hovers, dots, small highlights)
           lime: '#ccff00',
           limeMuted: '#a3e635',
           limeDim: '#65a30d',
+          limeText: 'var(--brand-lime-text, #ccff00)',
         }
       },
       fontFamily: {

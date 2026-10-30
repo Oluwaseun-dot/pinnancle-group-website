@@ -29,51 +29,62 @@ export default function BusinessGrowthMessageSection() {
           </h2>
 
           {/* Narrative Content */}
-          <div className="mt-8 space-y-5 text-base sm:text-lg text-brand-silver leading-relaxed font-normal max-w-3xl">
+          <div className="mt-8 space-y-6 text-base sm:text-lg text-brand-silver leading-relaxed font-normal max-w-3xl">
             <p>
-              Running a business takes courage, time, and commitment. You have invested your energy into building something valuable, and every day you make decisions that shape its future.
+              Running an ambitious business takes focus. But sustainable growth shouldn't mean spending extra hours on repetitive tasks, manually copying data between tools, or letting qualified sales leads slip away.
             </p>
 
-            <p>
-              But growth should not mean spending more hours on repetitive tasks, chasing every lead manually, answering the same questions repeatedly, or trying to manage disconnected tools.
-            </p>
-
-            <p className="text-white font-medium text-lg sm:text-xl pt-2">
-              At some point, growing your business means investing in better systems.
+            <p className="text-white font-medium text-lg sm:text-xl">
+              At every stage of scale, operational momentum comes from investing in reliable systems:
             </p>
 
             {/* System Breakdown Cards */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 py-4 my-2">
-              <div className="p-4 rounded-2xl bg-brand-dark border border-brand-border/80 space-y-1">
-                <span className="text-xs font-mono text-brand-lime uppercase tracking-wider block font-semibold">The Right Website</span>
-                <p className="text-xs sm:text-sm text-brand-offWhite">Helps customers immediately understand your value and converts visitors into inquiries.</p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 py-2">
+              <div className="p-4 sm:p-5 rounded-2xl bg-brand-dark border border-brand-border/80 space-y-1.5 hover:border-brand-lime/30 transition-colors">
+                <div className="flex items-center gap-2 text-brand-lime font-mono text-xs uppercase tracking-wider font-semibold">
+                  <span className="w-1.5 h-1.5 rounded-full bg-brand-lime" />
+                  The Right Website
+                </div>
+                <p className="text-xs sm:text-sm text-brand-offWhite leading-relaxed">
+                  Communicates clear value and converts incoming traffic into booked consultations.
+                </p>
               </div>
-              <div className="p-4 rounded-2xl bg-brand-dark border border-brand-border/80 space-y-1">
-                <span className="text-xs font-mono text-brand-lime uppercase tracking-wider block font-semibold">The Right CRM</span>
-                <p className="text-xs sm:text-sm text-brand-offWhite">Keeps track of every opportunity and ensures no qualified lead is forgotten.</p>
+
+              <div className="p-4 sm:p-5 rounded-2xl bg-brand-dark border border-brand-border/80 space-y-1.5 hover:border-brand-lime/30 transition-colors">
+                <div className="flex items-center gap-2 text-brand-lime font-mono text-xs uppercase tracking-wider font-semibold">
+                  <span className="w-1.5 h-1.5 rounded-full bg-brand-lime" />
+                  The Right CRM
+                </div>
+                <p className="text-xs sm:text-sm text-brand-offWhite leading-relaxed">
+                  Organizes client pipelines, automates follow-ups, and recovers missed opportunities.
+                </p>
               </div>
-              <div className="p-4 rounded-2xl bg-brand-dark border border-brand-border/80 space-y-1">
-                <span className="text-xs font-mono text-brand-lime uppercase tracking-wider block font-semibold">Workflow Automation</span>
-                <p className="text-xs sm:text-sm text-brand-offWhite">Frees your team from repetitive tasks so they can spend more time serving clients.</p>
+
+              <div className="p-4 sm:p-5 rounded-2xl bg-brand-dark border border-brand-border/80 space-y-1.5 hover:border-brand-lime/30 transition-colors">
+                <div className="flex items-center gap-2 text-brand-lime font-mono text-xs uppercase tracking-wider font-semibold">
+                  <span className="w-1.5 h-1.5 rounded-full bg-brand-lime" />
+                  Workflow Automation
+                </div>
+                <p className="text-xs sm:text-sm text-brand-offWhite leading-relaxed">
+                  Eliminates hours of manual data entry by synchronizing your daily software tools.
+                </p>
               </div>
-              <div className="p-4 rounded-2xl bg-brand-dark border border-brand-border/80 space-y-1">
-                <span className="text-xs font-mono text-brand-lime uppercase tracking-wider block font-semibold">AI-Powered Systems</span>
-                <p className="text-xs sm:text-sm text-brand-offWhite">Provides instant 24/7 responses and keeps business operations running smoothly.</p>
+
+              <div className="p-4 sm:p-5 rounded-2xl bg-brand-dark border border-brand-border/80 space-y-1.5 hover:border-brand-lime/30 transition-colors">
+                <div className="flex items-center gap-2 text-brand-lime font-mono text-xs uppercase tracking-wider font-semibold">
+                  <span className="w-1.5 h-1.5 rounded-full bg-brand-lime" />
+                  Autonomous AI Agents
+                </div>
+                <p className="text-xs sm:text-sm text-brand-offWhite leading-relaxed">
+                  Provide immediate 24/7 customer qualification, triage inquiries, and lock calendar slots.
+                </p>
               </div>
             </div>
 
-            <p>
-              You do not need to change everything overnight. You need to identify what is holding your business back and make thoughtful investments that support your next stage of growth.
-            </p>
-
-            <p>
-              At Pinnacle Group, we help businesses explore and implement practical digital systems, from websites and CRM workflows to AI agents and business automation. We start by understanding your needs, then recommend solutions that fit your goals, budget, and operations.
-            </p>
-
             <div className="pt-4 border-t border-brand-border/80">
               <p className="text-white font-display font-bold text-xl sm:text-2xl tracking-tight leading-snug">
-                Your next stage of growth may not require you to work harder. <br className="hidden sm:inline" />
-                <span className="text-brand-lime">It may require you to build smarter systems.</span>
+                Your next stage of growth doesn't require working harder. <br className="hidden sm:inline" />
+                <span className="text-brand-lime">It requires building smarter systems.</span>
               </p>
             </div>
           </div>

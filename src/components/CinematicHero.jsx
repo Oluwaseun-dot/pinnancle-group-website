@@ -90,8 +90,12 @@ export default function CinematicHero() {
         {/* High-Resolution Operations Center Visual Fallback */}
         <div className="absolute inset-0 w-full h-full">
           <img
-            src="/images/hero-command-center.jpg"
+            src="/images/hero-command-center.webp"
             alt="Pinnancle Group Global Operations Center"
+            fetchPriority="high"
+            decoding="async"
+            width="1920"
+            height="1080"
             className={`w-full h-full object-cover filter contrast-105 brightness-[0.70] transition-opacity duration-1000 ${
               videoLoaded && isPlaying ? 'opacity-0' : 'opacity-100'
             }`}
@@ -106,8 +110,8 @@ export default function CinematicHero() {
             muted
             loop
             playsInline
-            preload="auto"
-            poster="/images/hero-command-center.jpg"
+            preload="metadata"
+            poster="/images/hero-command-center.webp"
             onLoadedData={() => setVideoLoaded(true)}
             onPlaying={() => setIsPlaying(true)}
             onPause={() => setIsPlaying(false)}

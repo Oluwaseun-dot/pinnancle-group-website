@@ -30,7 +30,7 @@ export default function AboutPage() {
           {/* Studio Showcase */}
           <div className="relative w-full aspect-[2/1] rounded-2xl overflow-hidden border border-brand-border bg-brand-dark shadow-2xl group">
             <img
-              src="/images/pinnancle-office-studio.jpg"
+              src="/images/pinnancle-office-studio.webp"
               alt="Pinnancle Group Modern Global Engineering & Strategy Studio"
               loading="lazy"
               decoding="async"
@@ -94,7 +94,7 @@ export default function AboutPage() {
         <div className="space-y-8">
           <div className="relative w-full aspect-[21/9] sm:aspect-[16/7] rounded-3xl overflow-hidden border border-brand-border bg-brand-dark shadow-2xl group">
             <img
-              src="/images/global-worldwide-network.jpg"
+              src="/images/global-worldwide-network.webp"
               alt="Pinnancle Group Global Network — Worldwide Operations"
               className="w-full h-full object-cover filter contrast-105 group-hover:scale-105 transition-transform duration-700"
             />

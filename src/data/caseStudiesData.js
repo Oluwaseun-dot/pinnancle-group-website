@@ -10,7 +10,7 @@ export const caseStudies = [
     delivery: 'Production Deployment',
     projectCost: '$4,500 USD',
     maintenance: '$350 USD/month',
-    image: '/images/case-studies/ai-voice-to-email-agent.png',
+    image: '/images/case-studies/ai-voice-to-email-agent.webp',
     tagline: 'A secure, fault-tolerant AI automation system turning voice instructions into validated, human-approved email workflows with deterministic state management.',
     summary: 'The client needed a reliable way to turn voice memos into structured email drafts without manually transcribing messages, searching for recipient information, preparing emails, and managing incomplete instructions. Pinnancle Group designed and engineered a production-grade automation system in n8n connecting voice input, OpenAI Whisper audio transcription, GPT-4o semantic structuring, Supabase database state management, and Telegram-based human confirmation into one controlled workflow.',
     problem: 'Voice instructions from busy leadership were unstructured and incomplete. Crucial details such as recipient email addresses or complete meeting times were frequently missing from voice memos, meaning emails could not safely be dispatched without manual review.',
@@ -142,7 +142,7 @@ export const caseStudies = [
     implementationDuration: '2 Weeks + Ongoing Monthly Management',
     screenshots: [
       {
-        url: '/images/case-studies/ai-voice-to-email-agent.png',
+        url: '/images/case-studies/ai-voice-to-email-agent.webp',
         title: 'Complete Production n8n Voice-to-Email Architecture',
         caption: 'Authentic production canvas showing Telegram Trigger, Switch authorization, Supabase state lookups, Audio check, Whisper transcription, GPT-4o model messaging, validation router, Gmail dispatch, and dual error management.'
       }
@@ -166,7 +166,7 @@ export const caseStudies = [
     delivery: 'Production Deployment',
     projectCost: '$750 One-Time Setup',
     maintenance: null,
-    image: '/images/case-studies/shopify-make-workflow.png',
+    image: '/images/case-studies/shopify-make-workflow.webp',
     tagline: 'Moving Shopify product data into an organized Airtable content calendar through automated retrieval, variable mapping, Claude AI copy generation, and article publishing.',
     summary: 'The client needed a reliable way to move Shopify product information into a structured Airtable content management system without manually copying, organizing, and preparing product information. Pinnancle Group built an automated Shopify-to-Airtable content pipeline that handles the repetitive data movement and structuring process. The system allows product information to move from the Shopify store into an organized Airtable environment where the client can manage content more efficiently.',
     problem: 'Before the automation, product information had to be manually collected, organized, and prepared. This created repetitive work and made it harder to maintain a consistent content workflow as the Shopify catalog grew.',
@@ -233,12 +233,12 @@ export const caseStudies = [
     ],
     screenshots: [
       {
-        url: '/images/case-studies/shopify-make-workflow.png',
+        url: '/images/case-studies/shopify-make-workflow.webp',
         title: 'Make.com Automation Architecture & Data Mapping Scenario',
         caption: 'Authentic Make scenario canvas showing Shopify Search Products -> Array Aggregator -> Tools Variable Setter -> Anthropic Claude AI Prompt -> Text Pattern Parser -> Airtable Record Creation -> Shopify Article Creation -> Airtable Record Update.'
       },
       {
-        url: '/images/case-studies/shopify-airtable-calendar.png',
+        url: '/images/case-studies/shopify-airtable-calendar.webp',
         title: 'Resulting System: Airtable Content Calendar & Publishing Workspace',
         caption: 'Authentic Airtable base for client (S.I.T.F.U. Espresso) showing structured Grid view containing Product Title, Image URL, Shopify Article URL, Publishing Status ("Approved & Published" / "Drafting"), and Last Updated timestamps.'
       }
@@ -262,7 +262,7 @@ export const caseStudies = [
     delivery: 'Production System with Ongoing SLA',
     projectCost: '$1,350 Setup',
     maintenance: '$250/month',
-    image: '/images/case-studies/shopify-social-content-engine.png',
+    image: '/images/case-studies/shopify-social-content-engine.webp',
     tagline: 'An automated ecommerce content engine that ingests untagged Shopify products, generates high-converting social copy with Claude, renders dynamic video assets, publishes across social channels, and updates product tags.',
     summary: 'The client had a growing Shopify catalog and needed a more scalable way to turn products into social media content without manually creating every piece of content from scratch. Pinnancle Group designed and deployed an automated Shopify content engine in n8n that transforms product data into social-ready content through a connected AI and automation workflow, complete with programmatic video rendering via Shotstack, multi-channel social dispatch, and automated Shopify tagging.',
     problem: 'The client had a growing Shopify catalog and needed a more scalable way to turn products into social media content. Creating product posts manually meant repeatedly collecting product information, writing captions, preparing content, rendering media, and publishing each item.',
@@ -338,7 +338,7 @@ export const caseStudies = [
     ],
     screenshots: [
       {
-        url: '/images/case-studies/shopify-social-content-engine.png',
+        url: '/images/case-studies/shopify-social-content-engine.webp',
         title: 'Complete Production n8n Product-to-Social Content Engine',
         caption: 'Authentic production canvas showing Shopify Get Untagged Product -> HTTP Request -> Untagged Product 2 -> Generate Copy with Claude -> Parse Social Copy -> Create a record (Airtable) -> Shotstack Render Video -> Wait node -> Get Completed Render -> Create a post (multi) -> Shopify Tag Product.'
       }
@@ -356,7 +356,7 @@ export const caseStudies = [
     client: 'Cleveland Real Estate',
     industry: 'Real Estate & Property Management',
     category: 'AI CRM & Inbound Automation',
-    image: '/images/case-studies/cleveland-make-pipeline.png',
+    image: '/images/case-studies/cleveland-make-pipeline.webp',
     projectCost: '$500',
     tagline: 'Instant automated email welcome responses, regex data parsing, and autonomous GoHighLevel contact creation for rental property inquiries.',
     summary: 'Architected a sub-60-second automated Zillow rental lead capture pipeline using Make.com and GoHighLevel. Eliminated 100% of manual data entry while delivering instant property inquiry coordination for incoming tenants.',
@@ -387,22 +387,22 @@ export const caseStudies = [
     implementationDuration: '1 Week',
     screenshots: [
       {
-        url: '/images/case-studies/cleveland-make-pipeline.png',
+        url: '/images/case-studies/cleveland-make-pipeline.webp',
         title: 'Complete Dual-Branch Make.com Scenario',
         caption: 'Production Make.com architecture displaying real-time Mailhook trigger, router logic, automated Gmail delivery, and GoHighLevel CRM integration.'
       },
       {
-        url: '/images/case-studies/cleveland-ghl-workflow.png',
+        url: '/images/case-studies/cleveland-ghl-workflow.webp',
         title: 'GoHighLevel (GHL) Automation Workflow',
         caption: 'Active GHL trigger: Form submitted -> Add Tag -> Create opportunity -> Internal team notification.'
       },
       {
-        url: '/images/case-studies/cleveland-lead-widget.png',
+        url: '/images/case-studies/cleveland-lead-widget.webp',
         title: 'Property Inquiry Manager Live Intake Widget',
         caption: 'Client-facing responsive booking and details intake form deployed at link.apisystem.tech with SMS/rental consent verification.'
       },
       {
-        url: '/images/case-studies/cleveland-zillow-reply.png',
+        url: '/images/case-studies/cleveland-zillow-reply.webp',
         title: 'Zillow Auto-Reply & Data Store Engine',
         caption: 'Automated email responder scenario searching past records, preventing duplicate replies, and tracking client delivery.'
       }
@@ -420,7 +420,7 @@ export const caseStudies = [
     client: 'Brendc Lifestyle LLC',
     industry: 'High-Ticket Lifestyle Services & Business Consulting',
     category: 'AI Lead Qualification & Workflow Automation',
-    image: '/images/case-studies/brendc-n8n-workflow.png',
+    image: '/images/case-studies/brendc-n8n-workflow.webp',
     projectCost: '$2,000 Setup + $200/mo Retainer',
     tagline: 'Algorithmic company size & budget evaluation, instant Slack sales alerts, Airtable CRM synchronization, and multi-cadence automated email triage.',
     summary: 'Engineered an end-to-end appointment setting and AI lead qualification engine using n8n, Airtable CRM, Slack API, and Gmail. Automatically evaluates prospect budgets and company size, alerts sales reps within 30 seconds for qualified deals, logs $262,500+ in pipeline value, and delivers respectful automated nurture resources to below-threshold inquiries.',
@@ -454,27 +454,27 @@ export const caseStudies = [
     implementationDuration: '2 Weeks + Ongoing Monthly Management',
     screenshots: [
       {
-        url: '/images/case-studies/brendc-n8n-workflow.png',
+        url: '/images/case-studies/brendc-n8n-workflow.webp',
         title: 'Complete n8n Qualification & Appointment Architecture',
         caption: 'Full production workflow featuring Webhook trigger, Size & Budget router, Airtable CRM nodes, Slack team alerts, and dual email tracks.'
       },
       {
-        url: '/images/case-studies/brendc-airtable-crm.png',
+        url: '/images/case-studies/brendc-airtable-crm.webp',
         title: 'Airtable Lead Qualification CRM ($262,500+ Pipeline)',
         caption: 'Centralized database tracking 18+ real-time records totaling $262,500 in pipeline value, segmented by First Name, Budget, Requested Date, and Status.'
       },
       {
-        url: '/images/case-studies/brendc-slack-alert.png',
+        url: '/images/case-studies/brendc-slack-alert.webp',
         title: 'Real-Time Sales Team Alert in Slack (#leads)',
         caption: 'Live production Slack notification: "🚨 New Qualified Lead Received! Kindly attends to it." with prospect details, company size (75), and budget ($5,000).'
       },
       {
-        url: '/images/case-studies/brendc-nurture-email.png',
+        url: '/images/case-studies/brendc-nurture-email.webp',
         title: 'Polite Automated Nurture & Disqualification Email',
         caption: 'Automated transactional email sent via Gmail to sub-threshold prospects sharing free guides and documentation while preserving brand prestige.'
       },
       {
-        url: '/images/case-studies/brendc-workflow-detail.png',
+        url: '/images/case-studies/brendc-workflow-detail.webp',
         title: 'Execution Routing & Attendance Wait Timers',
         caption: 'Detailed node configuration for reminder timing, attendance email dispatch, and CRM upsert synchronization.'
       }
@@ -492,7 +492,7 @@ export const caseStudies = [
     client: 'AeroTech Digital Solutions',
     industry: 'Technology & Digital Agency Services',
     category: 'AI Triage & Business Automation',
-    image: '/images/case-studies/tech-agency-n8n-pipeline.png',
+    image: '/images/case-studies/tech-agency-n8n-pipeline.webp',
     projectCost: '$1,500 Implementation + Ongoing Monitoring',
     tagline: 'Multi-channel form & Gmail ingestion, Airtable deduplication, LLM intent classification, and instant dual-channel Slack routing for engineering and sales teams.',
     summary: 'Engineered an autonomous multi-channel inbound intelligence pipeline for an international tech agency using n8n, OpenAI LLM, Airtable CRM, and Slack API. Eliminates inbox clutter and spam, classifies client requests into technical support vs. commercial sales opportunities, auto-upserts records into Airtable, and dispatches real-time alerts to the appropriate engineering or sales Slack channel within 5 seconds.',
@@ -528,7 +528,7 @@ export const caseStudies = [
     implementationDuration: '10 Days + Ongoing Monitoring',
     screenshots: [
       {
-        url: '/images/case-studies/tech-agency-n8n-pipeline.png',
+        url: '/images/case-studies/tech-agency-n8n-pipeline.webp',
         title: 'Complete n8n AI Inbound Triage & Dual Slack Routing Scenario',
         caption: 'Production n8n architecture displaying Form and Gmail triggers, Airtable deduplication search, AI intent classification model, JavaScript parsing, and automated dual Slack routing to technical and sales channels.'
       }
@@ -546,7 +546,7 @@ export const caseStudies = [
     client: 'Apex Infrastructure Group',
     industry: 'Infrastructure & Commercial Tenders',
     category: 'Business Workflow Automation',
-    image: '/images/apex-case-study.jpg',
+    image: '/images/apex-case-study.webp',
     tagline: 'Transforming 140-page technical tender assemblies into an automated, compliant submission engine.',
     summary: 'Engineered an automated tender evaluation and document assembly system that reduced proposal turnaround time by 72% for cross-border infrastructure bids.',
     problem: 'Apex Infrastructure was competing for complex commercial and public infrastructure procurement tenders worldwide. Assembling multi-hundred-page bids required coordinating 12 team members across disparate locations, resulting in rushed deadlines, missed compliance clauses, and excessive overtime.',
@@ -586,7 +586,7 @@ export const caseStudies = [
     client: 'Vanguard Property Portfolio',
     industry: 'Real Estate & Asset Management',
     category: 'GoHighLevel Systems',
-    image: '/images/vanguard-case-study.jpg',
+    image: '/images/vanguard-case-study.webp',
     tagline: 'Sub-30-second inbound response times across domestic residential and international diaspora investment inquiries.',
     summary: 'Redesigned GoHighLevel CRM infrastructure connecting digital advertising, WhatsApp, and international sales teams into an automated pipeline.',
     problem: 'Vanguard was receiving high inbound inquiry volumes from international and diaspora buyers interested in high-yield properties worldwide. Because inquiries came in at all hours across different time zones, prospects waited an average of 4.5 hours for an initial response, leading to high drop-off.',
@@ -626,7 +626,7 @@ export const caseStudies = [
     client: 'Meridian Private Dental & Aesthetics',
     industry: 'Healthcare & Private Clinics',
     category: 'AI Customer Communication',
-    image: '/images/meridian-case-study.jpg',
+    image: '/images/meridian-case-study.webp',
     tagline: 'Capturing after-hours high-value patient inquiries and eliminating front-desk telephone bottlenecks.',
     summary: 'Deployed an intelligent AI receptionist and missed-call recovery engine, restoring £38,000+ in previously lost monthly cosmetic dentistry bookings.',
     problem: 'During busy clinic hours, the front desk was occupied checking in patients and taking payments, leading to over 35 missed phone calls every day. After-hours callers were met with a generic voicemail that rarely converted.',
@@ -667,7 +667,7 @@ export const caseStudies = [
     client: 'Solis Apparel International',
     industry: 'Ecommerce & Retail',
     category: 'Shopify Ecommerce',
-    image: '/images/website-design-showcase.jpg',
+    image: '/images/website-design-showcase.webp',
     tagline: 'Harmonizing multi-channel inventory, customer returns, and order status communications.',
     summary: 'Built automated fulfillment and customer service operations for an international apparel brand, resolving 68% of support inquiries without human intervention.',
     problem: 'Solis was experiencing rapid growth worldwide across international consumer markets. However, their 4-person customer support team was suffocating under 500+ daily emails asking "Where is my order?" and processing manual size exchange requests.',
@@ -707,7 +707,7 @@ export const caseStudies = [
     client: 'Catalyst Venture Capital',
     industry: 'Financial Advisory & Venture Capital',
     category: 'Content Automation',
-    image: '/images/ai-agent-interface.jpg',
+    image: '/images/ai-agent-interface.webp',
     tagline: 'Transforming 45-minute executive interviews into 20+ polished multimedia assets automatically.',
     summary: 'Engineered an AI-assisted video production and content pipeline that increased brand impression volume by 420% while saving 30+ production hours per episode.',
     problem: 'The partners at Catalyst were producing high-caliber weekly video podcasts with startup founders, but had no bandwidth to slice, caption, format, and distribute the insights across social platforms consistently.',
@@ -748,7 +748,7 @@ export const caseStudies = [
     client: 'Zenith Trade & Credit Solutions',
     industry: 'Financial Services & Trade Finance',
     category: 'API Integration',
-    image: '/images/business-automation-workflow.jpg',
+    image: '/images/business-automation-workflow.webp',
     tagline: 'Bridging legacy credit databases with real-time bank feeds for instant trade finance decisions.',
     summary: 'Constructed resilient API middleware connecting accounting software, national registries, and credit scoring algorithms to reduce underwriting delays from 9 days to 45 minutes.',
     problem: 'Zenith provides commercial financing to import-export businesses. Underwriters were manually downloading corporate filings, bank statements, and tax receipts from 4 different portals to calculate creditworthiness.',

@@ -200,12 +200,12 @@ export default function InteractivePhoneExperience() {
                   onClick={() => setActiveScreenIndex(idx)}
                   className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-mono transition-all duration-300 border ${
                     isActive
-                      ? 'bg-white text-black border-white shadow-lg shadow-white/10 font-bold scale-[1.02]'
+                      ? 'bg-slate-900 text-white border-slate-900 dark:bg-white dark:text-black dark:border-white shadow-lg font-bold scale-[1.02]'
                       : 'bg-brand-charcoal text-brand-silver border-brand-border hover:border-brand-borderLight hover:text-white'
                   }`}
                   aria-label={`Switch to ${screen.title}`}
                 >
-                  <Icon className={`w-3.5 h-3.5 ${isActive ? 'text-black' : 'text-brand-lime'}`} />
+                  <Icon className={`w-3.5 h-3.5 ${isActive ? 'text-brand-lime dark:text-black' : 'text-brand-lime'}`} />
                   <span>{screen.title}</span>
                 </button>
               );
@@ -352,6 +352,7 @@ export default function InteractivePhoneExperience() {
 
                 {/* Smartphone Hardware Outer Shell */}
                 <div
+                  data-theme-dark="true"
                   className="w-[320px] sm:w-[350px] md:w-[380px] h-[640px] sm:h-[680px] md:h-[720px] bg-neutral-900 rounded-[50px] p-3 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.9)] border-[4px] border-neutral-700 relative cursor-grab active:cursor-grabbing transition-transform duration-300"
                   onTouchStart={handleTouchStart}
                   onTouchMove={handleTouchMove}

@@ -41,7 +41,7 @@ export const teamMembers = [
     location: 'Worldwide',
     experienceYears: '5+ Years in Digital Systems',
     email: 'mosesayodeji25@gmail.com',
-    image: '/images/ayodeji-moses.jpg'
+    image: '/images/ayodeji-moses.webp'
   },
   {
     slug: 'oluwaseun-olatunji',
@@ -87,7 +87,7 @@ export const teamMembers = [
     email: 'Oluwaseungrowthstrategist@gmail.com',
     portfolio: 'https://olatunjisystems.lovable.app/',
     facebook: 'https://www.facebook.com/people/Olatunji-Oluwuseun/61584770552508/',
-    image: '/images/oluwaseun-olatunji.jpg'
+    image: '/images/oluwaseun-olatunji.webp'
   },
   {
     slug: 'praise-salami',
@@ -128,7 +128,7 @@ export const teamMembers = [
     ],
     location: 'Worldwide',
     experienceYears: '4+ Years',
-    image: '/images/praise-salami.jpg'
+    image: '/images/praise-salami.webp'
   },
   {
     slug: 'babatunde-david',
@@ -169,7 +169,7 @@ export const teamMembers = [
     ],
     location: 'Worldwide',
     experienceYears: '5+ Years Creative Design',
-    image: '/images/babatunde-david.jpg'
+    image: '/images/babatunde-david.webp'
   },
   {
     slug: 'babatunde-odunayo',
@@ -210,7 +210,7 @@ export const teamMembers = [
     ],
     location: 'Worldwide',
     experienceYears: '4+ Years Media Production',
-    image: '/images/babatunde-odunayo.jpg'
+    image: '/images/babatunde-odunayo.webp'
   },
   {
     slug: 'babatunde-damilola',
@@ -252,7 +252,7 @@ export const teamMembers = [
     location: 'Worldwide',
     experienceYears: '5+ Years CRM Design',
     email: 'sandradamilola68@gmail.com',
-    image: '/images/babatunde-damilola.jpg'
+    image: '/images/babatunde-damilola.webp'
   },
   {
     slug: 'azeez-anuoluwapo',
@@ -293,7 +293,7 @@ export const teamMembers = [
     ],
     location: 'Worldwide',
     experienceYears: '4+ Years AI Video',
-    image: '/images/azeez-anuoluwapo.jpg'
+    image: '/images/azeez-anuoluwapo.webp'
   }
 ];
 

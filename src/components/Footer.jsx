@@ -14,6 +14,8 @@ export default function Footer() {
 
     let animationId;
     let handleResize;
+    let observer;
+    let isVisible = false;
 
     try {
       const ctx = canvas.getContext('2d');
@@ -27,18 +29,24 @@ export default function Footer() {
         width = canvas.width = canvas.offsetWidth || window.innerWidth;
         height = canvas.height = canvas.offsetHeight || 600;
       };
-      window.addEventListener('resize', handleResize);
+      window.addEventListener('resize', handleResize, { passive: true });
 
-      const points = Array.from({ length: 30 }, () => ({
+      const points = Array.from({ length: 28 }, () => ({
         x: Math.random() * width,
         y: Math.random() * height,
-        vx: (Math.random() - 0.5) * 0.25,
-        vy: (Math.random() - 0.5) * 0.25,
+        vx: (Math.random() - 0.5) * 0.22,
+        vy: (Math.random() - 0.5) * 0.22,
         isLime: Math.random() > 0.8,
       }));
 
       const render = () => {
+        if (!isVisible || document.hidden) return;
+
+        const isLight = document.documentElement.classList.contains('light');
         ctx.clearRect(0, 0, width, height);
+
+        const lineBase = isLight ? '15, 23, 42' : '255, 255, 255';
+        const dotBase = isLight ? 'rgba(15, 23, 42, 0.35)' : 'rgba(255, 255, 255, 0.4)';
 
         for (let i = 0; i < points.length; i++) {
           for (let j = i + 1; j < points.length; j++) {
@@ -46,7 +54,7 @@ export default function Footer() {
             const dy = points[i].y - points[j].y;
             const dist = Math.sqrt(dx * dx + dy * dy);
             if (dist < 110) {
-              ctx.strokeStyle = `rgba(255, 255, 255, ${0.1 * (1 - dist / 110)})`;
+              ctx.strokeStyle = `rgba(${lineBase}, ${0.08 * (1 - dist / 110)})`;
               ctx.lineWidth = 0.75;
               ctx.beginPath();
               ctx.moveTo(points[i].x, points[i].y);
@@ -62,7 +70,7 @@ export default function Footer() {
           if (p.x < 0 || p.x > width) p.vx *= -1;
           if (p.y < 0 || p.y > height) p.vy *= -1;
 
-          ctx.fillStyle = p.isLime ? '#ccff00' : 'rgba(255, 255, 255, 0.4)';
+          ctx.fillStyle = p.isLime ? '#ccff00' : dotBase;
           ctx.beginPath();
           ctx.arc(p.x, p.y, p.isLime ? 2 : 1.5, 0, Math.PI * 2);
           ctx.fill();
@@ -71,15 +79,41 @@ export default function Footer() {
         animationId = requestAnimationFrame(render);
       };
 
-      render();
+      // Only animate when footer is in view
+      if ('IntersectionObserver' in window) {
+        observer = new IntersectionObserver(
+          ([entry]) => {
+            isVisible = entry.isIntersecting;
+            if (isVisible && !document.hidden) {
+              if (animationId) cancelAnimationFrame(animationId);
+              animationId = requestAnimationFrame(render);
+            }
+          },
+          { threshold: 0.05 }
+        );
+        observer.observe(canvas);
+      } else {
+        isVisible = true;
+        render();
+      }
+
+      const handleVisibilityChange = () => {
+        if (!document.hidden && isVisible) {
+          if (animationId) cancelAnimationFrame(animationId);
+          animationId = requestAnimationFrame(render);
+        }
+      };
+      document.addEventListener('visibilitychange', handleVisibilityChange);
+
+      return () => {
+        if (animationId) cancelAnimationFrame(animationId);
+        if (handleResize) window.removeEventListener('resize', handleResize);
+        if (observer) observer.disconnect();
+        document.removeEventListener('visibilitychange', handleVisibilityChange);
+      };
     } catch (e) {
       console.warn('Footer canvas subtle animation failed gracefully:', e);
     }
-
-    return () => {
-      if (animationId) cancelAnimationFrame(animationId);
-      if (handleResize) window.removeEventListener('resize', handleResize);
-    };
   }, []);
 
   const scrollToTop = () => {

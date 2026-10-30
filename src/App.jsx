@@ -8,8 +8,7 @@ import ScrollProgressBar from './components/ScrollProgressBar';
 import SeoRouteManager from './components/SeoRouteManager';
 import ErrorBoundary from './components/ErrorBoundary';
 import BackToTopButton from './components/BackToTopButton';
-import ConsultationActivityToast from './components/ConsultationActivityToast';
-import AiSalesAssistant from './components/AiSalesAssistant';
+import { ThemeProvider } from './context/ThemeContext';
 
 // Direct import for instant initial landing load
 import HomePage from './pages/HomePage';
@@ -28,6 +27,10 @@ const ContactPage = lazy(() => import('./pages/ContactPage'));
 const AutomationDemoPage = lazy(() => import('./pages/AutomationDemoPage'));
 const AutomationAssessmentPage = lazy(() => import('./pages/AutomationAssessmentPage'));
 
+// Defer background floating widgets so initial load stays lightning fast
+const ConsultationActivityToast = lazy(() => import('./components/ConsultationActivityToast'));
+const AiSalesAssistant = lazy(() => import('./components/AiSalesAssistant'));
+
 // Lightweight route transition fallback
 const RouteFallback = () => (
   <div className="min-h-[60vh] flex items-center justify-center bg-brand-black">
@@ -37,8 +40,9 @@ const RouteFallback = () => (
 
 export default function App() {
   return (
-    <Router>
-      <div className="relative min-h-screen bg-brand-black text-brand-offWhite selection:bg-brand-lime selection:text-black flex flex-col justify-between">
+    <ThemeProvider>
+      <Router>
+        <div className="relative min-h-screen bg-brand-black text-brand-offWhite selection:bg-brand-lime selection:text-black flex flex-col justify-between transition-colors duration-300">
         {/* Dynamic SEO metadata manager */}
         <SeoRouteManager />
 
@@ -90,15 +94,16 @@ export default function App() {
           </ErrorBoundary>
         </main>
 
-        {/* Real Consultation Activity Toast */}
-        <ConsultationActivityToast />
-
-        {/* Global Website AI Sales Assistant */}
-        <AiSalesAssistant />
+        {/* Deferred Floating Widgets */}
+        <Suspense fallback={null}>
+          <ConsultationActivityToast />
+          <AiSalesAssistant />
+        </Suspense>
 
         {/* Global editorial footer */}
         <Footer />
       </div>
     </Router>
-  );
+  </ThemeProvider>
+);
 }

@@ -9,8 +9,10 @@ export default function FinalCTASection() {
       {/* Executive Consultation Studio Photographic Backdrop */}
       <div className="absolute inset-0 z-0 pointer-events-none select-none">
         <img
-          src="/images/final-cta-studio.jpg"
+          src="/images/final-cta-studio.webp"
           alt="Pinnancle Group Executive Consultation Studio"
+          loading="lazy"
+          decoding="async"
           className="w-full h-full object-cover filter contrast-110 brightness-[0.35] opacity-25"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/85 to-brand-black/95" />

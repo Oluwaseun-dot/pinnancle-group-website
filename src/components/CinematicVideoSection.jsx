@@ -159,8 +159,12 @@ export default function CinematicVideoSection() {
           {/* Fallback Static Poster Backdrop */}
           <div className="absolute inset-0 z-0">
             <img
-              src="/images/hero-command-center.jpg"
+              src="/images/hero-command-center.webp"
               alt="Pinnacle Group Global Operations"
+              loading="lazy"
+              decoding="async"
+              width="1920"
+              height="1080"
               className={`w-full h-full object-cover filter contrast-110 brightness-75 transition-opacity duration-700 ${
                 hasStarted ? 'opacity-0 pointer-events-none' : 'opacity-70'
               }`}
@@ -175,8 +179,8 @@ export default function CinematicVideoSection() {
             <video
               ref={videoRef}
               src="/pinnancle_video.mp4"
-              poster="/images/hero-command-center.jpg"
-              preload="metadata"
+              poster="/images/hero-command-center.webp"
+              preload="none"
               playsInline
               onTimeUpdate={handleTimeUpdate}
               onLoadedMetadata={handleLoadedMetadata}

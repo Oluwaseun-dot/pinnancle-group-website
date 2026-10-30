@@ -59,7 +59,7 @@ export default function OurStorySection() {
         {/* Studio Showcase */}
         <div className="relative w-full aspect-[2/1] rounded-3xl overflow-hidden mb-12 border border-brand-border bg-brand-dark shadow-2xl group">
           <img
-            src="/images/pinnancle-office-studio.jpg"
+            src="/images/pinnancle-office-studio.webp"
             alt="Pinnancle Group Modern Global Engineering & Strategy Studio"
             loading="lazy"
             decoding="async"

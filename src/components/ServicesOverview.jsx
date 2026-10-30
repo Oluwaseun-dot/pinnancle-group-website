@@ -11,7 +11,7 @@ const servicesSummary = [
     name: 'AI Automation',
     tag: 'Flagship Capability',
     icon: Bot,
-    image: '/images/ai-agent-interface.jpg',
+    image: '/images/ai-agent-interface.webp',
     imageAlt: 'Realistic AI Autonomous Voice and Chat Assistant Interface',
     description:
       'Autonomous AI phone receptionists, WhatsApp assistants, and website chat agents that respond in seconds, qualify leads, and book appointments directly on your calendar 24/7.',
@@ -23,7 +23,7 @@ const servicesSummary = [
     name: 'Business Automation',
     tag: 'Operational Efficiency',
     icon: Workflow,
-    image: '/images/business-automation-workflow.jpg',
+    image: '/images/business-automation-workflow.webp',
     imageAlt: 'Business Workflow Automation Pipeline and Webhook Integration',
     description:
       'Resilient Make.com and n8n backend workflows that connect your forms, spreadsheets, and software tools to eliminate repetitive manual data entry and save hours of staff time.',
@@ -35,7 +35,7 @@ const servicesSummary = [
     name: 'CRM Automation',
     tag: 'Sales Pipeline Architecture',
     icon: Database,
-    image: '/images/crm-pipeline-dashboard.jpg',
+    image: '/images/crm-pipeline-dashboard.webp',
     imageAlt: 'Realistic CRM Sales Pipeline and Contact Management Dashboard',
     description:
       'Complete GoHighLevel and HubSpot CRM deployments with automated deal pipelines, missed-call text-back, SMS follow-ups, and customer lifecycle management that stop leads from slipping away.',
@@ -47,7 +47,7 @@ const servicesSummary = [
     name: 'Website Design',
     tag: 'Digital Conversion Architecture',
     icon: Monitor,
-    image: '/images/website-design-showcase.jpg',
+    image: '/images/website-design-showcase.webp',
     imageAlt: 'High-Performance Responsive Website Across Desktop and Mobile Devices',
     description:
       'Modern, high-speed, conversion-focused websites engineered with React and modern web technologies to position your brand as an industry leader and turn site traffic into paying clients.',
@@ -59,7 +59,7 @@ const servicesSummary = [
     name: 'Tender Support',
     tag: 'Commercial Procurement',
     icon: FileText,
-    image: '/images/tender-support-procurement.jpg',
+    image: '/images/tender-support-procurement.webp',
     imageAlt: 'Professional Tender Documentation and Procurement Review Scene',
     description:
       'Professional bid writing, technical documentation, compliance matrices, and presentation decks that help expanding companies win competitive commercial and government tenders.',
@@ -71,7 +71,7 @@ const servicesSummary = [
     name: 'Creative & AI Media',
     tag: 'Brand Production',
     icon: Video,
-    image: '/images/creative-ai-media-studio.jpg',
+    image: '/images/creative-ai-media-studio.webp',
     imageAlt: 'Modern Creative Media Video Editing and Dynamic AI Content Studio',
     description:
       'Studio-grade commercial media, AI-augmented video production, and high-converting creative assets that tell your company’s story with clarity and command market attention.',
@@ -128,6 +128,8 @@ export default function ServicesOverview() {
                     <img
                       src={srv.image}
                       alt={srv.imageAlt}
+                      width={640}
+                      height={400}
                       loading="lazy"
                       decoding="async"
                       className="w-full h-full object-cover filter contrast-105 group-hover:scale-105 transition-transform duration-700"

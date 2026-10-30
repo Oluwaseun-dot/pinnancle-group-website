@@ -217,7 +217,7 @@ export default function ServicesPage() {
                 {/* Large Hero Visual */}
                 <div className="relative aspect-[16/10] rounded-2xl overflow-hidden border border-brand-border bg-brand-dark shadow-2xl group">
                   <img
-                    src="/images/ai-agent-interface.jpg"
+                    src="/images/ai-agent-interface.webp"
                     alt="AI Automation System Interface in Modern Business"
                     className="w-full h-full object-cover filter contrast-105 group-hover:scale-105 transition-transform duration-700"
                     loading="lazy"
@@ -269,7 +269,7 @@ export default function ServicesPage() {
               <div className="lg:col-span-6 lg:order-1 space-y-4">
                 <div className="relative aspect-[16/10] rounded-2xl overflow-hidden border border-brand-border bg-brand-dark shadow-2xl group">
                   <img
-                    src="/images/business-automation-workflow.jpg"
+                    src="/images/business-automation-workflow.webp"
                     alt="Business Automation Pipeline and Webhook Integration"
                     className="w-full h-full object-cover filter contrast-105 group-hover:scale-105 transition-transform duration-700"
                     loading="lazy"
@@ -430,7 +430,7 @@ export default function ServicesPage() {
               <div className="lg:col-span-6 space-y-4">
                 <div className="relative aspect-[16/10] rounded-2xl overflow-hidden border border-brand-border bg-brand-dark shadow-2xl group">
                   <img
-                    src="/images/crm-pipeline-dashboard.jpg"
+                    src="/images/crm-pipeline-dashboard.webp"
                     alt="Realistic CRM Sales Pipeline and Contact Management Dashboard"
                     className="w-full h-full object-cover filter contrast-105 group-hover:scale-105 transition-transform duration-700"
                     loading="lazy"
@@ -482,7 +482,7 @@ export default function ServicesPage() {
             {/* Showcase Mockup Gallery */}
             <div className="relative aspect-[21/9] sm:aspect-[16/7] rounded-2xl overflow-hidden border border-brand-border bg-brand-dark shadow-2xl group">
               <img
-                src="/images/website-design-showcase.jpg"
+                src="/images/website-design-showcase.webp"
                 alt="High-Quality Website Mockups across Desktop, Tablet and Mobile"
                 className="w-full h-full object-cover filter contrast-105 group-hover:scale-105 transition-transform duration-700"
                 loading="lazy"
@@ -535,7 +535,7 @@ export default function ServicesPage() {
               <div className="lg:col-span-6 space-y-4">
                 <div className="relative aspect-[16/10] rounded-2xl overflow-hidden border border-brand-border bg-brand-dark shadow-2xl group">
                   <img
-                    src="/images/tender-support-procurement.jpg"
+                    src="/images/tender-support-procurement.webp"
                     alt="Professional Tender Review, Proposal Documents, and Contract Research"
                     className="w-full h-full object-cover filter contrast-105 group-hover:scale-105 transition-transform duration-700"
                     loading="lazy"

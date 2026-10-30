@@ -71,6 +71,8 @@ export default function SelectedWork() {
                         <img
                           src={study.image}
                           alt={study.title}
+                          width={800}
+                          height={500}
                           loading="lazy"
                           decoding="async"
                           className="w-full h-full object-cover filter contrast-105 group-hover/img:scale-105 transition-all duration-700"
@@ -80,7 +82,7 @@ export default function SelectedWork() {
 
                       {/* Top Meta Badges */}
                       <div className="absolute top-3 left-3 right-3 sm:top-4 sm:left-4 sm:right-4 flex items-center justify-between text-[11px] sm:text-xs font-mono">
-                        <span className="px-2.5 py-1 rounded-full bg-brand-black/85 backdrop-blur-md border border-brand-border text-white font-medium">
+                        <span className="px-2.5 py-1 rounded-full bg-brand-black/85 backdrop-blur-md border border-brand-border text-white force-white font-medium">
                           {study.client}
                         </span>
                         <span className="px-2.5 py-1 rounded-full bg-brand-black/85 backdrop-blur-md border border-brand-lime/40 text-brand-lime flex items-center gap-1.5 shadow-sm">

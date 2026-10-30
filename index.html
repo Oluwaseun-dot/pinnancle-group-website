@@ -36,6 +36,24 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="apple-touch-icon" href="/favicon.svg" />
 
+    <!-- Zero-Flash Theme Script (Synchronous execution before render) -->
+    <script>
+      (function() {
+        try {
+          var stored = localStorage.getItem('pinnacle-theme');
+          var isDark = stored ? stored === 'dark' : (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? false : true);
+          var theme = isDark ? 'dark' : 'light';
+          document.documentElement.classList.remove('light', 'dark');
+          document.documentElement.classList.add(theme);
+          var metaTheme = document.querySelector('meta[name="theme-color"]');
+          if (metaTheme) metaTheme.setAttribute('content', isDark ? '#050505' : '#f8fafc');
+        } catch(e) {}
+      })();
+    </script>
+
+    <!-- Priority Preload for LCP Hero Background Image -->
+    <link rel="preload" as="image" href="/images/hero-command-center.webp" type="image/webp" fetchpriority="high" />
+
     <!-- Google Fonts: 3 Curated Font Families (Outfit for Display, Plus Jakarta Sans for Body/UI, JetBrains Mono for Technical Specs) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

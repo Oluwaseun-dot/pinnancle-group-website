@@ -3,11 +3,54 @@
 @tailwind utilities;
 
 @layer base {
-  :root {
+  :root, html.dark {
     --brand-black: #050505;
     --brand-dark: #0a0a0a;
     --brand-charcoal: #121212;
+    --brand-card: #161616;
+    --brand-card-light: #1f1f1f;
+    --brand-border: #242424;
+    --brand-border-light: #383838;
+    --brand-grey: #737373;
+    --brand-silver: #a3a3a3;
+    --brand-light: #e5e5e5;
+    --brand-off-white: #f5f5f5;
     --brand-lime: #ccff00;
+    --brand-lime-text: #ccff00;
+    --text-white-adaptive: #ffffff;
+    --glass-bg: rgba(18, 18, 18, 0.75);
+    --glass-border: rgba(255, 255, 255, 0.08);
+    --body-bg: #050505;
+    --body-text: #f5f5f5;
+    --scrollbar-track: #050505;
+    --scrollbar-thumb: #242424;
+    --scrollbar-thumb-hover: #383838;
+    color-scheme: dark;
+  }
+
+  html.light {
+    --brand-black: #f8fafc;
+    --brand-dark: #f1f5f9;
+    --brand-charcoal: #ffffff;
+    --brand-card: #ffffff;
+    --brand-card-light: #f8fafc;
+    --brand-border: #e2e8f0;
+    --brand-border-light: #cbd5e1;
+    --brand-grey: #64748b;
+    --brand-silver: #475569;
+    --brand-light: #1e293b;
+    --brand-off-white: #0f172a;
+    --brand-lime: #ccff00;
+    --brand-lime-text: #3f6212;
+    --text-white-adaptive: #0f172a;
+    --glass-bg: rgba(255, 255, 255, 0.88);
+    --glass-border: rgba(0, 0, 0, 0.08);
+    --body-bg: #f8fafc;
+    --body-text: #0f172a;
+    --scrollbar-track: #f1f5f9;
+    --scrollbar-thumb: #cbd5e1;
+    --scrollbar-thumb-hover: #94a3b8;
+    color-scheme: light;
   }
 
   html {
@@ -16,9 +59,10 @@
   }
 
   body {
-    background-color: #050505;
-    color: #f5f5f5;
+    background-color: var(--body-bg);
+    color: var(--body-text);
     overflow-x: hidden;
+    transition: background-color 0.25s ease, color 0.25s ease;
   }
 
   /* Custom scrollbar in monochrome */
@@ -26,14 +70,14 @@
     width: 6px;
   }
   ::-webkit-scrollbar-track {
-    background: #050505;
+    background: var(--scrollbar-track);
   }
   ::-webkit-scrollbar-thumb {
-    background: #242424;
+    background: var(--scrollbar-thumb);
     border-radius: 3px;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: #383838;
+    background: var(--scrollbar-thumb-hover);
   }
 }
 
@@ -45,12 +89,61 @@
     linear-gradient(to bottom, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
 }
 
+html.light .bg-grid-subtle {
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.035) 1px, transparent 1px);
+}
+
 /* Restrained lime glow and dark glass */
 .glass-panel {
-  background: rgba(18, 18, 18, 0.7);
+  background: var(--glass-bg);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--glass-border);
+}
+
+html.light .glass-panel {
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Adaptive Typography for Light Mode */
+html.light .text-white:not(.force-white):not(.preserve-white) {
+  color: var(--text-white-adaptive);
+}
+
+/* Retain pure white on elements inside dark containers or badges in light mode */
+html.light .bg-black .text-white,
+html.light [class*="bg-black"] .text-white,
+html.light .bg-slate-900 .text-white,
+html.light .bg-slate-800 .text-white,
+html.light .bg-brand-lime .text-black,
+html.light .force-white,
+html.light [data-theme-dark="true"] .text-white {
+  color: #ffffff;
+}
+
+/* Ensure text-brand-lime has high AAA contrast on light backgrounds */
+html.light .text-brand-lime {
+  color: #3f6212;
+}
+
+/* In dark containers or badges, restore electric lime */
+html.light .bg-black .text-brand-lime,
+html.light [class*="bg-black"] .text-brand-lime,
+html.light .bg-slate-900 .text-brand-lime,
+html.light .bg-slate-850 .text-brand-lime,
+html.light [data-theme-dark="true"] .text-brand-lime {
+  color: #ccff00;
+}
+
+/* Light mode card shadow refinement */
+html.light .shadow-2xl {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.02);
+}
+
+html.light .shadow-xl {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.04), 0 4px 6px -4px rgba(0, 0, 0, 0.02);
 }
 
 .editorial-heading {

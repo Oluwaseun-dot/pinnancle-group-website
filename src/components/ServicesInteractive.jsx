@@ -80,7 +80,7 @@ export default function ServicesInteractive() {
                   {/* Visual Interface Preview */}
                   <div className="relative w-full aspect-[16/9] rounded-2xl overflow-hidden border border-brand-border bg-brand-dark mb-6 group">
                     <img
-                      src="/images/ai-agent-interface.jpg"
+                      src="/images/ai-agent-interface.webp"
                       alt="AI Agent Decision Architecture"
                       className="w-full h-full object-cover filter contrast-105 group-hover:scale-105 transition-transform duration-700"
                     />
@@ -156,7 +156,7 @@ export default function ServicesInteractive() {
                   {/* Visual Production Workflow Preview */}
                   <div className="relative w-full aspect-[16/9] rounded-2xl overflow-hidden border border-brand-border bg-brand-dark mb-4 group">
                     <img
-                      src="/images/case-studies/tech-agency-n8n-pipeline.png"
+                      src="/images/case-studies/tech-agency-n8n-pipeline.webp"
                       alt="Production n8n Multi-Channel Triage & Dual Slack Routing"
                       className="w-full h-full object-cover filter contrast-105 group-hover:scale-105 transition-transform duration-700"
                     />
@@ -305,7 +305,7 @@ export default function ServicesInteractive() {
                   {/* Visual CRM Pipeline Preview Featuring Babatunde Damilola */}
                   <div className="relative w-full aspect-[16/9] rounded-2xl overflow-hidden border border-brand-border bg-brand-dark mb-4 group shadow-2xl">
                     <img
-                      src="/images/crm-pipeline-dashboard.jpg"
+                      src="/images/crm-pipeline-dashboard.webp"
                       alt="Babatunde Damilola managing automated CRM sales pipelines at Pinnancle Group"
                       className="w-full h-full object-cover filter contrast-105 group-hover:scale-105 transition-transform duration-700"
                     />
@@ -385,7 +385,7 @@ export default function ServicesInteractive() {
             <div className="rounded-3xl bg-brand-charcoal border border-brand-border p-6 sm:p-10 shadow-2xl relative overflow-hidden">
               <div className="relative w-full aspect-[21/9] sm:aspect-[16/7] rounded-2xl overflow-hidden mb-8 border border-brand-border bg-brand-dark shadow-2xl group">
                 <img
-                  src="/images/website-design-showcase.jpg"
+                  src="/images/website-design-showcase.webp"
                   alt="High-Conversion Digital Web Architecture"
                   className="w-full h-full object-cover filter contrast-105 group-hover:scale-105 transition-transform duration-700"
                 />
@@ -439,7 +439,7 @@ export default function ServicesInteractive() {
               <div className="space-y-4">
                 <div className="relative w-full aspect-[16/9] rounded-2xl overflow-hidden border border-brand-border bg-brand-dark mb-4 group shadow-xl">
                   <img
-                    src="/images/tender-support-procurement.jpg"
+                    src="/images/tender-support-procurement.webp"
                     alt="Tender & RFP Procurement Review"
                     className="w-full h-full object-cover filter contrast-105 group-hover:scale-105 transition-transform duration-700"
                   />
@@ -480,7 +480,7 @@ export default function ServicesInteractive() {
               <div className="space-y-4">
                 <div className="relative w-full aspect-[16/9] rounded-2xl overflow-hidden border border-brand-border bg-brand-dark mb-4 group shadow-xl">
                   <img
-                    src="/images/case-studies/brendc-n8n-workflow.png"
+                    src="/images/case-studies/brendc-n8n-workflow.webp"
                     alt="Creative Automation & Visual Content Pipeline"
                     className="w-full h-full object-cover filter contrast-105 group-hover:scale-105 transition-transform duration-700"
                   />

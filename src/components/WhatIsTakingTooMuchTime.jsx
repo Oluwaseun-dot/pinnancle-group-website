@@ -86,7 +86,7 @@ export default function WhatIsTakingTooMuchTime() {
       {/* Subtle Architectural Operations Atmosphere Backdrop */}
       <div className="absolute inset-0 z-0 pointer-events-none select-none opacity-25">
         <img
-          src="/images/hero-command-center.jpg"
+          src="/images/hero-command-center.webp"
           alt=""
           className="w-full h-full object-cover filter contrast-125 brightness-[0.3]"
         />

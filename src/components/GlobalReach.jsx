@@ -26,7 +26,7 @@ export default function GlobalReach() {
             {/* Photographic Twilight Dual-Hub Composite */}
             <div className="absolute inset-0 z-0 pointer-events-none">
               <img
-                src="/images/global-worldwide-network.jpg"
+                src="/images/global-worldwide-network.webp"
                 alt="Worldwide Connected Systems Network"
                 className="w-full h-full object-cover filter contrast-125 brightness-75 opacity-30"
               />
