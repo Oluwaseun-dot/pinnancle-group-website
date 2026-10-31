@@ -91,10 +91,38 @@ export default function SeoRouteManager() {
       let ogDesc = document.querySelector('meta[property="og:description"]');
       if (ogDesc) ogDesc.setAttribute('content', currentSeo.description);
 
+      // Calculate canonical path (resolving aliases to canonical URLs)
+      const canonicalAliasMap = {
+        '/solutions': '/industries',
+        '/portfolio': '/work',
+        '/case-studies': '/work',
+        '/demo': '/automation-demo',
+        '/assessment': '/automation-assessment'
+      };
+
+      let cleanPath = canonicalAliasMap[pathname] || pathname;
+      if (cleanPath.startsWith('/portfolio/')) cleanPath = cleanPath.replace('/portfolio/', '/work/');
+      if (cleanPath.startsWith('/case-studies/')) cleanPath = cleanPath.replace('/case-studies/', '/work/');
+      if (cleanPath.startsWith('/case-study/')) cleanPath = cleanPath.replace('/case-study/', '/work/');
+
+      const canonicalUrl = `https://pinnacleteam.co${cleanPath === '/' ? '' : cleanPath}`;
+
       // Update canonical link
       let canonicalLink = document.querySelector('link[rel="canonical"]');
       if (canonicalLink) {
-        canonicalLink.setAttribute('href', `https://pinnanclegroup.com${pathname === '/' ? '' : pathname}`);
+        canonicalLink.setAttribute('href', canonicalUrl);
+      }
+
+      // Update og:url
+      let ogUrl = document.querySelector('meta[property="og:url"]');
+      if (ogUrl) {
+        ogUrl.setAttribute('content', canonicalUrl);
+      }
+
+      // Update twitter:url
+      let twitterUrl = document.querySelector('meta[name="twitter:url"]');
+      if (twitterUrl) {
+        twitterUrl.setAttribute('content', canonicalUrl);
       }
     }
   }, [pathname]);

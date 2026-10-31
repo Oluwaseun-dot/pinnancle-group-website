@@ -1,81 +1,123 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://pinnanclegroup.com/</loc>
-    <lastmod>2026-10-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <loc>https://pinnacleteam.co/</loc>
+    <lastmod>2026-10-30</lastmod>
   </url>
   <url>
-    <loc>https://pinnanclegroup.com/services</loc>
-    <lastmod>2026-10-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://pinnacleteam.co/services</loc>
+    <lastmod>2026-10-30</lastmod>
   </url>
   <url>
-    <loc>https://pinnanclegroup.com/solutions</loc>
-    <lastmod>2026-10-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://pinnacleteam.co/industries</loc>
+    <lastmod>2026-10-30</lastmod>
   </url>
   <url>
-    <loc>https://pinnanclegroup.com/work</loc>
-    <lastmod>2026-10-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
+    <loc>https://pinnacleteam.co/work</loc>
+    <lastmod>2026-10-30</lastmod>
   </url>
   <url>
-    <loc>https://pinnanclegroup.com/work/ai-voice-to-email-agent</loc>
-    <lastmod>2026-10-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
+    <loc>https://pinnacleteam.co/about</loc>
+    <lastmod>2026-10-30</lastmod>
   </url>
   <url>
-    <loc>https://pinnanclegroup.com/work/shopify-product-content-mapping</loc>
-    <lastmod>2026-10-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
+    <loc>https://pinnacleteam.co/team</loc>
+    <lastmod>2026-10-30</lastmod>
   </url>
   <url>
-    <loc>https://pinnanclegroup.com/work/shopify-product-to-social-automation</loc>
-    <lastmod>2026-10-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
+    <loc>https://pinnacleteam.co/insights</loc>
+    <lastmod>2026-10-30</lastmod>
   </url>
   <url>
-    <loc>https://pinnanclegroup.com/work/tech-agency-ai-lead-triage</loc>
-    <lastmod>2026-10-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
+    <loc>https://pinnacleteam.co/book</loc>
+    <lastmod>2026-10-30</lastmod>
   </url>
   <url>
-    <loc>https://pinnanclegroup.com/team</loc>
-    <lastmod>2026-10-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://pinnacleteam.co/contact</loc>
+    <lastmod>2026-10-30</lastmod>
   </url>
   <url>
-    <loc>https://pinnanclegroup.com/about</loc>
-    <lastmod>2026-10-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://pinnacleteam.co/automation-demo</loc>
+    <lastmod>2026-10-30</lastmod>
   </url>
   <url>
-    <loc>https://pinnanclegroup.com/insights</loc>
-    <lastmod>2026-10-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://pinnacleteam.co/automation-assessment</loc>
+    <lastmod>2026-10-30</lastmod>
   </url>
   <url>
-    <loc>https://pinnanclegroup.com/book</loc>
-    <lastmod>2026-10-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.95</priority>
+    <loc>https://pinnacleteam.co/work/ai-voice-to-email-agent</loc>
+    <lastmod>2026-10-30</lastmod>
   </url>
   <url>
-    <loc>https://pinnanclegroup.com/contact</loc>
-    <lastmod>2026-10-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://pinnacleteam.co/work/shopify-product-content-mapping</loc>
+    <lastmod>2026-10-30</lastmod>
+  </url>
+  <url>
+    <loc>https://pinnacleteam.co/work/shopify-product-to-social-automation</loc>
+    <lastmod>2026-10-30</lastmod>
+  </url>
+  <url>
+    <loc>https://pinnacleteam.co/work/cleveland-real-estate-ai-ghl</loc>
+    <lastmod>2026-10-30</lastmod>
+  </url>
+  <url>
+    <loc>https://pinnacleteam.co/work/brendc-lifestyle-ai-qualification</loc>
+    <lastmod>2026-10-30</lastmod>
+  </url>
+  <url>
+    <loc>https://pinnacleteam.co/work/tech-agency-ai-lead-triage</loc>
+    <lastmod>2026-10-30</lastmod>
+  </url>
+  <url>
+    <loc>https://pinnacleteam.co/work/apex-cross-border-tenders</loc>
+    <lastmod>2026-10-30</lastmod>
+  </url>
+  <url>
+    <loc>https://pinnacleteam.co/work/vanguard-gohighlevel-crm</loc>
+    <lastmod>2026-10-30</lastmod>
+  </url>
+  <url>
+    <loc>https://pinnacleteam.co/work/meridian-receptionist-ai</loc>
+    <lastmod>2026-10-30</lastmod>
+  </url>
+  <url>
+    <loc>https://pinnacleteam.co/work/solis-shopify-workflow</loc>
+    <lastmod>2026-10-30</lastmod>
+  </url>
+  <url>
+    <loc>https://pinnacleteam.co/work/omni-video-content-pipeline</loc>
+    <lastmod>2026-10-30</lastmod>
+  </url>
+  <url>
+    <loc>https://pinnacleteam.co/work/zenith-financial-data-sync</loc>
+    <lastmod>2026-10-30</lastmod>
+  </url>
+  <url>
+    <loc>https://pinnacleteam.co/team/ayodeji-moses</loc>
+    <lastmod>2026-10-30</lastmod>
+  </url>
+  <url>
+    <loc>https://pinnacleteam.co/team/oluwaseun-olatunji</loc>
+    <lastmod>2026-10-30</lastmod>
+  </url>
+  <url>
+    <loc>https://pinnacleteam.co/team/praise-salami</loc>
+    <lastmod>2026-10-30</lastmod>
+  </url>
+  <url>
+    <loc>https://pinnacleteam.co/team/babatunde-david</loc>
+    <lastmod>2026-10-30</lastmod>
+  </url>
+  <url>
+    <loc>https://pinnacleteam.co/team/babatunde-odunayo</loc>
+    <lastmod>2026-10-30</lastmod>
+  </url>
+  <url>
+    <loc>https://pinnacleteam.co/team/babatunde-damilola</loc>
+    <lastmod>2026-10-30</lastmod>
+  </url>
+  <url>
+    <loc>https://pinnacleteam.co/team/azeez-anuoluwapo</loc>
+    <lastmod>2026-10-30</lastmod>
   </url>
 </urlset>
